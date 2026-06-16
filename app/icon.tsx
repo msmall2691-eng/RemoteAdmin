@@ -11,7 +11,7 @@ export default function Icon() {
         style={{
           width: "100%",
           height: "100%",
-          backgroundColor: "#214a59",
+          backgroundColor: "#1e4860",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -20,8 +20,8 @@ export default function Icon() {
         }}
       >
         <div style={{ height: 6, borderRadius: 3, backgroundColor: "#faf8f3" }} />
-        <div style={{ height: 6, width: "100%", borderRadius: 3, backgroundColor: "#5d8bab" }} />
-        <div style={{ height: 6, width: "58%", borderRadius: 3, backgroundColor: "#2f7f86" }} />
+        <div style={{ height: 6, width: "100%", borderRadius: 3, backgroundColor: "#5f9277" }} />
+        <div style={{ height: 6, width: "58%", borderRadius: 3, backgroundColor: "#2f6f9c" }} />
       </div>
     ),
     { ...size },

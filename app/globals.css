@@ -7,18 +7,18 @@
      Stored as space-separated RGB channels so Tailwind alpha modifiers
      (e.g. bg-mist/50) work via rgb(var(--token) / <alpha-value>).
      For direct CSS/SVG use, wrap in rgb(): rgb(var(--ink)). */
-  --ink: 33 74 89; /* #214a59 deep teal-blue — text, headings */
-  --ink-2: 46 94 112; /* #2e5e70 */
+  --ink: 30 72 96; /* #1e4860 deep blue — text, headings */
+  --ink-2: 42 93 122; /* #2a5d7a */
   --oat: 250 248 243; /* #faf8f3 warm off-white page bg */
   --card: 255 253 249; /* #fffdf9 */
-  --mist: 231 238 246; /* #e7eef6 soft powder-blue surface */
-  --mist-2: 214 227 240; /* #d6e3f0 */
-  --sage: 93 139 171; /* #5d8bab dusty blue — primary accent */
-  --sage-deep: 56 99 128; /* #386380 deep blue — links/accent text */
-  --brass: 47 127 134; /* #2f7f86 soft teal — primary CTAs */
-  --brass-deep: 40 95 100; /* #285f64 deep teal */
-  --line: 219 228 232; /* #dbe4e8 soft blue-gray border */
-  --muted: 84 105 114; /* #546972 muted blue-gray text */
+  --mist: 221 232 243; /* #dde8f3 powder-blue surface (a touch deeper) */
+  --mist-2: 201 219 235; /* #c9dbeb */
+  --sage: 95 146 119; /* #5f9277 green — secondary accent (keeps her theme) */
+  --sage-deep: 63 107 86; /* #3f6b56 deep green */
+  --brass: 47 111 156; /* #2f6f9c blue — primary CTAs & badges */
+  --brass-deep: 40 93 131; /* #285d83 deep blue */
+  --line: 214 224 234; /* #d6e0ea soft blue-gray border */
+  --muted: 84 105 120; /* #546978 muted blue-gray text */
 }
 
 @layer base {
@@ -80,7 +80,7 @@
     @apply btn bg-ink text-oat hover:bg-ink-2 active:scale-[0.98];
   }
   .btn-brass {
-    @apply btn bg-gradient-to-br from-brass to-sage-deep text-oat shadow-sm hover:shadow-md hover:brightness-[1.06] active:scale-[0.98];
+    @apply btn bg-gradient-to-br from-brass to-brass-deep text-oat shadow-sm hover:shadow-md hover:brightness-[1.06] active:scale-[0.98];
   }
   .btn-ghost {
     @apply btn border border-line bg-transparent text-ink hover:border-sage hover:bg-mist/50;
@@ -97,7 +97,7 @@
         0deg,
         transparent,
         transparent 31px,
-        rgba(93, 139, 171, 0.06) 32px
+        rgba(47, 111, 156, 0.05) 32px
       );
   }
 }

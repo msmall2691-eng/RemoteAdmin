@@ -38,6 +38,12 @@ export function Hero() {
 
         <div className="relative">
           <div className="absolute inset-0 -z-10 rounded-[32px] bg-mist/60" />
+          {/* Soft drifting color blobs add quiet, modern movement */}
+          <div className="animate-drift absolute -left-6 -top-6 -z-10 h-40 w-40 rounded-full bg-sage/20 blur-2xl" />
+          <div
+            className="animate-drift absolute -bottom-8 -right-4 -z-10 h-44 w-44 rounded-full bg-brass/20 blur-2xl"
+            style={{ animationDelay: "-9s" }}
+          />
           <OfficeRescueAnimation />
         </div>
       </div>

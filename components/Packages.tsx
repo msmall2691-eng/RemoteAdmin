@@ -20,7 +20,7 @@ export function Packages() {
             return (
               <Reveal as="article" key={pkg.name} delay={i * 80} className="h-full">
                 <div
-                  className={`flex h-full flex-col rounded-card border bg-card p-7 ${
+                  className={`hover-lift flex h-full flex-col rounded-card border bg-card p-7 ${
                     pkg.highlighted
                       ? "border-brass shadow-md ring-1 ring-brass/30"
                       : "border-line"

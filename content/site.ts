@@ -67,8 +67,7 @@ export const site = {
     calendly: "https://calendly.com/office-the-remote-admin/discovery-call",
     jotform: "https://form.jotform.com/243524519236154",
     facebook: "https://facebook.com/TheRemoteAdminServices",
-    // TODO(Karen): add Instagram once the handle is confirmed.
-    instagram: "",
+    instagram: "https://www.instagram.com/theremoteadmin/",
   },
 
   nav: [
@@ -251,7 +250,7 @@ export const site = {
     pullQuote:
       "I started The Remote Admin because I love doing the work that most business owners dread — and I've seen what it does for them when it's finally handled.",
     bio: [
-      "Hi, I'm Karen. I help small, service-based businesses across southern New Hampshire get their admin and bookkeeping under control — so the people running them can get back to the work they actually love.",
+      "Hi, I'm Karen. For over 35 years I've helped businesses stay organized and keep their offices running smoothly — and I started The Remote Admin to bring that same support to small, service-based businesses across southern New Hampshire, so the people running them can get back to the work they actually love.",
       "I know how it feels when the paperwork piles up: invoices sitting unsent, payments slipping through the cracks, an inbox that never empties. You didn't start your business to spend nights buried in receipts. That's where I come in.",
       "Whether it's a one-time Office Rescue to dig you out, or steady monthly support so it never gets that bad again, I treat your business like it's my own — carefully, reliably, and always confidentially.",
     ],
@@ -276,15 +275,14 @@ export const site = {
   reviews: {
     eyebrow: "Kind words",
     heading: "Local business owners who got their time back.",
-    // TODO(Karen): replace with the 3 real reviews (Facebook/Google) once you
-    // have permission to quote. Keep names/attribution accurate.
     items: [
       {
         quote:
-          "Karen took a mountain of paperwork off my plate and got my invoicing back on track. I finally feel on top of my business again.",
-        name: "Local contractor",
-        attribution: "Facebook review",
+          "Karen is a breath of fresh air! She is responsive, timely, efficient, and has the best communication.",
+        name: "Ducharme Tree Service",
+        attribution: "Client",
       },
+      // TODO(Karen): add a couple more real Facebook/Google reviews here.
       {
         quote:
           "Reliable, organized, and so easy to work with. She caught up months of bookkeeping in no time and I actually understand my numbers now.",
@@ -299,13 +297,40 @@ export const site = {
       },
     ],
     spotlight: {
-      // TODO(Karen): confirm permission + final wording with Bohan Electric.
       client: "Bohan Electric",
       quote:
-        "Karen keeps our office running so we can stay focused on the job site. Invoices go out on time, payments get followed up, and nothing slips through the cracks.",
+        "Karen has been the missing link to our company being more legit and more like on autopilot.",
       name: "Bohan Electric",
       attribution: "Client spotlight",
     },
+  },
+
+  clients: {
+    eyebrow: "Businesses I work with",
+    heading: "Proudly supporting local businesses.",
+    closer: "We serve all small business & service industries.",
+    /**
+     * The businesses Karen supports — logos link out to their sites.
+     * To add one: drop the logo in /public/clients/ and add an item below.
+     * Leave `url` empty to show the logo without a "Visit" link.
+     */
+    items: [
+      {
+        name: "Bohan Electric",
+        logo: "/clients/bohan-electric.webp",
+        url: "https://www.bohanelectric.com/",
+      },
+      {
+        name: "Ducharme Tree Service",
+        logo: "/clients/ducharme-tree-service.webp",
+        url: "https://ducharmetreeservice.com/",
+      },
+      {
+        name: "Complete Masonry",
+        logo: "/clients/complete-masonry.webp",
+        url: "",
+      },
+    ],
   },
 
   faq: {

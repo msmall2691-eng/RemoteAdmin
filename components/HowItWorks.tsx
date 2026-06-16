@@ -17,7 +17,7 @@ export function HowItWorks() {
         <ol className="mt-12 grid gap-6 md:grid-cols-3">
           {how.steps.map((step, i) => (
             <Reveal as="li" key={step.n} delay={i * 90} className="h-full">
-              <div className="card h-full p-7">
+              <div className="card hover-lift h-full p-7">
                 <span className="flex h-12 w-12 items-center justify-center rounded-full bg-ink font-display text-xl font-semibold text-oat">
                   {step.n}
                 </span>

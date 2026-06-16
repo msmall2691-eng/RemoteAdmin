@@ -6,6 +6,7 @@ import { Packages } from "@/components/Packages";
 import { HowItWorks } from "@/components/HowItWorks";
 import { About } from "@/components/About";
 import { Reviews } from "@/components/Reviews";
+import { Clients } from "@/components/Clients";
 import { Faq } from "@/components/Faq";
 import { SocialFeed } from "@/components/SocialFeed";
 import { GetStarted } from "@/components/GetStarted";
@@ -24,6 +25,7 @@ export default function Home() {
         <HowItWorks />
         <About />
         <Reviews />
+        <Clients />
         <Faq />
         <SocialFeed />
         <GetStarted />

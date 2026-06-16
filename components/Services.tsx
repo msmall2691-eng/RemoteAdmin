@@ -60,7 +60,7 @@ export function Services() {
             const Icon = icons[bucket.icon];
             return (
               <Reveal as="article" key={bucket.name} delay={i * 80}>
-                <div className="card h-full p-7">
+                <div className="card hover-lift h-full p-7">
                   <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-mist text-sage-deep">
                     <Icon className="h-6 w-6" />
                   </span>

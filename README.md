@@ -131,7 +131,10 @@ Karen-side / launch tasks (not code) are in the checklist below.
 ## Assets still needed from Karen
 
 - Headshot (replace `public/karen.jpg`).
-- 3 real reviews (Facebook/Google) + permission to quote.
-- Bohan Electric spotlight wording + permission (and any client logo).
-- Instagram handle (if any).
+- A couple more real reviews (the Ducharme + Bohan testimonials from the old
+  About page are already in place; one carousel slot is still a placeholder).
 - Final confirm on phone/email and preferred package names/pricing.
+
+Already wired from the old site: Instagram (`@theremoteadmin`), and the
+"Proudly supporting local businesses" logos (Bohan Electric, Ducharme Tree
+Service, Complete Masonry) with outbound links, in `public/clients/`.

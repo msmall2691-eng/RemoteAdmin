@@ -20,7 +20,7 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundColor: "#1f3a2e",
+          backgroundColor: "#2f4257",
           padding: "72px",
           fontFamily: "Georgia, serif",
         }}
@@ -31,7 +31,7 @@ export default function OpengraphImage() {
               width: 64,
               height: 64,
               borderRadius: 16,
-              backgroundColor: "#fbf8f2",
+              backgroundColor: "#faf8f3",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
@@ -39,11 +39,11 @@ export default function OpengraphImage() {
               padding: "0 14px",
             }}
           >
-            <div style={{ height: 6, borderRadius: 3, backgroundColor: "#1f3a2e" }} />
-            <div style={{ height: 6, width: "100%", borderRadius: 3, backgroundColor: "#6b8e72" }} />
-            <div style={{ height: 6, width: "60%", borderRadius: 3, backgroundColor: "#bf9a4a" }} />
+            <div style={{ height: 6, borderRadius: 3, backgroundColor: "#2f4257" }} />
+            <div style={{ height: 6, width: "100%", borderRadius: 3, backgroundColor: "#6f93b8" }} />
+            <div style={{ height: 6, width: "60%", borderRadius: 3, backgroundColor: "#c6a85c" }} />
           </div>
-          <div style={{ display: "flex", color: "#fbf8f2", fontSize: 32, fontWeight: 600 }}>
+          <div style={{ display: "flex", color: "#faf8f3", fontSize: 32, fontWeight: 600 }}>
             The Remote Admin
           </div>
         </div>
@@ -52,7 +52,7 @@ export default function OpengraphImage() {
           <div
             style={{
               display: "flex",
-              color: "#bf9a4a",
+              color: "#c6a85c",
               fontSize: 24,
               letterSpacing: 2,
               textTransform: "uppercase",
@@ -64,7 +64,7 @@ export default function OpengraphImage() {
           <div
             style={{
               display: "flex",
-              color: "#fbf8f2",
+              color: "#faf8f3",
               fontSize: 68,
               fontWeight: 600,
               lineHeight: 1.05,
@@ -78,7 +78,7 @@ export default function OpengraphImage() {
         <div
           style={{
             display: "flex",
-            color: "#d8e3d4",
+            color: "#d9e4f0",
             fontSize: 28,
             fontStyle: "italic",
           }}

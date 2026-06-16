@@ -3,22 +3,22 @@
 @tailwind utilities;
 
 :root {
-  /* Color tokens — §4 of the brief.
+  /* Color tokens — drawn from Karen's logo (powder/dusty blue + cream-gold).
      Stored as space-separated RGB channels so Tailwind alpha modifiers
      (e.g. bg-mist/50) work via rgb(var(--token) / <alpha-value>).
      For direct CSS/SVG use, wrap in rgb(): rgb(var(--ink)). */
-  --ink: 31 58 46; /* #1f3a2e deep evergreen */
-  --ink-2: 44 74 59; /* #2c4a3b */
-  --oat: 251 248 242; /* #fbf8f2 warm off-white */
-  --card: 255 253 248; /* #fffdf8 */
-  --mist: 231 238 227; /* #e7eee3 soft sage */
-  --mist-2: 216 227 212; /* #d8e3d4 */
-  --sage: 107 142 114; /* #6b8e72 primary accent */
-  --sage-deep: 82 112 88; /* #527058 */
-  --brass: 191 154 74; /* #bf9a4a gold highlight */
-  --brass-deep: 156 123 51; /* #9c7b33 */
-  --line: 224 230 218; /* #e0e6da */
-  --muted: 87 100 89; /* #576459 */
+  --ink: 47 66 87; /* #2f4257 deep slate blue — text, dark sections */
+  --ink-2: 60 84 112; /* #3c5470 */
+  --oat: 250 248 243; /* #faf8f3 warm off-white page bg */
+  --card: 255 253 249; /* #fffdf9 */
+  --mist: 233 239 247; /* #e9eff7 soft powder-blue surface */
+  --mist-2: 217 228 240; /* #d9e4f0 */
+  --sage: 111 147 184; /* #6f93b8 primary accent — dusty blue */
+  --sage-deep: 61 94 134; /* #3d5e86 accent text / links */
+  --brass: 198 168 92; /* #c6a85c warm gold highlight (booking) */
+  --brass-deep: 143 115 48; /* #8f7330 */
+  --line: 226 230 236; /* #e2e6ec */
+  --muted: 91 107 125; /* #5b6b7d */
 }
 
 @layer base {
@@ -97,7 +97,7 @@
         0deg,
         transparent,
         transparent 31px,
-        rgba(107, 142, 114, 0.06) 32px
+        rgba(111, 147, 184, 0.06) 32px
       );
   }
 }

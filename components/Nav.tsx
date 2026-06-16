@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { site } from "@/content/site";
-import { LogoMark } from "./Logo";
 
 export function Nav() {
   const [open, setOpen] = useState(false);
@@ -36,13 +36,17 @@ export function Nav() {
       >
         <a
           href="#top"
-          className="flex items-center gap-2.5"
+          className="flex items-center"
           aria-label={`${site.business.name} — home`}
         >
-          <LogoMark className="h-9 w-9" />
-          <span className="font-display text-lg font-semibold tracking-tightish text-ink">
-            The Remote Admin
-          </span>
+          <Image
+            src="/tra-logo.png"
+            alt={site.business.name}
+            width={445}
+            height={446}
+            priority
+            className="h-12 w-auto"
+          />
         </a>
 
         <div className="hidden items-center gap-7 md:flex">

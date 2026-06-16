@@ -130,11 +130,13 @@ Karen-side / launch tasks (not code) are in the checklist below.
 
 ## Assets still needed from Karen
 
-- Headshot (replace `public/karen.jpg`).
 - A couple more real reviews (the Ducharme + Bohan testimonials from the old
   About page are already in place; one carousel slot is still a placeholder).
 - Final confirm on phone/email and preferred package names/pricing.
 
-Already wired from the old site: Instagram (`@theremoteadmin`), and the
-"Proudly supporting local businesses" logos (Bohan Electric, Ducharme Tree
-Service, Complete Masonry) with outbound links, in `public/clients/`.
+Already wired from her existing brand: her real **logo** (`public/tra-logo.png`,
+used in the nav + footer), her **headshot** (`public/karen.jpg`), **Instagram**
+(`@theremoteadmin`), and the "Proudly supporting local businesses" logos (Bohan
+Electric, Ducharme Tree Service, Complete Masonry) with outbound links in
+`public/clients/`. To swap the headshot or logo later, just replace the file of
+the same name in `public/`.

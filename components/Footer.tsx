@@ -1,6 +1,6 @@
-import { Mail, Phone, Facebook, ExternalLink } from "lucide-react";
+import Image from "next/image";
+import { Mail, Phone, Facebook, Instagram, ExternalLink } from "lucide-react";
 import { site } from "@/content/site";
-import { LogoMark } from "./Logo";
 
 export function Footer() {
   const { business, footer, nav, links } = site;
@@ -11,8 +11,16 @@ export function Footer() {
       <div className="container-page py-14">
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <div className="flex items-center gap-2.5">
-              <LogoMark className="h-9 w-9" />
+            <div className="flex items-center gap-3">
+              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-oat p-1.5">
+                <Image
+                  src="/tra-logo.png"
+                  alt={business.name}
+                  width={445}
+                  height={446}
+                  className="h-full w-auto"
+                />
+              </span>
               <span className="font-display text-lg font-semibold">
                 The Remote Admin
               </span>
@@ -85,6 +93,19 @@ export function Footer() {
                   Facebook
                 </a>
               </li>
+              {links.instagram && (
+                <li>
+                  <a
+                    href={links.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-oat/80 transition-colors hover:text-oat"
+                  >
+                    <Instagram className="h-4 w-4" />
+                    Instagram
+                  </a>
+                </li>
+              )}
             </ul>
           </div>
         </div>

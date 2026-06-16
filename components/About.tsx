@@ -16,8 +16,8 @@ export function About() {
                 <Image
                   src={about.photo.src}
                   alt={about.photo.alt}
-                  width={640}
-                  height={760}
+                  width={542}
+                  height={732}
                   className="h-auto w-full object-cover"
                   sizes="(max-width: 1024px) 90vw, 360px"
                   priority={false}

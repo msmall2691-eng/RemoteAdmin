@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Check } from "lucide-react";
 import { site, icons } from "@/content/site";
 import { Reveal } from "./Reveal";
@@ -35,7 +34,13 @@ export function Services() {
                   {services.featured.name}
                 </h3>
                 <p className="mt-3 text-muted">{services.featured.summary}</p>
-                <ul className="mt-6 space-y-3">
+                <Link href={services.featured.cta.href} className="btn-brass mt-7">
+                  {services.featured.cta.label}
+                </Link>
+              </div>
+              <div className="border-t border-line bg-mist/40 p-8 sm:p-10 md:border-l md:border-t-0">
+                <p className="eyebrow">What&rsquo;s included</p>
+                <ul className="mt-4 space-y-3">
                   {services.featured.points.map((point) => (
                     <li key={point} className="flex items-start gap-3">
                       <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sage/15 text-sage-deep">
@@ -45,21 +50,6 @@ export function Services() {
                     </li>
                   ))}
                 </ul>
-                <Link href={services.featured.cta.href} className="btn-brass mt-7">
-                  {services.featured.cta.label}
-                </Link>
-              </div>
-              <div className="flex items-center justify-center border-t border-line bg-mist/40 p-6 sm:p-8 md:border-l md:border-t-0">
-                <div className="overflow-hidden rounded-[20px] border border-line bg-card shadow-sm">
-                  <Image
-                    src="/karen-2.jpg"
-                    alt="Illustration of Karen at her desk working for The Remote Admin"
-                    width={1024}
-                    height={1014}
-                    sizes="(max-width: 768px) 90vw, 420px"
-                    className="h-auto w-full"
-                  />
-                </div>
               </div>
             </div>
           </div>

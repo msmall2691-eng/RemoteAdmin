@@ -6,7 +6,7 @@ import { Calendly } from "./Calendly";
 import { ContactForm } from "./ContactForm";
 
 export function GetStarted() {
-  const { getStarted, links, about } = site;
+  const { getStarted, links } = site;
   return (
     <section id="book" className="scroll-mt-20">
       <div className="container-page py-20 sm:py-24">
@@ -18,20 +18,22 @@ export function GetStarted() {
           <p className="mt-3 text-muted">{getStarted.body}</p>
         </Reveal>
 
-        {/* Meet Karen — a real, warm face right before the booking ask */}
-        <Reveal className="mx-auto mt-8 max-w-2xl" delay={60}>
-          <div className="flex flex-col items-center gap-4 rounded-card border border-line bg-mist/40 p-5 text-center sm:flex-row sm:text-left">
-            <Image
-              src={about.photo.src}
-              alt={about.photo.alt}
-              width={72}
-              height={72}
-              className="shrink-0 rounded-full object-cover"
-              style={{ height: 72, width: 72 }}
-            />
-            <div>
+        {/* A warm, on-brand welcome right before the booking ask */}
+        <Reveal className="mx-auto mt-10 max-w-3xl" delay={60}>
+          <div className="grid items-center gap-6 rounded-card border border-line bg-mist/40 p-5 sm:grid-cols-[200px_1fr] sm:p-6">
+            <div className="mx-auto w-40 overflow-hidden rounded-[18px] border border-line bg-card sm:w-full">
+              <Image
+                src="/karen-2.jpg"
+                alt="The Remote Admin — illustration of a friendly admin at her desk"
+                width={1024}
+                height={1014}
+                sizes="(max-width: 640px) 160px, 200px"
+                className="h-auto w-full"
+              />
+            </div>
+            <div className="text-center sm:text-left">
               <p className="text-[0.95rem] text-ink">{getStarted.meet.line}</p>
-              <p className="mt-1 text-sm font-semibold text-sage-deep">
+              <p className="mt-2 text-sm font-semibold text-sage-deep">
                 {getStarted.meet.role}
               </p>
             </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import { site } from "@/content/site";
 import { Reveal } from "./Reveal";
@@ -5,7 +6,7 @@ import { Calendly } from "./Calendly";
 import { ContactForm } from "./ContactForm";
 
 export function GetStarted() {
-  const { getStarted, links } = site;
+  const { getStarted, links, about } = site;
   return (
     <section id="book" className="scroll-mt-20">
       <div className="container-page py-20 sm:py-24">
@@ -15,6 +16,26 @@ export function GetStarted() {
             {getStarted.heading}
           </h2>
           <p className="mt-3 text-muted">{getStarted.body}</p>
+        </Reveal>
+
+        {/* Meet Karen — a real, warm face right before the booking ask */}
+        <Reveal className="mx-auto mt-8 max-w-2xl" delay={60}>
+          <div className="flex flex-col items-center gap-4 rounded-card border border-line bg-mist/40 p-5 text-center sm:flex-row sm:text-left">
+            <Image
+              src={about.photo.src}
+              alt={about.photo.alt}
+              width={72}
+              height={72}
+              className="shrink-0 rounded-full object-cover"
+              style={{ height: 72, width: 72 }}
+            />
+            <div>
+              <p className="text-[0.95rem] text-ink">{getStarted.meet.line}</p>
+              <p className="mt-1 text-sm font-semibold text-sage-deep">
+                {getStarted.meet.role}
+              </p>
+            </div>
+          </div>
         </Reveal>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-2">

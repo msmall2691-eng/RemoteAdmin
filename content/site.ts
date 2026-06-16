@@ -371,6 +371,10 @@ export const site = {
     eyebrow: "Get started",
     heading: "Ready to get organized?",
     body: "Book a free discovery call below, or send a quick message and we'll get right back to you.",
+    meet: {
+      line: "Hi, I'm Karen — you'll be talking with me, not a call center. Let's find the right next step for your business, no pressure.",
+      role: "Karen Felch · Owner, The Remote Admin",
+    },
     calendly: {
       heading: "Book a discovery call",
       body: "Pick a time that works — it's free, friendly, and there's no pressure.",

@@ -75,15 +75,13 @@ export default function OpengraphImage() {
           </div>
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            color: "#d9e4f0",
-            fontSize: 28,
-            fontStyle: "italic",
-          }}
-        >
-          {`${site.business.owner} · Amherst, NH`}
+        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          <div style={{ display: "flex", color: "#c6a85c", fontSize: 30, fontStyle: "italic" }}>
+            {site.business.slogan}
+          </div>
+          <div style={{ display: "flex", color: "#d9e4f0", fontSize: 24 }}>
+            {`${site.business.owner} · Amherst, NH`}
+          </div>
         </div>
       </div>
     ),

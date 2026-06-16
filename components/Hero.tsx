@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { site } from "@/content/site";
-import { OfficeRescueAnimation } from "./OfficeRescueAnimation";
 
 export function Hero() {
   const { hero } = site;
@@ -37,14 +37,23 @@ export function Hero() {
         </div>
 
         <div className="relative">
-          <div className="absolute inset-0 -z-10 rounded-[32px] bg-mist/60" />
           {/* Soft drifting color blobs add quiet, modern movement */}
-          <div className="animate-drift absolute -left-6 -top-6 -z-10 h-40 w-40 rounded-full bg-sage/20 blur-2xl" />
+          <div className="animate-drift absolute -left-6 -top-6 -z-10 h-40 w-40 rounded-full bg-sage/25 blur-2xl" />
           <div
-            className="animate-drift absolute -bottom-8 -right-4 -z-10 h-44 w-44 rounded-full bg-brass/20 blur-2xl"
+            className="animate-drift absolute -bottom-8 -right-4 -z-10 h-44 w-44 rounded-full bg-brass/25 blur-2xl"
             style={{ animationDelay: "-9s" }}
           />
-          <OfficeRescueAnimation />
+          <div className="overflow-hidden rounded-[28px] border border-line bg-card shadow-sm">
+            <Image
+              src="/karen-2.jpg"
+              alt="Illustration of Karen at her desk working for The Remote Admin"
+              width={1024}
+              height={1014}
+              priority
+              sizes="(max-width: 1024px) 90vw, 520px"
+              className="h-auto w-full"
+            />
+          </div>
         </div>
       </div>
     </section>

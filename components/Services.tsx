@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import { site, icons } from "@/content/site";
 import { Reveal } from "./Reveal";
+import { OfficeRescueAnimation } from "./OfficeRescueAnimation";
 
 export function Services() {
   const { services } = site;
@@ -19,7 +20,7 @@ export function Services() {
         {/* Featured — Office Rescue (signature) */}
         <Reveal className="mt-12">
           <div className="card overflow-hidden border-brass/40">
-            <div className="grid gap-0 md:grid-cols-[1.1fr_0.9fr]">
+            <div className="grid gap-0 md:grid-cols-[1fr_0.85fr]">
               <div className="p-8 sm:p-10">
                 <div className="flex items-center gap-3">
                   <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brass/15 text-brass-deep">
@@ -33,13 +34,7 @@ export function Services() {
                   {services.featured.name}
                 </h3>
                 <p className="mt-3 text-muted">{services.featured.summary}</p>
-                <a href={services.featured.cta.href} className="btn-brass mt-7">
-                  {services.featured.cta.label}
-                </a>
-              </div>
-              <div className="border-t border-line bg-mist/40 p-8 sm:p-10 md:border-l md:border-t-0">
-                <p className="eyebrow">What&rsquo;s included</p>
-                <ul className="mt-4 space-y-3">
+                <ul className="mt-6 space-y-3">
                   {services.featured.points.map((point) => (
                     <li key={point} className="flex items-start gap-3">
                       <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sage/15 text-sage-deep">
@@ -49,6 +44,12 @@ export function Services() {
                     </li>
                   ))}
                 </ul>
+                <a href={services.featured.cta.href} className="btn-brass mt-7">
+                  {services.featured.cta.label}
+                </a>
+              </div>
+              <div className="flex items-center justify-center border-t border-line bg-mist/40 p-8 sm:p-10 md:border-l md:border-t-0">
+                <OfficeRescueAnimation />
               </div>
             </div>
           </div>

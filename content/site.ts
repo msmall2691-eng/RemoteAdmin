@@ -53,6 +53,7 @@ export const site = {
     name: "The Remote Admin",
     owner: "Karen Felch",
     tagline: "Virtual admin & bookkeeping",
+    slogan: "Making your life easier, one task at a time.",
     region: "Southern New Hampshire",
     city: "Amherst",
     state: "NH",

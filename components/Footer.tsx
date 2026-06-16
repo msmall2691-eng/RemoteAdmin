@@ -25,7 +25,10 @@ export function Footer() {
                 The Remote Admin
               </span>
             </div>
-            <p className="mt-4 max-w-xs text-sm text-oat/70">
+            <p className="mt-4 font-display text-base italic text-brass">
+              {business.slogan}
+            </p>
+            <p className="mt-3 max-w-xs text-sm text-oat/70">
               {footer.blurb}
             </p>
           </div>

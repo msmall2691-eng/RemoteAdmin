@@ -20,7 +20,7 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundColor: "#2f4257",
+          backgroundColor: "#1f4744",
           padding: "72px",
           fontFamily: "Georgia, serif",
         }}
@@ -39,9 +39,9 @@ export default function OpengraphImage() {
               padding: "0 14px",
             }}
           >
-            <div style={{ height: 6, borderRadius: 3, backgroundColor: "#2f4257" }} />
-            <div style={{ height: 6, width: "100%", borderRadius: 3, backgroundColor: "#6f93b8" }} />
-            <div style={{ height: 6, width: "60%", borderRadius: 3, backgroundColor: "#c6a85c" }} />
+            <div style={{ height: 6, borderRadius: 3, backgroundColor: "#1f4744" }} />
+            <div style={{ height: 6, width: "100%", borderRadius: 3, backgroundColor: "#5f9277" }} />
+            <div style={{ height: 6, width: "60%", borderRadius: 3, backgroundColor: "#2f7a73" }} />
           </div>
           <div style={{ display: "flex", color: "#faf8f3", fontSize: 32, fontWeight: 600 }}>
             The Remote Admin
@@ -52,7 +52,7 @@ export default function OpengraphImage() {
           <div
             style={{
               display: "flex",
-              color: "#c6a85c",
+              color: "#2f7a73",
               fontSize: 24,
               letterSpacing: 2,
               textTransform: "uppercase",
@@ -76,10 +76,10 @@ export default function OpengraphImage() {
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-          <div style={{ display: "flex", color: "#c6a85c", fontSize: 30, fontStyle: "italic" }}>
+          <div style={{ display: "flex", color: "#2f7a73", fontSize: 30, fontStyle: "italic" }}>
             {site.business.slogan}
           </div>
-          <div style={{ display: "flex", color: "#d9e4f0", fontSize: 24 }}>
+          <div style={{ display: "flex", color: "#d6e3f0", fontSize: 24 }}>
             {`${site.business.owner} · Amherst, NH`}
           </div>
         </div>

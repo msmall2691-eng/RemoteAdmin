@@ -3,22 +3,22 @@
 @tailwind utilities;
 
 :root {
-  /* Color tokens — drawn from Karen's logo (powder/dusty blue + cream-gold).
+  /* Color tokens — modern blues & greens drawn from Karen's logo.
      Stored as space-separated RGB channels so Tailwind alpha modifiers
      (e.g. bg-mist/50) work via rgb(var(--token) / <alpha-value>).
      For direct CSS/SVG use, wrap in rgb(): rgb(var(--ink)). */
-  --ink: 47 66 87; /* #2f4257 deep slate blue — text, dark sections */
-  --ink-2: 60 84 112; /* #3c5470 */
+  --ink: 31 71 68; /* #1f4744 deep teal — text, headings */
+  --ink-2: 43 87 84; /* #2b5754 */
   --oat: 250 248 243; /* #faf8f3 warm off-white page bg */
   --card: 255 253 249; /* #fffdf9 */
-  --mist: 233 239 247; /* #e9eff7 soft powder-blue surface */
-  --mist-2: 217 228 240; /* #d9e4f0 */
-  --sage: 111 147 184; /* #6f93b8 primary accent — dusty blue */
-  --sage-deep: 61 94 134; /* #3d5e86 accent text / links */
-  --brass: 198 168 92; /* #c6a85c warm gold highlight (booking) */
-  --brass-deep: 143 115 48; /* #8f7330 */
-  --line: 226 230 236; /* #e2e6ec */
-  --muted: 91 107 125; /* #5b6b7d */
+  --mist: 231 238 246; /* #e7eef6 soft powder-blue surface */
+  --mist-2: 214 227 240; /* #d6e3f0 */
+  --sage: 95 146 119; /* #5f9277 sage green accent */
+  --sage-deep: 63 107 86; /* #3f6b56 deep green — links/accent text */
+  --brass: 47 122 115; /* #2f7a73 teal — primary CTAs */
+  --brass-deep: 35 94 88; /* #235e58 */
+  --line: 219 227 224; /* #dbe3e0 soft blue-green border */
+  --muted: 86 107 102; /* #566b66 muted teal-gray text */
 }
 
 @layer base {
@@ -80,7 +80,7 @@
     @apply btn bg-ink text-oat hover:bg-ink-2 active:scale-[0.98];
   }
   .btn-brass {
-    @apply btn bg-brass text-ink hover:bg-brass-deep hover:text-oat active:scale-[0.98];
+    @apply btn bg-gradient-to-br from-brass to-sage-deep text-oat shadow-sm hover:shadow-md hover:brightness-[1.06] active:scale-[0.98];
   }
   .btn-ghost {
     @apply btn border border-line bg-transparent text-ink hover:border-sage hover:bg-mist/50;
@@ -97,7 +97,7 @@
         0deg,
         transparent,
         transparent 31px,
-        rgba(111, 147, 184, 0.06) 32px
+        rgba(95, 146, 119, 0.06) 32px
       );
   }
 }

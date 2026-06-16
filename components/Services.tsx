@@ -1,8 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Check } from "lucide-react";
 import { site, icons } from "@/content/site";
 import { Reveal } from "./Reveal";
-import { OfficeRescueAnimation } from "./OfficeRescueAnimation";
 
 export function Services() {
   const { services } = site;
@@ -49,8 +49,17 @@ export function Services() {
                   {services.featured.cta.label}
                 </Link>
               </div>
-              <div className="flex items-center justify-center border-t border-line bg-mist/40 p-8 sm:p-10 md:border-l md:border-t-0">
-                <OfficeRescueAnimation />
+              <div className="flex items-center justify-center border-t border-line bg-mist/40 p-6 sm:p-8 md:border-l md:border-t-0">
+                <div className="overflow-hidden rounded-[20px] border border-line bg-card shadow-sm">
+                  <Image
+                    src="/karen-2.jpg"
+                    alt="Illustration of Karen at her desk working for The Remote Admin"
+                    width={1024}
+                    height={1014}
+                    sizes="(max-width: 768px) 90vw, 420px"
+                    className="h-auto w-full"
+                  />
+                </div>
               </div>
             </div>
           </div>

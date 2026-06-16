@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Color tokens — §4 of the brief.
+     Stored as space-separated RGB channels so Tailwind alpha modifiers
+     (e.g. bg-mist/50) work via rgb(var(--token) / <alpha-value>).
+     For direct CSS/SVG use, wrap in rgb(): rgb(var(--ink)). */
+  --ink: 31 58 46; /* #1f3a2e deep evergreen */
+  --ink-2: 44 74 59; /* #2c4a3b */
+  --oat: 251 248 242; /* #fbf8f2 warm off-white */
+  --card: 255 253 248; /* #fffdf8 */
+  --mist: 231 238 227; /* #e7eee3 soft sage */
+  --mist-2: 216 227 212; /* #d8e3d4 */
+  --sage: 107 142 114; /* #6b8e72 primary accent */
+  --sage-deep: 82 112 88; /* #527058 */
+  --brass: 191 154 74; /* #bf9a4a gold highlight */
+  --brass-deep: 156 123 51; /* #9c7b33 */
+  --line: 224 230 218; /* #e0e6da */
+  --muted: 87 100 89; /* #576459 */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 84px; /* clears the sticky nav on anchor jumps */
+  }
+
+  body {
+    background-color: rgb(var(--oat));
+    color: rgb(var(--ink));
+    font-feature-settings: "kern", "liga";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.012em;
+  }
+
+  /* Visible, on-brand focus rings everywhere */
+  :focus-visible {
+    outline: 2px solid rgb(var(--sage));
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-content px-5 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.14em] text-sage-deep;
+  }
+
+  /* Buttons — §4: pills, ink / brass / ghost */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-pill px-6 py-3 text-sm font-semibold transition-all duration-[180ms] ease-out;
+  }
+  .btn-ink {
+    @apply btn bg-ink text-oat hover:bg-ink-2 active:scale-[0.98];
+  }
+  .btn-brass {
+    @apply btn bg-brass text-ink hover:bg-brass-deep hover:text-oat active:scale-[0.98];
+  }
+  .btn-ghost {
+    @apply btn border border-line bg-transparent text-ink hover:border-sage hover:bg-mist/50;
+  }
+
+  .card {
+    @apply rounded-card border border-line bg-card;
+  }
+
+  /* Subtle paper / ledger texture for flat sections */
+  .texture-paper {
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 31px,
+        rgba(107, 142, 114, 0.06) 32px
+      );
+  }
+}
+
+/* Scroll-reveal — element starts hidden, .is-visible (set by IntersectionObserver) fades it up */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 500ms ease,
+    transform 500ms ease;
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

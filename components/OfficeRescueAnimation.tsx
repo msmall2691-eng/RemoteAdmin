@@ -109,7 +109,7 @@ export function OfficeRescueAnimation() {
 
       {/* Brass "Paid" badge pops in once settled */}
       <div
-        className={`absolute right-2 top-4 flex items-center gap-1.5 rounded-pill bg-brass px-3.5 py-2 text-sm font-semibold text-ink shadow-md transition-all duration-500 ${
+        className={`absolute right-2 top-4 flex items-center gap-1.5 rounded-pill bg-brass px-3.5 py-2 text-sm font-semibold text-oat shadow-md transition-all duration-500 ${
           settled ? "opacity-100 scale-100" : "opacity-0 scale-75"
         }`}
         style={{ transitionDelay: settled ? "700ms" : "0ms" }}

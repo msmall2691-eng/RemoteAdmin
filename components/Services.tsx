@@ -26,7 +26,7 @@ export function Services() {
                   <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brass/15 text-brass-deep">
                     <FeaturedIcon className="h-6 w-6" />
                   </span>
-                  <span className="rounded-pill bg-brass px-3 py-1 text-xs font-semibold uppercase tracking-wider text-ink">
+                  <span className="rounded-pill bg-brass px-3 py-1 text-xs font-semibold uppercase tracking-wider text-oat">
                     {services.featured.badge}
                   </span>
                 </div>

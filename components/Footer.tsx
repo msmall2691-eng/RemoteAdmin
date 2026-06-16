@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, Facebook, Instagram, ExternalLink } from "lucide-react";
 import { site } from "@/content/site";
@@ -7,45 +8,39 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-ink text-oat">
+    <footer className="border-t border-line bg-mist/50">
       <div className="container-page py-14">
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
-              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-oat p-1.5">
-                <Image
-                  src="/tra-logo.png"
-                  alt={business.name}
-                  width={445}
-                  height={446}
-                  className="h-full w-auto"
-                />
-              </span>
-              <span className="font-display text-lg font-semibold">
+              <Image
+                src="/tra-logo.png"
+                alt={business.name}
+                width={445}
+                height={446}
+                className="h-14 w-auto"
+              />
+              <span className="font-display text-lg font-semibold text-ink">
                 The Remote Admin
               </span>
             </div>
-            <p className="mt-4 font-display text-base italic text-brass">
+            <p className="mt-4 font-display text-base italic text-brass-deep">
               {business.slogan}
             </p>
-            <p className="mt-3 max-w-xs text-sm text-oat/70">
-              {footer.blurb}
-            </p>
+            <p className="mt-3 max-w-xs text-sm text-muted">{footer.blurb}</p>
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brass">
-              Explore
-            </p>
+            <p className="eyebrow">Explore</p>
             <ul className="mt-4 space-y-2.5">
               {nav.map((item) => (
                 <li key={item.href}>
-                  <a
+                  <Link
                     href={item.href}
-                    className="text-sm text-oat/80 transition-colors hover:text-oat"
+                    className="text-sm text-muted transition-colors hover:text-ink"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li>
@@ -53,7 +48,7 @@ export function Footer() {
                   href={links.jotform}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm text-oat/80 transition-colors hover:text-oat"
+                  className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-ink"
                 >
                   New client intake
                   <ExternalLink className="h-3.5 w-3.5" />
@@ -63,14 +58,12 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brass">
-              Get in touch
-            </p>
+            <p className="eyebrow">Get in touch</p>
             <ul className="mt-4 space-y-2.5">
               <li>
                 <a
                   href={business.emailHref}
-                  className="inline-flex items-center gap-2 text-sm text-oat/80 transition-colors hover:text-oat"
+                  className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-ink"
                 >
                   <Mail className="h-4 w-4" />
                   {business.email}
@@ -79,7 +72,7 @@ export function Footer() {
               <li>
                 <a
                   href={business.phoneHref}
-                  className="inline-flex items-center gap-2 text-sm text-oat/80 transition-colors hover:text-oat"
+                  className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-ink"
                 >
                   <Phone className="h-4 w-4" />
                   {business.phone}
@@ -90,7 +83,7 @@ export function Footer() {
                   href={links.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-oat/80 transition-colors hover:text-oat"
+                  className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-ink"
                 >
                   <Facebook className="h-4 w-4" />
                   Facebook
@@ -102,7 +95,7 @@ export function Footer() {
                     href={links.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm text-oat/80 transition-colors hover:text-oat"
+                    className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-ink"
                   >
                     <Instagram className="h-4 w-4" />
                     Instagram
@@ -113,7 +106,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/10 pt-6 text-sm text-oat/60">
+        <div className="mt-12 border-t border-line pt-6 text-sm text-muted">
           © {year} {footer.copyright}
         </div>
       </div>

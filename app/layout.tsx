@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import { site } from "@/content/site";
 import { JsonLd } from "@/components/JsonLd";
+import { Nav } from "@/components/Nav";
+import { Footer } from "@/components/Footer";
+import { StickyMobileCta } from "@/components/StickyMobileCta";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -74,7 +77,10 @@ export default function RootLayout({
     <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
       <body className="font-sans antialiased">
         <JsonLd />
-        {children}
+        <Nav />
+        <main>{children}</main>
+        <Footer />
+        <StickyMobileCta />
       </body>
     </html>
   );

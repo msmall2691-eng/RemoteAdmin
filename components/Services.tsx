@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Check } from "lucide-react";
 import { site, icons } from "@/content/site";
 import { Reveal } from "./Reveal";
@@ -44,9 +45,9 @@ export function Services() {
                     </li>
                   ))}
                 </ul>
-                <a href={services.featured.cta.href} className="btn-brass mt-7">
+                <Link href={services.featured.cta.href} className="btn-brass mt-7">
                   {services.featured.cta.label}
-                </a>
+                </Link>
               </div>
               <div className="flex items-center justify-center border-t border-line bg-mist/40 p-8 sm:p-10 md:border-l md:border-t-0">
                 <OfficeRescueAnimation />

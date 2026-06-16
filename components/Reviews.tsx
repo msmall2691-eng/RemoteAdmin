@@ -92,14 +92,14 @@ export function Reviews() {
 
         {/* Client spotlight */}
         <Reveal className="mx-auto mt-6 max-w-2xl" delay={80}>
-          <div className="rounded-card border border-ink bg-ink p-7 text-oat sm:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brass">
+          <div className="rounded-card border border-brass/40 bg-mist/50 p-7 sm:p-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brass-deep">
               {reviews.spotlight.attribution}
             </p>
-            <blockquote className="mt-3 font-display text-lg italic leading-snug sm:text-xl">
+            <blockquote className="mt-3 font-display text-lg italic leading-snug text-ink sm:text-xl">
               &ldquo;{reviews.spotlight.quote}&rdquo;
             </blockquote>
-            <p className="mt-4 text-sm font-semibold text-oat">
+            <p className="mt-4 text-sm font-semibold text-ink">
               {reviews.spotlight.name}
             </p>
           </div>

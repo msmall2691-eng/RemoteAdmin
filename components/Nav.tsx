@@ -1,13 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { site } from "@/content/site";
 
 export function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -24,6 +27,12 @@ export function Nav() {
     };
   }, [open]);
 
+  // Close the mobile menu whenever the route changes.
+  useEffect(() => setOpen(false), [pathname]);
+
+  const isActive = (href: string) =>
+    pathname === href || (href !== "/" && pathname.startsWith(href));
+
   return (
     <header
       className={`sticky top-0 z-50 transition-colors duration-200 ${
@@ -34,8 +43,8 @@ export function Nav() {
         className="container-page flex h-16 items-center justify-between"
         aria-label="Primary"
       >
-        <a
-          href="#top"
+        <Link
+          href="/"
           className="flex items-center"
           aria-label={`${site.business.name} — home`}
         >
@@ -47,21 +56,23 @@ export function Nav() {
             priority
             className="h-12 w-auto"
           />
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-7 md:flex">
           {site.nav.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-muted transition-colors hover:text-ink"
+              className={`text-sm font-medium transition-colors hover:text-ink ${
+                isActive(item.href) ? "text-ink" : "text-muted"
+              }`}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
-          <a href="#book" className="btn-brass">
+          <Link href="/contact" className="btn-brass">
             Book a call
-          </a>
+          </Link>
         </div>
 
         <button
@@ -79,22 +90,17 @@ export function Nav() {
         <div className="border-t border-line bg-oat md:hidden">
           <div className="container-page flex flex-col gap-1 py-4">
             {site.nav.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 className="rounded-lg px-2 py-3 text-base font-medium text-ink hover:bg-mist/60"
-                onClick={() => setOpen(false)}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#book"
-              className="btn-brass mt-2"
-              onClick={() => setOpen(false)}
-            >
+            <Link href="/contact" className="btn-brass mt-2">
               Book a call
-            </a>
+            </Link>
           </div>
         </div>
       )}

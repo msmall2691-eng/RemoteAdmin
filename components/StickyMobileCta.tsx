@@ -1,26 +1,26 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { CalendarDays } from "lucide-react";
 
 /**
- * Sticky "Book a call" bar for small screens. Appears after the hero scrolls
- * past, hides itself once the booking section is on screen.
+ * Sticky "Book a call" bar for small screens. Appears after a little scroll,
+ * and stays out of the way on the contact page (where booking already lives).
  */
 export function StickyMobileCta() {
   const [show, setShow] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => {
-      const book = document.getElementById("book");
-      const bookVisible =
-        book && book.getBoundingClientRect().top < window.innerHeight;
-      setShow(window.scrollY > 600 && !bookVisible);
-    };
+    const onScroll = () => setShow(window.scrollY > 500);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  if (pathname.startsWith("/contact")) return null;
 
   return (
     <div
@@ -29,10 +29,10 @@ export function StickyMobileCta() {
       }`}
       style={{ paddingBottom: "calc(0.75rem + env(safe-area-inset-bottom))" }}
     >
-      <a href="#book" className="btn-brass w-full">
+      <Link href="/contact" className="btn-brass w-full">
         <CalendarDays className="h-4 w-4" />
         Book a call
-      </a>
+      </Link>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { site } from "@/content/site";
 
@@ -17,13 +18,13 @@ export function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a href={hero.primaryCta.href} className="btn-brass">
+            <Link href={hero.primaryCta.href} className="btn-brass">
               {hero.primaryCta.label}
-            </a>
-            <a href={hero.secondaryCta.href} className="btn-ghost">
+            </Link>
+            <Link href={hero.secondaryCta.href} className="btn-ghost">
               {hero.secondaryCta.label}
               <ArrowRight className="h-4 w-4" />
-            </a>
+            </Link>
           </div>
 
           <ul className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium text-muted">

@@ -72,19 +72,19 @@ export const site = {
   },
 
   nav: [
-    { label: "Services", href: "#services" },
-    { label: "How it works", href: "#how" },
-    { label: "About", href: "#about" },
-    { label: "Reviews", href: "#reviews" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Services", href: "/services" },
+    { label: "About", href: "/about" },
+    { label: "Reviews", href: "/reviews" },
+    { label: "FAQ", href: "/faq" },
+    { label: "Contact", href: "/contact" },
   ],
 
   hero: {
     eyebrow: "Virtual admin & bookkeeping · Southern New Hampshire",
     headline: "Let's get your business organized — and get you paid.",
     subcopy: "You focus on your customers; I'll take care of the admin.",
-    primaryCta: { label: "Book a call", href: "#book" },
-    secondaryCta: { label: "See what I do", href: "#services" },
+    primaryCta: { label: "Book a call", href: "/contact" },
+    secondaryCta: { label: "See what I do", href: "/services" },
     trustLine: ["Local", "Reliable", "Confidential"],
   },
 
@@ -117,7 +117,7 @@ export const site = {
         "Sort and file the receipt-and-paperwork backlog",
         "Hand you a tidy, repeatable system to keep it that way",
       ],
-      cta: { label: "Start your rescue", href: "#book" },
+      cta: { label: "Start your rescue", href: "/contact" },
     },
     buckets: [
       {
@@ -179,7 +179,7 @@ export const site = {
           "A simple system to keep going",
         ],
         highlighted: true,
-        cta: { label: "Book a rescue", href: "#book" },
+        cta: { label: "Book a rescue", href: "/contact" },
       },
       {
         icon: "repeat" as IconName,
@@ -195,7 +195,7 @@ export const site = {
           "Monthly check-in",
         ],
         highlighted: false,
-        cta: { label: "Book a call", href: "#book" },
+        cta: { label: "Book a call", href: "/contact" },
       },
       {
         icon: "list-checks" as IconName,
@@ -211,7 +211,7 @@ export const site = {
           "Pay for what you use",
         ],
         highlighted: false,
-        cta: { label: "Ask about à la carte", href: "#book" },
+        cta: { label: "Ask about à la carte", href: "/contact" },
       },
     ],
     note: "Not sure which fits? Book a call and we'll figure it out together.",
@@ -225,7 +225,7 @@ export const site = {
         n: 1,
         title: "Book a call",
         body: "Grab a free discovery call. We talk through what's on your plate and where you're stuck — no pressure, no jargon.",
-        cta: { label: "Book your discovery call", href: "#book" },
+        cta: { label: "Book your discovery call", href: "/contact" },
       },
       {
         n: 2,

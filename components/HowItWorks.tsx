@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { site } from "@/content/site";
 import { Reveal } from "./Reveal";
@@ -26,13 +27,13 @@ export function HowItWorks() {
                 </h3>
                 <p className="mt-2 text-sm text-muted">{step.body}</p>
                 {"cta" in step && step.cta && (
-                  <a
+                  <Link
                     href={step.cta.href}
                     className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-sage-deep hover:text-ink"
                   >
                     {step.cta.label}
                     <ArrowRight className="h-4 w-4" />
-                  </a>
+                  </Link>
                 )}
               </div>
             </Reveal>

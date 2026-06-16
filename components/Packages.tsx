@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Check } from "lucide-react";
 import { site, icons } from "@/content/site";
 import { Reveal } from "./Reveal";
@@ -61,12 +62,12 @@ export function Packages() {
                       </li>
                     ))}
                   </ul>
-                  <a
+                  <Link
                     href={pkg.cta.href}
                     className={`mt-7 ${pkg.highlighted ? "btn-brass" : "btn-ghost"}`}
                   >
                     {pkg.cta.label}
-                  </a>
+                  </Link>
                 </div>
               </Reveal>
             );

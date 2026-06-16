@@ -98,7 +98,7 @@ export const site = {
       "An inbox that never stops",
       "Receipts everywhere — glovebox, truck, junk drawer",
     ],
-    closer: "I can help.",
+    closer: "We can help.",
   },
 
   services: {
@@ -228,13 +228,13 @@ export const site = {
       },
       {
         n: 2,
-        title: "I build your plan",
-        body: "I map out exactly what I'll take off your hands, how we'll work together, and what it costs. You approve it.",
+        title: "We build your plan",
+        body: "The Remote Admin maps out exactly what we'll take off your hands, how we'll work together, and what it costs — then you approve it.",
       },
       {
         n: 3,
         title: "You get your time back",
-        body: "I handle the admin in the background. You get clean books, sent invoices, and your evenings back.",
+        body: "We handle the admin in the background. You get clean books, sent invoices, and your evenings back.",
       },
     ],
   },
@@ -339,15 +339,15 @@ export const site = {
     items: [
       {
         q: "Is my information kept confidential?",
-        a: "Always. I treat your financials and business details with complete confidentiality — your information stays between us, full stop.",
+        a: "Always. We treat your financials and business details with complete confidentiality — your information stays between us, full stop.",
       },
       {
         q: "What software do you work with?",
-        a: "I work in QuickBooks and the common tools small businesses already use. If you're not set up yet, I'll help you choose something simple and get it running.",
+        a: "We work in QuickBooks and the common tools small businesses already use. If you're not set up yet, we'll help you choose something simple and get it running.",
       },
       {
         q: "How will we communicate?",
-        a: "However works best for you — email, phone, or text — at a cadence we agree on. You'll always know what I'm working on and where things stand.",
+        a: "However works best for you — email, phone, or text — at a cadence we agree on. You'll always know what we're working on and where things stand.",
       },
       {
         q: "Am I locked into a contract?",
@@ -355,7 +355,7 @@ export const site = {
       },
       {
         q: "You're remote — but are you local?",
-        a: "Both. I'm based in Amherst, NH and work with businesses all over southern New Hampshire. Working remotely just means I can help you efficiently, without the overhead of being on-site.",
+        a: "Both. The Remote Admin is based in Amherst, NH and works with businesses all over southern New Hampshire. Working remotely just means we can help you efficiently, without the overhead of being on-site.",
       },
     ],
   },
@@ -369,20 +369,20 @@ export const site = {
   getStarted: {
     eyebrow: "Get started",
     heading: "Ready to get organized?",
-    body: "Book a free discovery call below, or send a quick message and I'll get right back to you.",
+    body: "Book a free discovery call below, or send a quick message and we'll get right back to you.",
     calendly: {
       heading: "Book a discovery call",
       body: "Pick a time that works — it's free, friendly, and there's no pressure.",
     },
     contact: {
       heading: "Or send a quick message",
-      body: "Tell me a little about what you need and I'll be in touch.",
+      body: "Tell us a little about what you need and we'll be in touch.",
       successTitle: "Got it — thank you!",
       successBody:
-        "Your message is on its way to my inbox. I'll get back to you shortly. Talk soon!",
+        "Your message is on its way to our inbox. We'll get back to you shortly. Talk soon!",
       errorTitle: "Hmm, that didn't go through.",
       errorBody:
-        "Something went wrong on my end. Please try again, or email me directly at office@the-remote-admin.com.",
+        "Something went wrong on our end. Please try again, or email us directly at office@the-remote-admin.com.",
       needOptions: ["Office Rescue", "Bookkeeping", "Admin", "Invoicing"],
     },
     jotform: {

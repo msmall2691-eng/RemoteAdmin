@@ -21,6 +21,7 @@ import {
   Mail,
   Repeat,
   ListChecks,
+  Workflow,
 } from "lucide-react";
 
 export type IconName =
@@ -33,7 +34,8 @@ export type IconName =
   | "clipboard-list"
   | "mail"
   | "repeat"
-  | "list-checks";
+  | "list-checks"
+  | "workflow";
 
 export const icons: Record<IconName, LucideIcon> = {
   "file-text": FileText,
@@ -46,6 +48,7 @@ export const icons: Record<IconName, LucideIcon> = {
   mail: Mail,
   repeat: Repeat,
   "list-checks": ListChecks,
+  workflow: Workflow,
 };
 
 export const site = {
@@ -118,6 +121,14 @@ export const site = {
   services: {
     eyebrow: "What I do",
     heading: "Administrative support that keeps your business moving.",
+    strengths: [
+      "Invoicing & collections",
+      "Contractor support",
+      "Forms, SOPs & process creation",
+      "Office organization & cleanup",
+      "Follow-up & communication",
+      "W-9 & COI requests",
+    ],
     featured: {
       icon: "sparkles" as IconName,
       badge: "Signature",
@@ -135,6 +146,19 @@ export const site = {
     },
     buckets: [
       {
+        icon: "clipboard-list" as IconName,
+        name: "Administrative Services",
+        summary:
+          "The day-to-day support that keeps your office running efficiently.",
+        points: [
+          "Email and communication management",
+          "Scheduling and coordination",
+          "Customer follow-up and service support",
+          "Data entry, forms, and documentation",
+        ],
+        mini: ["Customers followed up", "Paperwork in order"],
+      },
+      {
         icon: "file-text" as IconName,
         name: "Financial Administration",
         summary:
@@ -148,17 +172,17 @@ export const site = {
         mini: ["Accounts reconciled", "Bills paid on time"],
       },
       {
-        icon: "clipboard-list" as IconName,
-        name: "Administrative Services",
+        icon: "workflow" as IconName,
+        name: "Systems & SOPs",
         summary:
-          "The day-to-day support that keeps your office running efficiently.",
+          "When how you work only lives in your head, things break the moment you step away. The Remote Admin turns your day-to-day into clear, written systems your business can actually run on.",
         points: [
-          "Email and communication management",
-          "Scheduling and coordination",
-          "Customer follow-up and service support",
-          "Data entry, forms, and documentation",
+          "Standard operating procedures (SOPs)",
+          "Step-by-step process documentation",
+          "Custom forms, checklists & templates",
+          "Onboarding & training materials",
         ],
-        mini: ["Customers followed up", "Paperwork in order"],
+        mini: ["SOPs documented", "Workflows mapped"],
       },
       {
         icon: "folder-open" as IconName,

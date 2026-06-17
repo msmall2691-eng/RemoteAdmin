@@ -55,18 +55,34 @@ export function Hero() {
           </ul>
         </div>
 
-        <div className="relative flex items-center justify-center py-6">
-          {/* Soft drifting color blobs add quiet, modern movement */}
-          <div className="animate-drift absolute left-0 top-2 -z-10 h-56 w-56 rounded-full bg-sage/25 blur-3xl" />
-          <div
-            className="animate-drift absolute bottom-2 right-0 -z-10 h-60 w-60 rounded-full bg-gold/25 blur-3xl"
-            style={{ animationDelay: "-9s" }}
-          />
-          {/* Slow-rotating brand ring echoes the logo's circle */}
+        <div className="relative flex items-center justify-center py-10">
+          {/* Soft "breathing" glow halo grounds the logo */}
           <div
             aria-hidden="true"
-            className="animate-spin-slow absolute -z-10 h-[24rem] w-[24rem] rounded-full border-2 border-dashed border-sage/25 sm:h-[30rem] sm:w-[30rem] lg:h-[36rem] lg:w-[36rem]"
+            className="animate-pulse-glow absolute -z-10 h-[22rem] w-[22rem] rounded-full blur-2xl sm:h-[26rem] sm:w-[26rem] lg:h-[30rem] lg:w-[30rem]"
+            style={{
+              background:
+                "radial-gradient(circle, rgb(var(--mist-2) / 0.95) 0%, rgb(var(--sage) / 0.18) 45%, transparent 72%)",
+            }}
           />
+          {/* Gold + sage accent glows drift gently */}
+          <div
+            className="animate-drift absolute right-6 top-8 -z-10 h-40 w-40 rounded-full bg-gold/20 blur-3xl"
+            style={{ animationDelay: "-4s" }}
+          />
+          <div className="animate-drift absolute bottom-8 left-6 -z-10 h-44 w-44 rounded-full bg-sage/20 blur-3xl" />
+
+          {/* Small floating brand accents add quiet life */}
+          <span className="animate-float absolute left-10 top-14 h-3 w-3 rounded-full bg-gold/70 shadow-sm" />
+          <span
+            className="animate-float absolute right-10 top-24 h-2.5 w-2.5 rounded-full bg-sage/70 shadow-sm"
+            style={{ animationDelay: "-2.5s" }}
+          />
+          <span
+            className="animate-float absolute bottom-16 left-24 h-2 w-2 rounded-full bg-brass/70 shadow-sm"
+            style={{ animationDelay: "-4.5s" }}
+          />
+
           <div className="hero-in" style={{ animationDelay: "240ms" }}>
             <div className="animate-float">
               <Image

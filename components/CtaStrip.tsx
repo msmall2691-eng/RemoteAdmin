@@ -14,9 +14,9 @@ export function CtaStrip() {
       <div className="container-page py-10">
         <Reveal className="flex flex-col items-center justify-between gap-5 rounded-card border border-line bg-card px-7 py-7 text-center shadow-sm sm:flex-row sm:text-left">
           <div>
-            <h2 className="font-display text-xl font-semibold text-ink sm:text-2xl">
+            <p className="font-display text-xl font-semibold text-ink sm:text-2xl">
               {cta.heading}
-            </h2>
+            </p>
             <p className="mt-1 text-sm text-muted">{cta.body}</p>
           </div>
           <Link href="#book" className="btn-brass shrink-0">

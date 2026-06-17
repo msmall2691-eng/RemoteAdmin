@@ -84,8 +84,7 @@ export const site = {
   ],
 
   hero: {
-    eyebrow:
-      "Admin office support, light bookkeeping, collections, and more · Southern New Hampshire",
+    eyebrow: "Admin support, light bookkeeping & collections · Southern NH",
     headline:
       "Virtual administrative office support for contractors & service businesses",
     subcopy: "You focus on your customers; I'll take care of the admin.",
@@ -95,7 +94,7 @@ export const site = {
   },
 
   valueProps: {
-    heading: "Behind every organized business is someone handling the chaos.",
+    heading: "What you can count on.",
     items: [
       { title: "Accurate", body: "Financial support you can count on." },
       { title: "Organized", body: "Your systems and documents, in order." },
@@ -106,7 +105,7 @@ export const site = {
 
   pain: {
     eyebrow: "Sound familiar?",
-    heading: "If your back office is running you, you're not alone.",
+    heading: "Is your back office running you?",
     items: [
       "Invoices that never quite get sent",
       "Payments you keep meaning to follow up on",
@@ -205,7 +204,7 @@ export const site = {
   tools: {
     eyebrow: "Tools & systems",
     heading: "I work in the tools you already use.",
-    body: "No need to learn anything new, I'll meet your business where it already runs.",
+    body: "No need to learn anything new. I'll meet your business where it already runs.",
     items: [
       "QuickBooks",
       "Jobber",
@@ -319,11 +318,11 @@ export const site = {
       alt: "Karen Felch, owner of The Remote Admin",
     },
     pullQuote:
-      "I started The Remote Admin because I love doing the work that most business owners dread, and I've seen what it does for them when it's finally handled.",
+      "I love doing the work most business owners dread. And I've seen the relief when it's finally handled.",
     bio: [
-      "Hi, I'm Karen. For over 35 years I've helped businesses stay organized and keep their offices running smoothly, and I started The Remote Admin to bring that same support to small, service-based businesses across southern New Hampshire, so the people running them can get back to the work they actually love.",
-      "I know how it feels when the paperwork piles up: invoices sitting unsent, payments slipping through the cracks, an inbox that never empties. You didn't start your business to spend nights buried in receipts. That's where I come in.",
-      "Whether it's a one-time Office Rescue to dig you out, or steady monthly support so it never gets that bad again, I treat your business like it's my own, carefully, reliably, and always confidentially.",
+      "Hi, I'm Karen. For over 35 years, I've helped businesses stay organized and keep their offices running smoothly.",
+      "I started The Remote Admin to bring that same support to small, service-based businesses across southern New Hampshire, so owners can get back to the work they love.",
+      "Whether it's a one-time Office Rescue or steady monthly support, I treat your business like my own. Careful, reliable, and always confidential.",
     ],
     signature: "Karen",
     serviceArea: {
@@ -406,11 +405,11 @@ export const site = {
 
   faq: {
     eyebrow: "Good questions",
-    heading: "The things people ask before getting started.",
+    heading: "Questions, answered.",
     items: [
       {
         q: "Is my information kept confidential?",
-        a: "Always. I treat your financials and business details with complete confidentiality, your information stays between us, full stop.",
+        a: "Always. I treat your financials and business details with complete confidentiality. Your information stays between us, full stop.",
       },
       {
         q: "What software do you work with?",
@@ -442,7 +441,7 @@ export const site = {
     heading: "Ready to get organized?",
     body: "Book a free discovery call below, or send a quick message and I'll get right back to you.",
     meet: {
-      line: "Hi, I'm Karen, you'll be talking with me, not a call center. Let's find the right next step for your business, no pressure.",
+      line: "Hi, I'm Karen. You'll be talking with me, not a call center. Let's find the right next step for your business, no pressure.",
       role: "Karen Felch · Owner, The Remote Admin",
     },
     calendly: {

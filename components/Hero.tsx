@@ -65,7 +65,7 @@ export function Hero() {
           {/* Slow-rotating brand ring echoes the logo's circle */}
           <div
             aria-hidden="true"
-            className="animate-spin-slow absolute -z-10 h-[22rem] w-[22rem] rounded-full border-2 border-dashed border-sage/25 sm:h-[26rem] sm:w-[26rem] lg:h-[30rem] lg:w-[30rem]"
+            className="animate-spin-slow absolute -z-10 h-[24rem] w-[24rem] rounded-full border-2 border-dashed border-sage/25 sm:h-[30rem] sm:w-[30rem] lg:h-[36rem] lg:w-[36rem]"
           />
           <div className="hero-in" style={{ animationDelay: "240ms" }}>
             <div className="animate-float">
@@ -75,7 +75,7 @@ export function Hero() {
                 width={445}
                 height={446}
                 priority
-                className="mx-auto h-auto w-full max-w-md drop-shadow-md sm:max-w-lg"
+                className="mx-auto h-auto w-full max-w-lg drop-shadow-md sm:max-w-xl"
               />
             </div>
           </div>

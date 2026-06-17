@@ -67,18 +67,27 @@ export function Hero() {
           />
           {/* Gold + sage accent glows drift gently */}
           <div
+            aria-hidden="true"
             className="animate-drift absolute right-6 top-8 -z-10 h-40 w-40 rounded-full bg-gold/20 blur-3xl"
             style={{ animationDelay: "-4s" }}
           />
-          <div className="animate-drift absolute bottom-8 left-6 -z-10 h-44 w-44 rounded-full bg-sage/20 blur-3xl" />
+          <div
+            aria-hidden="true"
+            className="animate-drift absolute bottom-8 left-6 -z-10 h-44 w-44 rounded-full bg-sage/20 blur-3xl"
+          />
 
           {/* Small floating brand accents add quiet life */}
-          <span className="animate-float absolute left-10 top-14 h-3 w-3 rounded-full bg-gold/70 shadow-sm" />
           <span
+            aria-hidden="true"
+            className="animate-float absolute left-10 top-14 h-3 w-3 rounded-full bg-gold/70 shadow-sm"
+          />
+          <span
+            aria-hidden="true"
             className="animate-float absolute right-10 top-24 h-2.5 w-2.5 rounded-full bg-sage/70 shadow-sm"
             style={{ animationDelay: "-2.5s" }}
           />
           <span
+            aria-hidden="true"
             className="animate-float absolute bottom-16 left-24 h-2 w-2 rounded-full bg-brass/70 shadow-sm"
             style={{ animationDelay: "-4.5s" }}
           />

@@ -39,13 +39,17 @@ project settings (Production). All keys live under **Karen's own accounts**.
 
 | Variable | What it's for |
 | --- | --- |
-| `RESEND_API_KEY` | Resend API key — delivers the contact form to Karen's inbox. |
-| `CONTACT_TO_EMAIL` | Where inquiries go (default `office@the-remote-admin.com`). |
-| `CONTACT_FROM_EMAIL` | Verified Resend sender (e.g. `website@the-remote-admin.com`). |
+| `GMAIL_USER` | The Gmail/Workspace address that sends the form email (e.g. `office@the-remote-admin.com`). |
+| `GMAIL_APP_PASSWORD` | A 16-char Google **App Password** for that account (needs 2-Step Verification on). |
+| `CONTACT_TO_EMAIL` | Where inquiries land (optional; defaults to `GMAIL_USER`). |
 | `NEXT_PUBLIC_SITE_URL` | Canonical site URL, used for SEO/OG/sitemap. No trailing slash. |
 
-The contact form returns a friendly error if `RESEND_API_KEY` isn't set, so the
-rest of the site works fine before email is wired up.
+The contact form delivers via **Gmail SMTP** straight to Karen's inbox (no
+third-party service). To get the App Password: Google Account → **Security** →
+turn on **2-Step Verification** → **App passwords** → create one for "Mail",
+and paste the 16 characters into `GMAIL_APP_PASSWORD`. The form returns a
+friendly error if these aren't set, so the rest of the site works fine before
+email is wired up.
 
 ---
 

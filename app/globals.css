@@ -164,6 +164,16 @@
   animation: drift 18s ease-in-out infinite;
 }
 
+/* Very slow rotation for the decorative brand ring behind the hero logo */
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin-slow 50s linear infinite;
+}
+
 /* Logo marquee — seamless horizontal scroll for the clients strip */
 @keyframes marquee {
   from {
@@ -210,7 +220,8 @@
 @media (prefers-reduced-motion: reduce) {
   .animate-float,
   .animate-drift,
-  .animate-marquee {
+  .animate-marquee,
+  .animate-spin-slow {
     animation: none !important;
   }
   .hover-lift:hover {

@@ -4,9 +4,9 @@ import { ArrowRight, Check } from "lucide-react";
 import { site } from "@/content/site";
 
 const floatingTasks = [
-  { label: "Invoices sent", pos: "left-0 top-6", delay: "-1s" },
+  { label: "Books up to date", pos: "left-0 top-6", delay: "-1s" },
   { label: "Reconciled", pos: "right-0 top-16", delay: "-3.5s" },
-  { label: "Files organized", pos: "bottom-14 left-1", delay: "-5s" },
+  { label: "Records organized", pos: "bottom-14 left-1", delay: "-5s" },
   { label: "Follow-ups done", pos: "bottom-24 right-1", delay: "-2.2s" },
 ];
 
@@ -100,7 +100,7 @@ export function Hero() {
             <span
               key={task.label}
               aria-hidden="true"
-              className={`animate-float absolute ${task.pos} flex items-center gap-1.5 rounded-pill border border-line bg-card/80 px-2.5 py-1 text-[0.7rem] font-medium text-sage-deep shadow-sm backdrop-blur-sm`}
+              className={`animate-chip absolute ${task.pos} flex items-center gap-1.5 rounded-pill border border-line bg-card/80 px-2.5 py-1 text-[0.7rem] font-medium text-sage-deep shadow-sm backdrop-blur-sm`}
               style={{ animationDelay: task.delay }}
             >
               <Check className="h-3 w-3 text-gold" strokeWidth={3} />

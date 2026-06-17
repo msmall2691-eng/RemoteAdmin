@@ -145,6 +145,26 @@
   animation: float 6s ease-in-out infinite;
 }
 
+/* Organic 2D drift for the hero task chips */
+@keyframes chip-float {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(4px, -9px);
+  }
+  50% {
+    transform: translate(-3px, -4px);
+  }
+  75% {
+    transform: translate(3px, -11px);
+  }
+}
+.animate-chip {
+  animation: chip-float 9s ease-in-out infinite;
+}
+
 /* Slowly drifting blob for the hero backdrop */
 @keyframes drift {
   0% {
@@ -238,7 +258,8 @@
   .animate-drift,
   .animate-marquee,
   .animate-spin-slow,
-  .animate-pulse-glow {
+  .animate-pulse-glow,
+  .animate-chip {
     animation: none !important;
   }
   .hover-lift:hover {

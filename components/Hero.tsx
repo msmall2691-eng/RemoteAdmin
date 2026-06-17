@@ -1,7 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { site } from "@/content/site";
+
+const floatingTasks = [
+  { label: "Invoices sent", pos: "left-0 top-6", delay: "-1s" },
+  { label: "Reconciled", pos: "right-0 top-16", delay: "-3.5s" },
+  { label: "Files organized", pos: "bottom-14 left-1", delay: "-5s" },
+  { label: "Follow-ups done", pos: "bottom-24 right-1", delay: "-2.2s" },
+];
 
 export function Hero() {
   const { hero } = site;
@@ -88,19 +95,21 @@ export function Hero() {
             className="animate-drift absolute bottom-8 left-6 -z-10 h-44 w-44 rounded-full bg-sage/20 blur-3xl"
           />
 
-          {/* Small floating brand accents add quiet life */}
+          {/* Faint floating "task handled" chips — quiet, on-brand motion */}
+          {floatingTasks.map((task) => (
+            <span
+              key={task.label}
+              aria-hidden="true"
+              className={`animate-float absolute ${task.pos} flex items-center gap-1.5 rounded-pill border border-line bg-card/80 px-2.5 py-1 text-[0.7rem] font-medium text-sage-deep shadow-sm backdrop-blur-sm`}
+              style={{ animationDelay: task.delay }}
+            >
+              <Check className="h-3 w-3 text-gold" strokeWidth={3} />
+              {task.label}
+            </span>
+          ))}
           <span
             aria-hidden="true"
-            className="animate-float absolute left-10 top-14 h-3 w-3 rounded-full bg-gold/70 shadow-sm"
-          />
-          <span
-            aria-hidden="true"
-            className="animate-float absolute right-10 top-24 h-2.5 w-2.5 rounded-full bg-sage/70 shadow-sm"
-            style={{ animationDelay: "-2.5s" }}
-          />
-          <span
-            aria-hidden="true"
-            className="animate-float absolute bottom-16 left-24 h-2 w-2 rounded-full bg-brass/70 shadow-sm"
+            className="animate-float absolute left-8 top-1/2 h-2.5 w-2.5 rounded-full bg-gold/70 shadow-sm"
             style={{ animationDelay: "-4.5s" }}
           />
 

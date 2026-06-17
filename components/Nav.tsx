@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Facebook, Instagram } from "lucide-react";
 import { site } from "@/content/site";
 
 export function Nav() {
@@ -49,7 +49,7 @@ export function Nav() {
           />
         </a>
 
-        <div className="hidden items-center gap-7 md:flex">
+        <div className="hidden items-center gap-6 md:flex">
           {site.nav.map((item) => (
             <a
               key={item.href}
@@ -59,6 +59,28 @@ export function Nav() {
               {item.label}
             </a>
           ))}
+          <span className="flex items-center gap-1">
+            <a
+              href={site.links.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="The Remote Admin on Facebook"
+              className="flex h-9 w-9 items-center justify-center rounded-full text-muted transition-colors hover:bg-mist/60 hover:text-ink"
+            >
+              <Facebook className="h-[1.15rem] w-[1.15rem]" />
+            </a>
+            {site.links.instagram && (
+              <a
+                href={site.links.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="The Remote Admin on Instagram"
+                className="flex h-9 w-9 items-center justify-center rounded-full text-muted transition-colors hover:bg-mist/60 hover:text-ink"
+              >
+                <Instagram className="h-[1.15rem] w-[1.15rem]" />
+              </a>
+            )}
+          </span>
           <a href="#book" className="btn-brass">
             Book a call
           </a>
@@ -95,6 +117,28 @@ export function Nav() {
             >
               Book a call
             </a>
+            <div className="mt-3 flex items-center gap-2 border-t border-line pt-4">
+              <a
+                href={site.links.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="The Remote Admin on Facebook"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-ink"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              {site.links.instagram && (
+                <a
+                  href={site.links.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="The Remote Admin on Instagram"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-ink"
+                >
+                  <Instagram className="h-5 w-5" />
+                </a>
+              )}
+            </div>
           </div>
         </div>
       )}

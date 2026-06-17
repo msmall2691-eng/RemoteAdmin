@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Check } from "lucide-react";
 import { site, icons } from "@/content/site";
 import { Reveal } from "./Reveal";
+import { OfficeRescueAnimation } from "./OfficeRescueAnimation";
 
 export function Services() {
   const { services } = site;
@@ -37,12 +38,7 @@ export function Services() {
                   {services.featured.subtitle}
                 </p>
                 <p className="mt-3 text-muted">{services.featured.summary}</p>
-                <Link href={services.featured.cta.href} className="btn-brass mt-7">
-                  {services.featured.cta.label}
-                </Link>
-              </div>
-              <div className="border-t border-line bg-mist/40 p-8 sm:p-10 md:border-l md:border-t-0">
-                <p className="eyebrow">What&rsquo;s included</p>
+                <p className="mt-6 eyebrow">What&rsquo;s included</p>
                 <ul className="mt-4 space-y-3">
                   {services.featured.points.map((point) => (
                     <li key={point} className="flex items-start gap-3">
@@ -53,6 +49,12 @@ export function Services() {
                     </li>
                   ))}
                 </ul>
+                <Link href={services.featured.cta.href} className="btn-brass mt-7">
+                  {services.featured.cta.label}
+                </Link>
+              </div>
+              <div className="flex items-center justify-center border-t border-line bg-mist/40 p-6 sm:p-10 md:border-l md:border-t-0">
+                <OfficeRescueAnimation />
               </div>
             </div>
           </div>

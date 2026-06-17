@@ -46,7 +46,7 @@ export function About() {
                 {about.serviceArea.label}
               </p>
               <p className="mt-2 text-sm text-muted">
-                {about.serviceArea.towns.join(", ")} —{" "}
+                {about.serviceArea.towns.join(", ")},{" "}
                 {about.serviceArea.remoteNote}
               </p>
             </div>

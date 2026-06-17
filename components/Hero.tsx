@@ -7,6 +7,18 @@ export function Hero() {
   const { hero } = site;
   return (
     <section id="top" className="relative overflow-hidden">
+      {/* Ambient "aurora" — slow drifting brand glows across the whole hero */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
+        <div className="animate-drift absolute -left-24 top-0 h-72 w-72 rounded-full bg-sage/20 blur-3xl" />
+        <div
+          className="animate-drift absolute left-1/3 -bottom-28 h-80 w-80 rounded-full bg-mist-2/50 blur-3xl"
+          style={{ animationDelay: "-7s" }}
+        />
+        <div
+          className="animate-drift absolute -right-16 top-1/4 h-72 w-72 rounded-full bg-gold/15 blur-3xl"
+          style={{ animationDelay: "-13s" }}
+        />
+      </div>
       <div className="container-page grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
         <div className="max-w-xl">
           <p className="hero-in eyebrow" style={{ animationDelay: "60ms" }}>

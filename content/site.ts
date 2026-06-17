@@ -116,7 +116,7 @@ export const site = {
       "An inbox that never stops",
       "Receipts everywhere, glovebox, truck, junk drawer",
     ],
-    closer: "I can help.",
+    closer: "The Remote Admin can help.",
   },
 
   services: {
@@ -137,7 +137,7 @@ export const site = {
       name: "Office Rescue",
       subtitle: "A one-time administrative reset",
       summary:
-        "When paperwork piles up and tasks start slipping through the cracks, I'll help you get caught up and organized with a plan that works moving forward.",
+        "When paperwork piles up and tasks start slipping through the cracks, The Remote Admin will help you get caught up and organized with a plan that works moving forward.",
       points: [
         "Backlog cleanup and organization",
         "Invoicing and customer follow-up",
@@ -464,7 +464,13 @@ export const site = {
       errorTitle: "Hmm, that didn't go through.",
       errorBody:
         "Something went wrong on my end. Please try again, or email me directly at office@the-remote-admin.com.",
-      needOptions: ["Office Rescue", "Financial Administration", "Admin", "Invoicing"],
+      needOptions: [
+        "Office Rescue",
+        "Ongoing admin support",
+        "Financial Administration",
+        "Special project",
+        "General support",
+      ],
     },
     jotform: {
       label: "Serious about working together? Start the New Client Intake →",

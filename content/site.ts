@@ -72,11 +72,8 @@ export const site = {
     jotform: "https://form.jotform.com/243524519236154",
     facebook: "https://facebook.com/TheRemoteAdminServices",
     instagram: "https://www.instagram.com/theremoteadmin/",
-    // Clean Google search that surfaces Karen's Business Profile + reviews.
-    // TODO(Karen): swap for the exact Google Business Profile / "write a review"
-    // link (g.page/r/… or maps share link) once available.
-    google:
-      "https://www.google.com/search?q=The+Remote+Admin+Amherst+NH",
+    // Karen's Google share link (from her Business Profile).
+    google: "https://share.google/U4LdybsVORFwJJrXI",
   },
 
   nav: [

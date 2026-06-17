@@ -400,6 +400,11 @@ export const site = {
         logo: "/clients/complete-masonry.webp",
         url: "",
       },
+      {
+        name: "The Maine Cleaning Co.",
+        logo: "/clients/the-maine-cleaning-co.webp",
+        url: "",
+      },
     ],
   },
 

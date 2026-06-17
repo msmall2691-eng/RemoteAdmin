@@ -24,6 +24,30 @@ export function Services() {
           className="h-[32rem] w-auto"
         />
       </div>
+      {/* Faded background words — a soft sense of everything handled */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 overflow-hidden font-display font-semibold text-ink/[0.05]"
+      >
+        <span className="absolute left-[2%] top-[9%] text-4xl sm:text-5xl">
+          Reconciliations
+        </span>
+        <span className="absolute right-[3%] top-[19%] text-3xl sm:text-5xl">
+          Collections
+        </span>
+        <span className="absolute left-[4%] top-[46%] text-3xl sm:text-5xl">
+          Light bookkeeping
+        </span>
+        <span className="absolute right-[2%] top-[56%] text-3xl sm:text-4xl">
+          Office support
+        </span>
+        <span className="absolute bottom-[16%] left-[6%] text-3xl sm:text-4xl">
+          Records
+        </span>
+        <span className="absolute bottom-[8%] right-[5%] text-3xl sm:text-5xl">
+          Follow-up
+        </span>
+      </div>
       <div className="container-page py-20 sm:py-24">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">{services.eyebrow}</p>

@@ -3,12 +3,14 @@ import { Check } from "lucide-react";
 import { site, icons } from "@/content/site";
 import { Reveal } from "./Reveal";
 import { AmbientGlow } from "./AmbientGlow";
+import { LogoWatermark } from "./LogoWatermark";
 
 export function Packages() {
   const { packages } = site;
   return (
     <section id="packages" className="relative overflow-hidden bg-mist/50">
       <AmbientGlow />
+      <LogoWatermark className="-right-20 top-12" size="h-[30rem]" />
       <div className="container-page py-20 sm:py-24">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">{packages.eyebrow}</p>

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 import { site } from "@/content/site";
 
 export const runtime = "nodejs";
@@ -8,7 +8,12 @@ export const runtime = "nodejs";
  * Quick contact form handler.
  * - Honeypot (`company`) silently drops bots.
  * - Simple in-memory, per-IP rate limit (best-effort; resets on cold start).
- * - Delivers via Resend to Karen's inbox.
+ * - Delivers via Gmail SMTP straight to Karen's inbox.
+ *
+ * Required env vars (set in Vercel → Settings → Environment Variables):
+ *   GMAIL_USER          the Gmail/Workspace address that sends (e.g. office@the-remote-admin.com)
+ *   GMAIL_APP_PASSWORD  a 16-char Google "App Password" for that account (needs 2FA on)
+ *   CONTACT_TO_EMAIL    where inquiries land (defaults to GMAIL_USER, then the site email)
  */
 
 type Payload = {
@@ -84,20 +89,25 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Message too long." }, { status: 400 });
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL ?? site.business.email;
-  const from = process.env.CONTACT_FROM_EMAIL ?? "website@the-remote-admin.com";
+  const gmailUser = process.env.GMAIL_USER;
+  const gmailPass = process.env.GMAIL_APP_PASSWORD;
+  const to = process.env.CONTACT_TO_EMAIL ?? gmailUser ?? site.business.email;
 
-  // Without a configured key we can't deliver — fail clearly (also helps in dev).
-  if (!apiKey) {
-    console.error("RESEND_API_KEY is not set; cannot send contact email.");
+  // Without credentials we can't deliver — fail clearly (also helps in dev).
+  if (!gmailUser || !gmailPass) {
+    console.error(
+      "GMAIL_USER / GMAIL_APP_PASSWORD not set; cannot send contact email.",
+    );
     return NextResponse.json(
       { error: "Email is not configured yet." },
       { status: 500 },
     );
   }
 
-  const resend = new Resend(apiKey);
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: { user: gmailUser, pass: gmailPass },
+  });
 
   const needsLine = needs.length ? needs.join(", ") : "Not specified";
   const html = `
@@ -110,29 +120,22 @@ export async function POST(request: Request) {
   `;
 
   try {
-    const { error } = await resend.emails.send({
-      from: `The Remote Admin Website <${from}>`,
-      to: [to],
+    await transporter.sendMail({
+      // Gmail sends as the authenticated account; show a friendly name.
+      from: `"The Remote Admin Website" <${gmailUser}>`,
+      to,
       replyTo: contact.includes("@") ? contact : undefined,
       subject: `New inquiry from ${name}`,
       html,
       text: `New website inquiry\n\nName: ${name}\nContact: ${contact}\nNeeds: ${needsLine}\n\nMessage:\n${message || "(no message)"}`,
     });
 
-    if (error) {
-      console.error("Resend error:", error);
-      return NextResponse.json(
-        { error: "Could not send your message." },
-        { status: 502 },
-      );
-    }
-
     return NextResponse.json({ ok: true });
   } catch (err) {
-    console.error("Contact route error:", err);
+    console.error("Contact route (Gmail) error:", err);
     return NextResponse.json(
-      { error: "Something went wrong." },
-      { status: 500 },
+      { error: "Could not send your message." },
+      { status: 502 },
     );
   }
 }

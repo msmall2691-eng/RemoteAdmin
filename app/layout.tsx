@@ -28,20 +28,23 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? site.business.url;
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${site.business.name} — Virtual Admin & Bookkeeping in Southern NH`,
+    default: `${site.business.name} — Invoicing & Admin Support in Southern NH`,
     template: `%s · ${site.business.name}`,
   },
   description:
-    "Let's get your business organized — and get you paid. Virtual admin & bookkeeping for small, service-based businesses across southern New Hampshire. Book a free discovery call.",
+    "Get your invoices out and your payments in. Invoicing, collections, and administrative support for small, service-based businesses across southern New Hampshire. Book a free discovery call.",
   applicationName: site.business.name,
   authors: [{ name: site.business.owner }],
   keywords: [
+    "invoicing",
+    "accounts receivable",
+    "collections",
+    "administrative support",
     "virtual admin",
-    "bookkeeping",
+    "contractor admin support",
     "Amherst NH",
     "southern New Hampshire",
     "QuickBooks",
-    "invoicing",
     "small business admin",
     "Office Rescue",
   ],
@@ -50,16 +53,16 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl,
     siteName: site.business.name,
-    title: `${site.business.name} — Virtual Admin & Bookkeeping in Southern NH`,
+    title: `${site.business.name} — Invoicing & Admin Support in Southern NH`,
     description:
-      "You focus on your customers; I'll take care of the admin. Bookkeeping & virtual admin for small businesses in southern New Hampshire.",
+      "You focus on your customers; I'll get the invoices out, chase the payments, and handle the admin. Serving small businesses across southern New Hampshire.",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.business.name} — Virtual Admin & Bookkeeping`,
+    title: `${site.business.name} — Invoicing & Admin Support`,
     description:
-      "You focus on your customers; I'll take care of the admin. Serving southern New Hampshire.",
+      "You focus on your customers; I'll get the invoices out and the payments in. Serving southern New Hampshire.",
   },
   robots: {
     index: true,

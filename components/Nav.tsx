@@ -31,7 +31,7 @@ export function Nav() {
       }`}
     >
       <nav
-        className="container-page flex h-16 items-center justify-between"
+        className="container-page flex h-16 items-center justify-between sm:h-20"
         aria-label="Primary"
       >
         <a
@@ -45,7 +45,7 @@ export function Nav() {
             width={445}
             height={446}
             priority
-            className="h-12 w-auto"
+            className="h-14 w-auto sm:h-16"
           />
         </a>
 

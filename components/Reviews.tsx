@@ -39,7 +39,7 @@ export function Reviews() {
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
                       key={i}
-                      className="h-4 w-4 fill-brass text-brass"
+                      className="h-4 w-4 fill-gold text-gold"
                       aria-hidden="true"
                     />
                   ))}

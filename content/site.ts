@@ -81,8 +81,9 @@ export const site = {
   ],
 
   hero: {
-    eyebrow: "Virtual admin & bookkeeping · Southern New Hampshire",
-    headline: "Let's get your business organized — and get you paid.",
+    eyebrow: "Admin support, invoicing & collections · Southern New Hampshire",
+    headline:
+      "Virtual Administrative Office Support — For Contractors & Service-Based Businesses",
     subcopy: "You focus on your customers; I'll take care of the admin.",
     primaryCta: { label: "Book a call", href: "#book" },
     secondaryCta: { label: "See what I do", href: "#services" },
@@ -105,56 +106,57 @@ export const site = {
 
   services: {
     eyebrow: "What I do",
-    heading: "Practical help, handled quietly in the background.",
+    heading: "Administrative support that keeps your business moving.",
     featured: {
       icon: "sparkles" as IconName,
       badge: "Signature",
       name: "Office Rescue",
+      subtitle: "A one-time administrative reset",
       summary:
-        "A one-time deep catch-up for when things have piled up. We dig out of the backlog together — invoices sent, payments chased, receipts sorted, files organized — so you start fresh with a back office that's actually under control.",
+        "When paperwork piles up and tasks start slipping through the cracks, I'll help you get caught up and organized with a plan that works moving forward.",
       points: [
-        "Catch up overdue invoicing and send what's owed",
-        "Follow up on unpaid balances so you get paid",
-        "Sort and file the receipt-and-paperwork backlog",
-        "Hand you a tidy, repeatable system to keep it that way",
+        "Backlog cleanup and organization",
+        "Invoicing and customer follow-up",
+        "Forms, files, and process improvements",
+        "A clear plan to keep things running smoothly",
       ],
       cta: { label: "Start your rescue", href: "#book" },
     },
     buckets: [
       {
         icon: "file-text" as IconName,
-        name: "Bookkeeping",
+        name: "Financial Administration",
         summary:
-          "Day-to-day numbers kept clean and current — so you always know where you stand.",
+          "Stay on top of your numbers without spending evenings buried in paperwork.",
         points: [
-          "Invoicing & accounts receivable",
-          "Bill pay & accounts payable",
-          "Transaction categorization & reconciliations",
-          "Monthly reports you can actually read",
+          "Invoicing and accounts receivable",
+          "Customer payment follow-up",
+          "Accounts payable support",
+          "Bank and credit card reconciliations",
         ],
       },
       {
         icon: "calendar-days" as IconName,
         name: "Administrative Services",
         summary:
-          "The everyday admin that eats your evenings — managed for you.",
+          "The day-to-day support that keeps your office running efficiently.",
         points: [
-          "Inbox & email management",
-          "Scheduling & calendar coordination",
-          "Customer follow-up & communications",
-          "Document prep & data entry",
+          "Email and communication management",
+          "Scheduling and coordination",
+          "Customer follow-up and service support",
+          "Data entry, forms, and documentation",
         ],
       },
       {
         icon: "folder-open" as IconName,
-        name: "Additional Support",
+        name: "Project Support",
         summary:
-          "Extra hands for the projects and odd jobs that keep getting pushed to next week.",
+          "One-time projects and special tasks that need attention but never seem to reach the top of the list.",
         points: [
-          "File & folder organization",
-          "Spreadsheet & list cleanup",
-          "Onboarding new tools & templates",
-          "Project-based and seasonal help",
+          "File and folder organization",
+          "Spreadsheet cleanup and setup",
+          "Forms, templates, and workflows",
+          "Seasonal and project-based assistance",
         ],
       },
     ],
@@ -192,7 +194,7 @@ export const site = {
         features: [
           "Recurring bookkeeping",
           "Ongoing invoicing & follow-up",
-          "Inbox & scheduling support",
+          "Customer follow-up & communication",
           "Monthly check-in",
         ],
         highlighted: false,
@@ -389,7 +391,7 @@ export const site = {
       errorTitle: "Hmm, that didn't go through.",
       errorBody:
         "Something went wrong on our end. Please try again, or email us directly at office@the-remote-admin.com.",
-      needOptions: ["Office Rescue", "Bookkeeping", "Admin", "Invoicing"],
+      needOptions: ["Office Rescue", "Financial Administration", "Admin", "Invoicing"],
     },
     jotform: {
       label: "Serious about working together? Start the New Client Intake →",
@@ -398,7 +400,7 @@ export const site = {
 
   footer: {
     blurb:
-      "Virtual admin & bookkeeping for small, service-based businesses across southern New Hampshire.",
+      "Administrative support, invoicing & collections for small, service-based businesses across southern New Hampshire.",
     copyright: "Karen Felch · Amherst, NH",
   },
 } as const;

@@ -7,18 +7,19 @@
      Stored as space-separated RGB channels so Tailwind alpha modifiers
      (e.g. bg-mist/50) work via rgb(var(--token) / <alpha-value>).
      For direct CSS/SVG use, wrap in rgb(): rgb(var(--ink)). */
-  --ink: 30 72 96; /* #1e4860 deep blue — text, headings */
-  --ink-2: 42 93 122; /* #2a5d7a */
-  --oat: 250 248 243; /* #faf8f3 warm off-white page bg */
-  --card: 255 253 249; /* #fffdf9 */
-  --mist: 221 232 243; /* #dde8f3 powder-blue surface (a touch deeper) */
-  --mist-2: 201 219 235; /* #c9dbeb */
-  --sage: 95 146 119; /* #5f9277 green — secondary accent (keeps her theme) */
-  --sage-deep: 63 107 86; /* #3f6b56 deep green */
-  --brass: 47 111 156; /* #2f6f9c blue — primary CTAs & badges */
-  --brass-deep: 40 93 131; /* #285d83 deep blue */
-  --line: 214 224 234; /* #d6e0ea soft blue-gray border */
-  --muted: 84 105 120; /* #546978 muted blue-gray text */
+  --ink: 36 63 99; /* #243f63 deep periwinkle-blue — headings & body text */
+  --ink-2: 47 80 121; /* #2f5079 */
+  --oat: 247 249 252; /* #f7f9fc soft cool white page bg */
+  --card: 255 255 255; /* #ffffff */
+  --mist: 230 237 248; /* #e6edf8 light periwinkle surface */
+  --mist-2: 211 224 242; /* #d3e0f2 */
+  --sage: 72 112 173; /* #4870ad medium blue accent */
+  --sage-deep: 47 82 136; /* #2f5288 deep blue — links/accent text */
+  --brass: 44 92 160; /* #2c5ca0 primary blue — CTAs & links */
+  --brass-deep: 33 72 130; /* #214882 deep blue */
+  --gold: 236 194 74; /* #ecc24a logo gold — highlight accent only */
+  --line: 216 226 240; /* #d8e2f0 soft blue border */
+  --muted: 76 96 118; /* #4c6076 muted blue-gray text */
 }
 
 @layer base {
@@ -97,7 +98,7 @@
         0deg,
         transparent,
         transparent 31px,
-        rgba(47, 111, 156, 0.05) 32px
+        rgba(44, 92, 160, 0.05) 32px
       );
   }
 }

@@ -1,15 +1,29 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Check } from "lucide-react";
 import { site, icons } from "@/content/site";
 import { Reveal } from "./Reveal";
 import { OfficeRescueAnimation } from "./OfficeRescueAnimation";
+import { ServiceMini } from "./ServiceMini";
 
 export function Services() {
   const { services } = site;
   const FeaturedIcon = icons[services.featured.icon];
 
   return (
-    <section id="services" className="texture-paper">
+    <section id="services" className="relative overflow-hidden texture-paper">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-24 top-24 -z-10 opacity-[0.05]"
+      >
+        <Image
+          src="/tra-logo.png"
+          alt=""
+          width={445}
+          height={446}
+          className="h-[32rem] w-auto"
+        />
+      </div>
       <div className="container-page py-20 sm:py-24">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">{services.eyebrow}</p>
@@ -63,13 +77,10 @@ export function Services() {
         {/* Three official buckets */}
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {services.buckets.map((bucket, i) => {
-            const Icon = icons[bucket.icon];
             return (
               <Reveal as="article" key={bucket.name} delay={i * 80}>
                 <div className="card hover-lift h-full p-7">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-mist text-sage-deep">
-                    <Icon className="h-6 w-6" />
-                  </span>
+                  <ServiceMini iconName={bucket.icon} items={bucket.mini} />
                   <h3 className="mt-5 font-display text-xl font-semibold text-ink">
                     {bucket.name}
                   </h3>

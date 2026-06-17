@@ -12,9 +12,9 @@ import { FileText, Receipt, Mail, Check } from "lucide-react";
  * skipped entirely under prefers-reduced-motion (we render the settled state).
  */
 const messy = [
-  { icon: FileText, label: "Invoice #1042", x: -16, y: -10, r: -11 },
+  { icon: FileText, label: "Paperwork", x: -16, y: -10, r: -11 },
   { icon: Receipt, label: "Receipts", x: 18, y: -4, r: 8 },
-  { icon: Mail, label: "Inbox (37)", x: -8, y: 12, r: 5 },
+  { icon: Mail, label: "Follow-ups", x: -8, y: 12, r: 5 },
 ];
 
 export function OfficeRescueAnimation() {
@@ -75,7 +75,7 @@ export function OfficeRescueAnimation() {
           />
         </div>
         <ul className="mt-4 space-y-2.5">
-          {["Invoices sent", "Payments followed up", "Receipts filed"].map(
+          {["Backlog cleared", "Files organized", "Follow-ups done"].map(
             (line, i) => (
               <li
                 key={line}
@@ -129,7 +129,7 @@ export function OfficeRescueAnimation() {
         style={{ transitionDelay: settled ? "700ms" : "0ms" }}
       >
         <Check className="h-4 w-4" strokeWidth={3} />
-        Paid +$2,400
+        Caught up!
       </div>
     </div>
   );

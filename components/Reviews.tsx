@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, Quote, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { site } from "@/content/site";
 import { Reveal } from "./Reveal";
 
@@ -124,6 +124,20 @@ export function Reviews() {
             </p>
           </div>
         </Reveal>
+
+        {site.links.google && (
+          <Reveal className="mt-8 text-center">
+            <a
+              href={site.links.google}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-sage-deep hover:text-ink"
+            >
+              See our reviews on Google
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          </Reveal>
+        )}
       </div>
     </section>
   );

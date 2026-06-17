@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, Facebook, Instagram, ExternalLink } from "lucide-react";
+import { Mail, Phone, Facebook, Instagram, MapPin, ExternalLink } from "lucide-react";
 import { site } from "@/content/site";
 
 export function Footer() {
@@ -99,6 +99,19 @@ export function Footer() {
                   >
                     <Instagram className="h-4 w-4" />
                     Instagram
+                  </a>
+                </li>
+              )}
+              {links.google && (
+                <li>
+                  <a
+                    href={links.google}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-ink"
+                  >
+                    <MapPin className="h-4 w-4" />
+                    Find us on Google
                   </a>
                 </li>
               )}

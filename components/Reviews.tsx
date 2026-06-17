@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { site } from "@/content/site";
 import { Reveal } from "./Reveal";
@@ -8,9 +8,23 @@ import { Reveal } from "./Reveal";
 export function Reviews() {
   const { reviews } = site;
   const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
   const count = reviews.items.length;
 
   const go = (dir: number) => setActive((a) => (a + dir + count) % count);
+
+  // Gently auto-advance; pause on hover/focus and under reduced-motion.
+  useEffect(() => {
+    if (paused || count <= 1) return;
+    if (
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return;
+    }
+    const id = setInterval(() => setActive((a) => (a + 1) % count), 6000);
+    return () => clearInterval(id);
+  }, [paused, count]);
 
   return (
     <section id="reviews">
@@ -24,7 +38,13 @@ export function Reviews() {
 
         {/* Carousel */}
         <Reveal className="mx-auto mt-12 max-w-2xl">
-          <div className="card relative p-8 sm:p-10">
+          <div
+            className="card relative p-8 sm:p-10"
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+            onFocusCapture={() => setPaused(true)}
+            onBlurCapture={() => setPaused(false)}
+          >
             <Quote className="h-8 w-8 text-brass/50" aria-hidden="true" />
             <div
               className="mt-4 min-h-[7rem]"

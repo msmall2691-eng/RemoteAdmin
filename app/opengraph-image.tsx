@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { site } from "@/content/site";
 
-export const alt = `${site.business.name} — Virtual Admin & Bookkeeping in Southern NH`;
+export const alt = `${site.business.name} — Invoicing & Administrative Support in Southern NH`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -20,7 +20,7 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundColor: "#1e4860",
+          backgroundColor: "#243f63",
           padding: "72px",
           fontFamily: "Georgia, serif",
         }}
@@ -31,7 +31,7 @@ export default function OpengraphImage() {
               width: 64,
               height: 64,
               borderRadius: 16,
-              backgroundColor: "#faf8f3",
+              backgroundColor: "#f7f9fc",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
@@ -39,11 +39,11 @@ export default function OpengraphImage() {
               padding: "0 14px",
             }}
           >
-            <div style={{ height: 6, borderRadius: 3, backgroundColor: "#1e4860" }} />
-            <div style={{ height: 6, width: "100%", borderRadius: 3, backgroundColor: "#5f9277" }} />
-            <div style={{ height: 6, width: "60%", borderRadius: 3, backgroundColor: "#2f6f9c" }} />
+            <div style={{ height: 6, borderRadius: 3, backgroundColor: "#243f63" }} />
+            <div style={{ height: 6, width: "100%", borderRadius: 3, backgroundColor: "#4870ad" }} />
+            <div style={{ height: 6, width: "60%", borderRadius: 3, backgroundColor: "#ecc24a" }} />
           </div>
-          <div style={{ display: "flex", color: "#faf8f3", fontSize: 32, fontWeight: 600 }}>
+          <div style={{ display: "flex", color: "#f7f9fc", fontSize: 32, fontWeight: 600 }}>
             The Remote Admin
           </div>
         </div>
@@ -52,34 +52,34 @@ export default function OpengraphImage() {
           <div
             style={{
               display: "flex",
-              color: "#2f6f9c",
+              color: "#ecc24a",
               fontSize: 24,
               letterSpacing: 2,
               textTransform: "uppercase",
               fontFamily: "system-ui, sans-serif",
             }}
           >
-            {"Virtual admin & bookkeeping · Southern NH"}
+            {"Admin support, invoicing & collections · Southern NH"}
           </div>
           <div
             style={{
               display: "flex",
-              color: "#faf8f3",
-              fontSize: 68,
+              color: "#f7f9fc",
+              fontSize: 64,
               fontWeight: 600,
               lineHeight: 1.05,
-              maxWidth: 920,
+              maxWidth: 960,
             }}
           >
-            {"Let’s get your business organized — and get you paid."}
+            {"Get your invoices out — and your payments in."}
           </div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-          <div style={{ display: "flex", color: "#2f6f9c", fontSize: 30, fontStyle: "italic" }}>
+          <div style={{ display: "flex", color: "#ecc24a", fontSize: 30, fontStyle: "italic" }}>
             {site.business.slogan}
           </div>
-          <div style={{ display: "flex", color: "#c9dbeb", fontSize: 24 }}>
+          <div style={{ display: "flex", color: "#cdddf2", fontSize: 24 }}>
             {`${site.business.owner} · Amherst, NH`}
           </div>
         </div>

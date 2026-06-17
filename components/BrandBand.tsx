@@ -23,8 +23,8 @@ export function BrandBand() {
             {business.slogan}
           </p>
           <p className="mt-3 text-muted">
-            Virtual admin &amp; bookkeeping for small, service-based businesses
-            across southern New Hampshire.
+            Administrative support, invoicing &amp; collections for small,
+            service-based businesses across southern New Hampshire.
           </p>
         </Reveal>
       </div>

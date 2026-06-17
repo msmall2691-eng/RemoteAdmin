@@ -26,13 +26,16 @@ export function Services() {
                   <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brass/15 text-brass-deep">
                     <FeaturedIcon className="h-6 w-6" />
                   </span>
-                  <span className="rounded-pill bg-brass px-3 py-1 text-xs font-semibold uppercase tracking-wider text-oat">
+                  <span className="rounded-pill bg-gold px-3 py-1 text-xs font-semibold uppercase tracking-wider text-ink">
                     {services.featured.badge}
                   </span>
                 </div>
                 <h3 className="mt-5 font-display text-2xl font-semibold text-ink sm:text-3xl">
                   {services.featured.name}
                 </h3>
+                <p className="mt-1 font-display text-lg italic text-sage-deep">
+                  {services.featured.subtitle}
+                </p>
                 <p className="mt-3 text-muted">{services.featured.summary}</p>
                 <Link href={services.featured.cta.href} className="btn-brass mt-7">
                   {services.featured.cta.label}

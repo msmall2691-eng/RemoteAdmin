@@ -19,6 +19,7 @@ const config: Config = {
         "sage-deep": "rgb(var(--sage-deep) / <alpha-value>)",
         brass: "rgb(var(--brass) / <alpha-value>)",
         "brass-deep": "rgb(var(--brass-deep) / <alpha-value>)",
+        gold: "rgb(var(--gold) / <alpha-value>)",
         line: "rgb(var(--line) / <alpha-value>)",
         muted: "rgb(var(--muted) / <alpha-value>)",
       },

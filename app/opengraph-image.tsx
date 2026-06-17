@@ -1,4 +1,6 @@
 import { ImageResponse } from "next/og";
+import { readFileSync } from "fs";
+import { join } from "path";
 import { site } from "@/content/site";
 
 export const alt = `${site.business.name} — Invoicing & Administrative Support in Southern NH`;
@@ -6,11 +8,13 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 /**
- * Branded OG share image. Uses the site's color tokens and a tidy-stack mark.
- * NOTE(Karen): once a headshot is in /public, this can be extended to include
- * her photo via an <img> with an absolute URL.
+ * Branded OG share image — features Karen's real logo on a teal band.
  */
 export default function OpengraphImage() {
+  // Embed the real logo (read at build time) as a data URI so satori can render it.
+  const logo = readFileSync(join(process.cwd(), "public/tra-logo.png"));
+  const logoSrc = `data:image/png;base64,${logo.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -20,30 +24,28 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundColor: "#243f63",
+          backgroundColor: "#37606a",
           padding: "72px",
           fontFamily: "Georgia, serif",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
           <div
             style={{
-              width: 64,
-              height: 64,
-              borderRadius: 16,
-              backgroundColor: "#f7f9fc",
+              width: 96,
+              height: 96,
+              borderRadius: 20,
+              backgroundColor: "#ffffff",
               display: "flex",
-              flexDirection: "column",
+              alignItems: "center",
               justifyContent: "center",
-              gap: 7,
-              padding: "0 14px",
+              padding: 8,
             }}
           >
-            <div style={{ height: 6, borderRadius: 3, backgroundColor: "#243f63" }} />
-            <div style={{ height: 6, width: "100%", borderRadius: 3, backgroundColor: "#4870ad" }} />
-            <div style={{ height: 6, width: "60%", borderRadius: 3, backgroundColor: "#ecc24a" }} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={logoSrc} width={80} height={80} alt="" />
           </div>
-          <div style={{ display: "flex", color: "#f7f9fc", fontSize: 32, fontWeight: 600 }}>
+          <div style={{ display: "flex", color: "#f7f4ed", fontSize: 34, fontWeight: 600 }}>
             The Remote Admin
           </div>
         </div>
@@ -52,7 +54,7 @@ export default function OpengraphImage() {
           <div
             style={{
               display: "flex",
-              color: "#ecc24a",
+              color: "#e6b84c",
               fontSize: 24,
               letterSpacing: 2,
               textTransform: "uppercase",
@@ -64,7 +66,7 @@ export default function OpengraphImage() {
           <div
             style={{
               display: "flex",
-              color: "#f7f9fc",
+              color: "#f7f4ed",
               fontSize: 64,
               fontWeight: 600,
               lineHeight: 1.05,
@@ -76,10 +78,10 @@ export default function OpengraphImage() {
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-          <div style={{ display: "flex", color: "#ecc24a", fontSize: 30, fontStyle: "italic" }}>
+          <div style={{ display: "flex", color: "#e6b84c", fontSize: 30, fontStyle: "italic" }}>
             {site.business.slogan}
           </div>
-          <div style={{ display: "flex", color: "#cdddf2", fontSize: 24 }}>
+          <div style={{ display: "flex", color: "#bfd4d7", fontSize: 24 }}>
             {`${site.business.owner} · Amherst, NH`}
           </div>
         </div>

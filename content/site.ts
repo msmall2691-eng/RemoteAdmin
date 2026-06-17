@@ -90,6 +90,16 @@ export const site = {
     trustLine: ["Local", "Reliable", "Confidential"],
   },
 
+  valueProps: {
+    heading: "Behind every organized business is someone handling the chaos.",
+    items: [
+      { title: "Accurate", body: "Financial support you can count on." },
+      { title: "Organized", body: "Your systems and documents, in order." },
+      { title: "Reliable", body: "Follow-through on every task." },
+      { title: "Easy to work with", body: "Clear, friendly communication." },
+    ],
+  },
+
   pain: {
     eyebrow: "Sound familiar?",
     heading: "If your back office is running you, you're not alone.",

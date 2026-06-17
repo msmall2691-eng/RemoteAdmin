@@ -87,7 +87,7 @@ export const site = {
     eyebrow:
       "Admin office support, light bookkeeping, collections, and more · Southern New Hampshire",
     headline:
-      "Virtual Administrative Office Support, For Contractors & Service-Based Businesses",
+      "Virtual administrative office support for contractors & service businesses",
     subcopy: "You focus on your customers; I'll take care of the admin.",
     primaryCta: { label: "Book a call", href: "#book" },
     secondaryCta: { label: "See what I do", href: "#services" },
@@ -121,6 +121,7 @@ export const site = {
   services: {
     eyebrow: "What I do",
     heading: "Administrative support that keeps your business moving.",
+    intro: "Especially for contractors and service-based businesses.",
     strengths: [
       "Invoicing & collections",
       "Contractor support",
@@ -152,8 +153,8 @@ export const site = {
           "The day-to-day support that keeps your office running efficiently.",
         points: [
           "Email and communication management",
-          "Scheduling and coordination",
           "Customer follow-up and service support",
+          "W-9 & COI (certificate of insurance) requests",
           "Data entry, forms, and documentation",
         ],
         mini: ["Customers followed up", "Paperwork in order"],
@@ -199,6 +200,34 @@ export const site = {
       },
     ],
     tagline: "Help your small business breathe again.",
+  },
+
+  tools: {
+    eyebrow: "Tools & systems",
+    heading: "I work in the tools you already use.",
+    body: "No need to learn anything new, I'll meet your business where it already runs.",
+    items: [
+      "QuickBooks",
+      "Jobber",
+      "Google Workspace",
+      "Gmail",
+      "Google Drive",
+      "Google Sheets",
+      "Microsoft Excel",
+      "Microsoft Teams",
+      "Outlook",
+      "Windows",
+      "Dropbox",
+      "Zoom",
+      "Calendly",
+      "and more",
+    ],
+  },
+
+  cta: {
+    heading: "Ready to hand off the admin?",
+    body: "Book a free, no-pressure discovery call and let's get you caught up.",
+    button: "Book a call",
   },
 
   packages: {

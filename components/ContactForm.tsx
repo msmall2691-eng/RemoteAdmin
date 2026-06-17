@@ -53,11 +53,6 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="card p-7 sm:p-8" noValidate>
-      <h3 className="font-display text-xl font-semibold text-ink">
-        {contact.heading}
-      </h3>
-      <p className="mt-1 text-sm text-muted">{contact.body}</p>
-
       {/* Honeypot field — visually hidden, ignored by humans */}
       <div className="absolute left-[-9999px]" aria-hidden="true">
         <label htmlFor="company">Company</label>

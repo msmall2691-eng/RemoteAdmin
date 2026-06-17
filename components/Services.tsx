@@ -30,6 +30,9 @@ export function Services() {
           <h2 className="mt-3 font-display text-3xl font-semibold tracking-tightish text-ink sm:text-4xl">
             {services.heading}
           </h2>
+          <p className="mt-3 font-display text-lg italic text-sage-deep">
+            {services.intro}
+          </p>
         </Reveal>
 
         {/* What I'm great at — quick niche overview */}

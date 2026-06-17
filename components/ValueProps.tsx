@@ -1,13 +1,15 @@
 import { BadgeCheck, Layers, ShieldCheck, MessagesSquare } from "lucide-react";
 import { site } from "@/content/site";
 import { Reveal } from "./Reveal";
+import { AmbientGlow } from "./AmbientGlow";
 
 const icons = [BadgeCheck, Layers, ShieldCheck, MessagesSquare];
 
 export function ValueProps() {
   const { valueProps } = site;
   return (
-    <section className="bg-mist/50">
+    <section className="relative overflow-hidden bg-mist/50">
+      <AmbientGlow />
       <div className="container-page py-16 sm:py-20">
         <Reveal className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-2xl font-semibold tracking-tightish text-ink sm:text-3xl">

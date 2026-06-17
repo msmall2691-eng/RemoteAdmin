@@ -2,11 +2,13 @@ import Link from "next/link";
 import { Check } from "lucide-react";
 import { site, icons } from "@/content/site";
 import { Reveal } from "./Reveal";
+import { AmbientGlow } from "./AmbientGlow";
 
 export function Packages() {
   const { packages } = site;
   return (
-    <section id="packages" className="bg-mist/50">
+    <section id="packages" className="relative overflow-hidden bg-mist/50">
+      <AmbientGlow />
       <div className="container-page py-20 sm:py-24">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">{packages.eyebrow}</p>

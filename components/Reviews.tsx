@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Star, Quote, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { site } from "@/content/site";
 import { Reveal } from "./Reveal";
+import { LogoWatermark } from "./LogoWatermark";
 
 export function Reviews() {
   const { reviews } = site;
@@ -27,7 +28,8 @@ export function Reviews() {
   }, [paused, count]);
 
   return (
-    <section id="reviews">
+    <section id="reviews" className="relative overflow-hidden">
+      <LogoWatermark className="-left-24 bottom-4" size="h-[28rem]" />
       <div className="container-page py-20 sm:py-24">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">{reviews.eyebrow}</p>

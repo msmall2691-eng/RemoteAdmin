@@ -88,7 +88,7 @@ export const site = {
   hero: {
     eyebrow: "Admin support, light bookkeeping & collections · Southern NH",
     headline:
-      "Virtual administrative office support for contractors & service businesses",
+      "Virtual administrative office support for contractors & service-based businesses",
     subcopy: "You focus on your customers; I'll take care of the admin.",
     primaryCta: { label: "Book a call", href: "#book" },
     secondaryCta: { label: "See what I do", href: "#services" },

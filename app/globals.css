@@ -9,7 +9,7 @@
      For direct CSS/SVG use, wrap in rgb(): rgb(var(--ink)). */
   --ink: 55 96 106; /* #37606a deep teal — headings & text (primary) */
   --ink-2: 74 124 132; /* #4a7c84 teal */
-  --oat: 247 244 237; /* #f7f4ed warm cream page bg */
+  --oat: 252 250 232; /* #fcfae8 very pale yellow page bg */
   --card: 255 255 255; /* #ffffff */
   --mist: 215 228 229; /* #d7e4e5 soft teal-blue surface */
   --mist-2: 191 212 215; /* #bfd4d7 dusty blue */

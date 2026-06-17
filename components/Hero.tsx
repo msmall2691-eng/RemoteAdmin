@@ -55,22 +55,29 @@ export function Hero() {
           </ul>
         </div>
 
-        <div className="relative flex items-center justify-center">
+        <div className="relative flex items-center justify-center py-6">
           {/* Soft drifting color blobs add quiet, modern movement */}
-          <div className="animate-drift absolute left-2 top-2 -z-10 h-48 w-48 rounded-full bg-sage/25 blur-2xl" />
+          <div className="animate-drift absolute left-0 top-2 -z-10 h-56 w-56 rounded-full bg-sage/25 blur-3xl" />
           <div
-            className="animate-drift absolute bottom-2 right-2 -z-10 h-52 w-52 rounded-full bg-gold/25 blur-2xl"
+            className="animate-drift absolute bottom-2 right-0 -z-10 h-60 w-60 rounded-full bg-gold/25 blur-3xl"
             style={{ animationDelay: "-9s" }}
           />
+          {/* Slow-rotating brand ring echoes the logo's circle */}
+          <div
+            aria-hidden="true"
+            className="animate-spin-slow absolute -z-10 h-[22rem] w-[22rem] rounded-full border-2 border-dashed border-sage/25 sm:h-[26rem] sm:w-[26rem] lg:h-[30rem] lg:w-[30rem]"
+          />
           <div className="hero-in" style={{ animationDelay: "240ms" }}>
-            <Image
-              src="/tra-logo.png"
-              alt={`${site.business.name} logo`}
-              width={445}
-              height={446}
-              priority
-              className="mx-auto h-auto w-full max-w-sm drop-shadow-sm"
-            />
+            <div className="animate-float">
+              <Image
+                src="/tra-logo.png"
+                alt={`${site.business.name} logo`}
+                width={445}
+                height={446}
+                priority
+                className="mx-auto h-auto w-full max-w-md drop-shadow-md sm:max-w-lg"
+              />
+            </div>
           </div>
         </div>
       </div>

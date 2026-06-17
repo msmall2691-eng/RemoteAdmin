@@ -96,22 +96,24 @@ export function OfficeRescueAnimation() {
         </ul>
       </div>
 
-      {/* The messy cards that fly away as things settle */}
+      {/* The scattered cards settle into a tidy stack near the top */}
       {messy.map((m, i) => {
         const Icon = m.icon;
         return (
           <div
             key={m.label}
-            className="absolute left-1/2 top-1/2 flex w-40 items-center gap-2 rounded-2xl border border-line bg-card px-3.5 py-3 shadow-sm transition-all duration-700 ease-out"
+            className="absolute left-1/2 top-1/2 flex w-44 items-center gap-2 rounded-2xl border border-line bg-card px-3.5 py-3 shadow-sm transition-all duration-700 ease-out"
             style={{
               transform: settled
-                ? `translate(-50%, -50%) translate(${m.x * 0.2}px, -120px) rotate(0deg) scale(0.9)`
+                ? `translate(-50%, -50%) translate(0px, ${-128 + i * 52}px) rotate(0deg)`
                 : `translate(-50%, -50%) translate(${m.x * 4}px, ${m.y * 4}px) rotate(${m.r}deg)`,
-              opacity: settled ? 0 : 1,
+              opacity: 1,
               transitionDelay: settled ? `${i * 90}ms` : "0ms",
             }}
           >
-            <Icon className="h-4 w-4 shrink-0 text-sage-deep" />
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-sage/15 text-sage-deep">
+              <Icon className="h-3.5 w-3.5" />
+            </span>
             <span className="truncate text-sm font-medium text-ink">
               {m.label}
             </span>

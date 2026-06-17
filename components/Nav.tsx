@@ -37,7 +37,7 @@ export function Nav() {
         <a
           href="#top"
           className="flex items-center"
-          aria-label={`${site.business.name} — home`}
+          aria-label={`${site.business.name}, home`}
         >
           <Image
             src="/tra-logo.png"

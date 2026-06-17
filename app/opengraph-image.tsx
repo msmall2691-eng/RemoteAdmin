@@ -3,7 +3,7 @@ import { readFileSync } from "fs";
 import { join } from "path";
 import { site } from "@/content/site";
 
-export const alt = `${site.business.name} — Invoicing & Administrative Support in Southern NH`;
+export const alt = `${site.business.name}, Admin & Bookkeeping Support in Southern NH`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -61,7 +61,7 @@ export default function OpengraphImage() {
               fontFamily: "system-ui, sans-serif",
             }}
           >
-            {"Admin support, invoicing & collections · Southern NH"}
+            {"Admin office support, light bookkeeping, collections, and more"}
           </div>
           <div
             style={{
@@ -73,7 +73,7 @@ export default function OpengraphImage() {
               maxWidth: 960,
             }}
           >
-            {"Get your invoices out — and your payments in."}
+            {"Get caught up, organized, and back in control."}
           </div>
         </div>
 

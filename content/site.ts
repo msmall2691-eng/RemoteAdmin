@@ -81,9 +81,10 @@ export const site = {
   ],
 
   hero: {
-    eyebrow: "Admin support, invoicing & collections · Southern New Hampshire",
+    eyebrow:
+      "Admin office support, light bookkeeping, collections, and more · Southern New Hampshire",
     headline:
-      "Virtual Administrative Office Support — For Contractors & Service-Based Businesses",
+      "Virtual Administrative Office Support, For Contractors & Service-Based Businesses",
     subcopy: "You focus on your customers; I'll take care of the admin.",
     primaryCta: { label: "Book a call", href: "#book" },
     secondaryCta: { label: "See what I do", href: "#services" },
@@ -109,9 +110,9 @@ export const site = {
       "Paperwork stacking up faster than you can file it",
       "Files and folders you can't find when you need them",
       "An inbox that never stops",
-      "Receipts everywhere — glovebox, truck, junk drawer",
+      "Receipts everywhere, glovebox, truck, junk drawer",
     ],
-    closer: "We can help.",
+    closer: "I can help.",
   },
 
   services: {
@@ -198,7 +199,7 @@ export const site = {
         icon: "repeat" as IconName,
         name: "Monthly Support",
         kind: "Ongoing",
-        price: "Starting at — let's talk",
+        price: "Let's talk pricing",
         description:
           "Steady, predictable help every month so the admin never piles up again.",
         features: [
@@ -216,7 +217,7 @@ export const site = {
         kind: "As needed",
         price: "By the project",
         description:
-          "Pick exactly what you need help with, when you need it — no commitment.",
+          "Pick exactly what you need help with, when you need it, no commitment.",
         features: [
           "One-off projects",
           "Seasonal or overflow help",
@@ -227,7 +228,7 @@ export const site = {
         cta: { label: "Ask about à la carte", href: "#book" },
       },
     ],
-    note: "Not sure which fits? Book a call and we'll figure it out together.",
+    note: "Not sure which fits? Book a call and I'll figure it out with you.",
   },
 
   how: {
@@ -237,18 +238,18 @@ export const site = {
       {
         n: 1,
         title: "Book a call",
-        body: "Grab a free discovery call. We talk through what's on your plate and where you're stuck — no pressure, no jargon.",
+        body: "Grab a free discovery call. I'll talk through what's on your plate and where you're stuck, no pressure, no jargon.",
         cta: { label: "Book your discovery call", href: "#book" },
       },
       {
         n: 2,
-        title: "We build your plan",
-        body: "The Remote Admin maps out exactly what we'll take off your hands, how we'll work together, and what it costs — then you approve it.",
+        title: "I build your plan",
+        body: "I'll map out exactly what I'll take off your hands, how I'll work with you, and what it costs, then you approve it.",
       },
       {
         n: 3,
         title: "You get your time back",
-        body: "We handle the admin in the background. You get clean books, sent invoices, and your evenings back.",
+        body: "I handle the admin in the background. You get clean books, sent invoices, and your evenings back.",
       },
     ],
   },
@@ -262,13 +263,13 @@ export const site = {
       alt: "Karen Felch, owner of The Remote Admin",
     },
     pullQuote:
-      "I started The Remote Admin because I love doing the work that most business owners dread — and I've seen what it does for them when it's finally handled.",
+      "I started The Remote Admin because I love doing the work that most business owners dread, and I've seen what it does for them when it's finally handled.",
     bio: [
-      "Hi, I'm Karen. For over 35 years I've helped businesses stay organized and keep their offices running smoothly — and I started The Remote Admin to bring that same support to small, service-based businesses across southern New Hampshire, so the people running them can get back to the work they actually love.",
+      "Hi, I'm Karen. For over 35 years I've helped businesses stay organized and keep their offices running smoothly, and I started The Remote Admin to bring that same support to small, service-based businesses across southern New Hampshire, so the people running them can get back to the work they actually love.",
       "I know how it feels when the paperwork piles up: invoices sitting unsent, payments slipping through the cracks, an inbox that never empties. You didn't start your business to spend nights buried in receipts. That's where I come in.",
-      "Whether it's a one-time Office Rescue to dig you out, or steady monthly support so it never gets that bad again, I treat your business like it's my own — carefully, reliably, and always confidentially.",
+      "Whether it's a one-time Office Rescue to dig you out, or steady monthly support so it never gets that bad again, I treat your business like it's my own, carefully, reliably, and always confidentially.",
     ],
-    signature: "— Karen",
+    signature: "Karen",
     serviceArea: {
       label: "Proudly serving",
       towns: [
@@ -322,7 +323,7 @@ export const site = {
   clients: {
     eyebrow: "Businesses I work with",
     heading: "Proudly supporting local businesses.",
-    closer: "We serve all small business & service industries.",
+    closer: "I serve all small business & service industries.",
     /**
      * The businesses Karen supports — logos link out to their sites.
      * To add one: drop the logo in /public/clients/ and add an item below.
@@ -349,27 +350,27 @@ export const site = {
 
   faq: {
     eyebrow: "Good questions",
-    heading: "The things people ask before we start.",
+    heading: "The things people ask before getting started.",
     items: [
       {
         q: "Is my information kept confidential?",
-        a: "Always. We treat your financials and business details with complete confidentiality — your information stays between us, full stop.",
+        a: "Always. I treat your financials and business details with complete confidentiality, your information stays between us, full stop.",
       },
       {
         q: "What software do you work with?",
-        a: "We work in QuickBooks and the common tools small businesses already use. If you're not set up yet, we'll help you choose something simple and get it running.",
+        a: "I work in QuickBooks and the common tools small businesses already use. If you're not set up yet, I'll help you choose something simple and get it running.",
       },
       {
-        q: "How will we communicate?",
-        a: "However works best for you — email, phone, or text — at a cadence we agree on. You'll always know what we're working on and where things stand.",
+        q: "How do you communicate?",
+        a: "However works best for you, email, phone, or text, at a cadence that works for you. You'll always know what I'm working on and where things stand.",
       },
       {
         q: "Am I locked into a contract?",
-        a: "No long, scary contracts. We start with a clear plan, and you can choose a one-time rescue, ongoing monthly support, or à la carte help as you need it.",
+        a: "No long, scary contracts. I start with a clear plan, and you can choose a one-time rescue, ongoing monthly support, or à la carte help as you need it.",
       },
       {
-        q: "You're remote — but are you local?",
-        a: "Both. The Remote Admin is based in Amherst, NH and works with businesses all over southern New Hampshire. Working remotely just means we can help you efficiently, without the overhead of being on-site.",
+        q: "You're remote, but are you local?",
+        a: "Both. I'm based in Amherst, NH and work with businesses all over southern New Hampshire. Working remotely just means I can help you efficiently, without the overhead of being on-site.",
       },
     ],
   },
@@ -377,30 +378,30 @@ export const site = {
   social: {
     eyebrow: "Stay in the loop",
     heading: "Follow along for tips and updates.",
-    body: "Quick, practical tips for keeping your back office under control — plus what's new at The Remote Admin.",
+    body: "Quick, practical tips for keeping your back office under control, plus what's new at The Remote Admin.",
   },
 
   getStarted: {
     eyebrow: "Get started",
     heading: "Ready to get organized?",
-    body: "Book a free discovery call below, or send a quick message and we'll get right back to you.",
+    body: "Book a free discovery call below, or send a quick message and I'll get right back to you.",
     meet: {
-      line: "Hi, I'm Karen — you'll be talking with me, not a call center. Let's find the right next step for your business, no pressure.",
+      line: "Hi, I'm Karen, you'll be talking with me, not a call center. Let's find the right next step for your business, no pressure.",
       role: "Karen Felch · Owner, The Remote Admin",
     },
     calendly: {
       heading: "Book a discovery call",
-      body: "Pick a time that works — it's free, friendly, and there's no pressure.",
+      body: "Pick a time that works, it's free, friendly, and there's no pressure.",
     },
     contact: {
       heading: "Or send a quick message",
-      body: "Tell us a little about what you need and we'll be in touch.",
-      successTitle: "Got it — thank you!",
+      body: "Tell me a little about what you need and I'll be in touch.",
+      successTitle: "Got it, thank you!",
       successBody:
-        "Your message is on its way to our inbox. We'll get back to you shortly. Talk soon!",
+        "Your message is on its way to my inbox. I'll get back to you shortly. Talk soon!",
       errorTitle: "Hmm, that didn't go through.",
       errorBody:
-        "Something went wrong on our end. Please try again, or email us directly at office@the-remote-admin.com.",
+        "Something went wrong on my end. Please try again, or email me directly at office@the-remote-admin.com.",
       needOptions: ["Office Rescue", "Financial Administration", "Admin", "Invoicing"],
     },
     jotform: {
@@ -410,7 +411,7 @@ export const site = {
 
   footer: {
     blurb:
-      "Administrative support, invoicing & collections for small, service-based businesses across southern New Hampshire.",
+      "Admin office support, light bookkeeping, collections, and more for small, service-based businesses across southern New Hampshire.",
     copyright: "Karen Felch · Amherst, NH",
   },
 } as const;

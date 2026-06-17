@@ -36,7 +36,7 @@ export function GetStarted() {
             <div className="mx-auto w-40 overflow-hidden rounded-[18px] border border-line bg-card sm:w-full">
               <Image
                 src="/karen-2.jpg"
-                alt="The Remote Admin — illustration of a friendly admin at her desk"
+                alt="The Remote Admin, illustration of a friendly admin at her desk"
                 width={1024}
                 height={1014}
                 sizes="(max-width: 640px) 160px, 200px"

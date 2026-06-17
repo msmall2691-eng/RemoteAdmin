@@ -84,7 +84,7 @@ export function SocialFeed() {
           ) : (
             <div className="card max-w-md p-8 text-center">
               <p className="text-muted">
-                Our latest updates live on Facebook — come say hello.
+                My latest updates live on Facebook, come say hello.
               </p>
               <a
                 href={links.facebook}

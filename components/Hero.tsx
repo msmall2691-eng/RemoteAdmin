@@ -1,7 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { site } from "@/content/site";
-import { OfficeRescueAnimation } from "./OfficeRescueAnimation";
 
 export function Hero() {
   const { hero } = site;
@@ -55,15 +55,23 @@ export function Hero() {
           </ul>
         </div>
 
-        <div className="relative">
-          <div className="absolute inset-0 -z-10 rounded-[32px] bg-mist/60" />
+        <div className="relative flex items-center justify-center">
           {/* Soft drifting color blobs add quiet, modern movement */}
-          <div className="animate-drift absolute -left-6 -top-6 -z-10 h-40 w-40 rounded-full bg-sage/25 blur-2xl" />
+          <div className="animate-drift absolute left-2 top-2 -z-10 h-48 w-48 rounded-full bg-sage/25 blur-2xl" />
           <div
-            className="animate-drift absolute -bottom-8 -right-4 -z-10 h-44 w-44 rounded-full bg-gold/30 blur-2xl"
+            className="animate-drift absolute bottom-2 right-2 -z-10 h-52 w-52 rounded-full bg-gold/25 blur-2xl"
             style={{ animationDelay: "-9s" }}
           />
-          <OfficeRescueAnimation />
+          <div className="hero-in" style={{ animationDelay: "240ms" }}>
+            <Image
+              src="/tra-logo.png"
+              alt={`${site.business.name} logo`}
+              width={445}
+              height={446}
+              priority
+              className="mx-auto h-auto w-full max-w-sm drop-shadow-sm"
+            />
+          </div>
         </div>
       </div>
     </section>

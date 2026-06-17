@@ -28,7 +28,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? site.business.url;
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${site.business.name} — Invoicing & Admin Support in Southern NH`,
+    default: `${site.business.name}, Admin & Bookkeeping Support in Southern NH`,
     template: `%s · ${site.business.name}`,
   },
   description:
@@ -53,16 +53,16 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl,
     siteName: site.business.name,
-    title: `${site.business.name} — Invoicing & Admin Support in Southern NH`,
+    title: `${site.business.name}, Admin & Bookkeeping Support in Southern NH`,
     description:
-      "You focus on your customers; I'll get the invoices out, chase the payments, and handle the admin. Serving small businesses across southern New Hampshire.",
+      "You focus on your customers; I'll handle the admin, light bookkeeping, and collections. Serving small businesses across southern New Hampshire.",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.business.name} — Invoicing & Admin Support`,
+    title: `${site.business.name}, Admin & Bookkeeping Support`,
     description:
-      "You focus on your customers; I'll get the invoices out and the payments in. Serving southern New Hampshire.",
+      "You focus on your customers; I'll handle the admin, light bookkeeping, and collections. Serving southern New Hampshire.",
   },
   robots: {
     index: true,

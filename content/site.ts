@@ -145,9 +145,10 @@ export const site = {
           "Accounts payable support",
           "Bank and credit card reconciliations",
         ],
+        mini: ["Accounts reconciled", "Bills paid on time"],
       },
       {
-        icon: "calendar-days" as IconName,
+        icon: "clipboard-list" as IconName,
         name: "Administrative Services",
         summary:
           "The day-to-day support that keeps your office running efficiently.",
@@ -157,6 +158,7 @@ export const site = {
           "Customer follow-up and service support",
           "Data entry, forms, and documentation",
         ],
+        mini: ["Customers followed up", "Paperwork in order"],
       },
       {
         icon: "folder-open" as IconName,
@@ -169,6 +171,7 @@ export const site = {
           "Forms, templates, and workflows",
           "Seasonal and project-based assistance",
         ],
+        mini: ["Files organized", "Templates ready"],
       },
     ],
     tagline: "Help your small business breathe again.",

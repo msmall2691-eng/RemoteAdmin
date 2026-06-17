@@ -1,4 +1,5 @@
 import { Hero } from "@/components/Hero";
+import { ValueProps } from "@/components/ValueProps";
 import { About } from "@/components/About";
 import { PainStrip } from "@/components/PainStrip";
 import { Services } from "@/components/Services";
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <ValueProps />
       <About />
       <PainStrip />
       <Services />

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { FileText, Receipt, Mail, Check } from "lucide-react";
 
 /**
@@ -58,10 +59,21 @@ export function OfficeRescueAnimation() {
           settled ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
         }`}
       >
-        <p className="eyebrow">This week</p>
-        <p className="mt-1 font-display text-xl font-semibold text-ink">
-          Handled.
-        </p>
+        <div className="flex items-start justify-between">
+          <div>
+            <p className="eyebrow">This week</p>
+            <p className="mt-1 font-display text-xl font-semibold text-ink">
+              Handled.
+            </p>
+          </div>
+          <Image
+            src="/tra-logo.png"
+            alt=""
+            width={445}
+            height={446}
+            className="h-9 w-auto opacity-90"
+          />
+        </div>
         <ul className="mt-4 space-y-2.5">
           {["Invoices sent", "Payments followed up", "Receipts filed"].map(
             (line, i) => (

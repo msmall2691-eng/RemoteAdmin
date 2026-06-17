@@ -8,7 +8,19 @@ import { ContactForm } from "./ContactForm";
 export function GetStarted() {
   const { getStarted, links } = site;
   return (
-    <section id="book" className="scroll-mt-20">
+    <section id="book" className="relative scroll-mt-20 overflow-hidden">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-20 -top-16 -z-10 opacity-[0.06]"
+      >
+        <Image
+          src="/tra-logo.png"
+          alt=""
+          width={445}
+          height={446}
+          className="h-[26rem] w-auto"
+        />
+      </div>
       <div className="container-page py-20 sm:py-24">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">{getStarted.eyebrow}</p>

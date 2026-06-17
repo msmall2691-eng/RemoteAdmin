@@ -2,11 +2,13 @@ import Image from "next/image";
 import { MapPin } from "lucide-react";
 import { site } from "@/content/site";
 import { Reveal } from "./Reveal";
+import { AmbientGlow } from "./AmbientGlow";
 
 export function About() {
   const { about } = site;
   return (
-    <section id="about" className="bg-mist/50">
+    <section id="about" className="relative overflow-hidden bg-mist/50">
+      <AmbientGlow />
       <div className="container-page py-20 sm:py-24">
         <div className="grid items-center gap-12 lg:grid-cols-[0.85fr_1.15fr]">
           <Reveal>
@@ -22,6 +24,14 @@ export function About() {
                   sizes="(max-width: 1024px) 90vw, 360px"
                   priority={false}
                 />
+              </div>
+              <div className="absolute -bottom-4 -right-4 rounded-2xl bg-gold px-4 py-3 text-center shadow-md">
+                <p className="font-display text-2xl font-semibold leading-none text-[#20302d]">
+                  35+
+                </p>
+                <p className="mt-1 text-[0.7rem] font-semibold uppercase tracking-wider text-[#20302d]">
+                  Years experience
+                </p>
               </div>
             </div>
           </Reveal>
@@ -45,8 +55,17 @@ export function About() {
                 <MapPin className="h-4 w-4 text-sage-deep" />
                 {about.serviceArea.label}
               </p>
-              <p className="mt-2 text-sm text-muted">
-                {about.serviceArea.towns.join(", ")},{" "}
+              <div className="mt-3 flex flex-wrap gap-1.5">
+                {about.serviceArea.towns.map((town) => (
+                  <span
+                    key={town}
+                    className="rounded-pill border border-line bg-oat px-2.5 py-1 text-xs font-medium text-ink"
+                  >
+                    {town}
+                  </span>
+                ))}
+              </div>
+              <p className="mt-3 text-sm italic text-muted">
                 {about.serviceArea.remoteNote}
               </p>
             </div>

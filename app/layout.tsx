@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import { site } from "@/content/site";
 import { JsonLd } from "@/components/JsonLd";
@@ -71,6 +71,10 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#37606a",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -79,9 +83,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
       <body className="font-sans antialiased">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-ink focus:px-4 focus:py-2 focus:text-oat focus:shadow-md"
+        >
+          Skip to content
+        </a>
         <JsonLd />
         <Nav />
-        <main>{children}</main>
+        <main id="main">{children}</main>
         <Footer />
         <StickyMobileCta />
       </body>

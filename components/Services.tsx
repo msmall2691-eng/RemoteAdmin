@@ -32,6 +32,19 @@ export function Services() {
           </h2>
         </Reveal>
 
+        {/* What I'm great at — quick niche overview */}
+        <Reveal className="mx-auto mt-7 flex max-w-3xl flex-wrap justify-center gap-2.5">
+          {services.strengths.map((s) => (
+            <span
+              key={s}
+              className="inline-flex items-center gap-1.5 rounded-pill border border-line bg-card px-3.5 py-1.5 text-sm font-medium text-ink"
+            >
+              <Check className="h-3.5 w-3.5 text-sage-deep" strokeWidth={3} />
+              {s}
+            </span>
+          ))}
+        </Reveal>
+
         {/* Featured — Office Rescue (signature) */}
         <Reveal className="mt-12">
           <div className="card overflow-hidden border-brass/40">
@@ -75,7 +88,7 @@ export function Services() {
         </Reveal>
 
         {/* Three official buckets */}
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {services.buckets.map((bucket, i) => {
             return (
               <Reveal as="article" key={bucket.name} delay={i * 80}>

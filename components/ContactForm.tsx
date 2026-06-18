@@ -170,6 +170,13 @@ export function ContactForm() {
           </>
         )}
       </button>
+      <p className="mt-3 text-xs text-muted">
+        By submitting, you agree to be contacted about your inquiry and to our{" "}
+        <a href="/privacy" className="underline transition-colors hover:text-ink">
+          Privacy Policy
+        </a>
+        .
+      </p>
     </form>
   );
 }

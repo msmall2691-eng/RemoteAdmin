@@ -91,14 +91,17 @@ export async function POST(request: Request) {
 
   // Best-effort backup of every submission to a Google Sheet (never blocks the response).
   const sheetUrl = process.env.SHEETS_WEBHOOK_URL;
+  let backupOk = true;
   if (sheetUrl) {
     try {
-      await fetch(sheetUrl, {
+      const backupRes = await fetch(sheetUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, contact, help: needs.join(", "), message }),
       });
+      if (!backupRes.ok) backupOk = false;
     } catch (backupErr) {
+      backupOk = false;
       console.error("Sheet backup failed:", backupErr);
     }
   }
@@ -143,6 +146,19 @@ export async function POST(request: Request) {
       html,
       text: `New website inquiry\n\nName: ${name}\nContact: ${contact}\nNeeds: ${needsLine}\n\nMessage:\n${message || "(no message)"}`,
     });
+
+    if (!backupOk) {
+      try {
+        await transporter.sendMail({
+          from: `"The Remote Admin Website" <${gmailUser}>`,
+          to,
+          subject: "Contact form: a submission did NOT save to the backup sheet",
+          text: `A submission from ${name} (${contact}) was emailed to you but did NOT save to the Google Sheet backup. Message: ${message || "(no message)"}`,
+        });
+      } catch (alertErr) {
+        console.error("Backup-failure alert email failed:", alertErr);
+      }
+    }
 
     return NextResponse.json({ ok: true });
   } catch (err) {

@@ -23,7 +23,7 @@ export function ValueProps() {
             return (
               <Reveal as="article" key={item.title} delay={i * 80}>
                 <div className="card hover-lift h-full p-6 text-center">
-                  <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-gold/20 text-sage-deep">
+                  <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-sage/15 text-sage-deep">
                     <Icon className="h-6 w-6" />
                   </span>
                   <h3 className="mt-4 font-display text-lg font-semibold text-ink">

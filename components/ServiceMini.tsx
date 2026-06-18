@@ -47,7 +47,7 @@ export function ServiceMini({
             viewport={{ once: true }}
             transition={{ delay: 0.2 + i * 0.18, duration: 0.4 }}
           >
-            <span className="flex h-4 w-4 items-center justify-center rounded-full bg-gold/25 text-sage-deep">
+            <span className="flex h-4 w-4 items-center justify-center rounded-full bg-sage/15 text-sage-deep">
               <Check className="h-3 w-3" strokeWidth={3} />
             </span>
             {item}

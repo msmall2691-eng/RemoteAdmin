@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import { site } from "@/content/site";
 import { JsonLd } from "@/components/JsonLd";
+import { ScrollProgress } from "@/components/ScrollProgress";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { StickyMobileCta } from "@/components/StickyMobileCta";
@@ -90,6 +91,7 @@ export default function RootLayout({
           Skip to content
         </a>
         <JsonLd />
+        <ScrollProgress />
         <Nav />
         <main id="main">{children}</main>
         <Footer />

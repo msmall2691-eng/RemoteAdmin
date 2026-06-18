@@ -122,7 +122,7 @@ export const site = {
   services: {
     eyebrow: "What I do",
     heading: "Administrative support that keeps your business moving.",
-    intro: "Especially for contractors and service-based businesses.",
+    intro: "I serve contractors and small service-based businesses.",
     strengths: [
       "Invoicing & collections",
       "Contractor support",
@@ -312,7 +312,7 @@ export const site = {
   },
 
   about: {
-    eyebrow: "About Karen",
+    eyebrow: "About the Founder",
     name: "Karen Felch",
     // TODO(Karen): replace with the provided headshot. Drop the file in /public.
     photo: {
@@ -320,11 +320,11 @@ export const site = {
       alt: "Karen Felch, owner of The Remote Admin",
     },
     pullQuote:
-      "I love doing the work most business owners dread. And I've seen the relief when it's finally handled.",
+      "I love being the person my clients can count on when they need an extra hand.",
     bio: [
-      "Hi, I'm Karen. For over 35 years, I've helped businesses stay organized and keep their offices running smoothly.",
-      "I started The Remote Admin to bring that same support to small, service-based businesses across southern New Hampshire, so owners can get back to the work they love.",
-      "Whether it's a one-time Office Rescue or steady monthly support, I treat your business like my own. Careful, reliable, and always confidential.",
+      "Hi, I'm Karen, founder of The Remote Admin. For more than 35 years, I've helped businesses stay organized and keep their offices running smoothly. I know firsthand how quickly administrative tasks can pile up, taking valuable time away from the work that matters most.",
+      "That's why I started The Remote Admin, to provide dependable, personalized support that helps business owners stay on top of their day-to-day operations. From invoicing and collections to customer follow-up, scheduling, and paperwork, I'm here to help keep things organized and moving forward.",
+      "I love building relationships with my clients and being the person they can count on when they need an extra hand. When I'm not working, you'll usually find me enjoying time on the lake or making memories with my three grandchildren.",
     ],
     signature: "Karen",
     serviceArea: {

@@ -24,14 +24,14 @@ export function Clients() {
         <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {clients.items.map((client, i) => (
             <Reveal key={client.name} delay={i * 90} className="h-full">
-              <div className="hover-lift flex h-full flex-col items-center rounded-card border border-line bg-oat p-7 text-center">
-                <div className="relative flex h-28 w-full items-center justify-center">
+              <div className="hover-lift flex h-full flex-col items-center rounded-card border border-line bg-card p-6 text-center">
+                <div className="relative flex h-32 w-full items-center justify-center overflow-hidden rounded-xl bg-white p-3">
                   <Image
                     src={client.logo}
                     alt={`${client.name} logo`}
                     fill
                     sizes="(max-width: 640px) 80vw, 280px"
-                    className="object-contain"
+                    className="object-contain p-2"
                   />
                 </div>
                 {client.url ? (

@@ -405,7 +405,7 @@ export const site = {
       {
         name: "The Maine Cleaning Co.",
         logo: "/clients/the-maine-cleaning-co.webp",
-        url: "",
+        url: "https://maineclean.co",
       },
     ],
   },

@@ -89,6 +89,20 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Message too long." }, { status: 400 });
   }
 
+  // Best-effort backup of every submission to a Google Sheet (never blocks the response).
+  const sheetUrl = process.env.SHEETS_WEBHOOK_URL;
+  if (sheetUrl) {
+    try {
+      await fetch(sheetUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, contact, help: needs.join(", "), message }),
+      });
+    } catch (backupErr) {
+      console.error("Sheet backup failed:", backupErr);
+    }
+  }
+
   const gmailUser = process.env.GMAIL_USER;
   const gmailPass = process.env.GMAIL_APP_PASSWORD;
   const to = process.env.CONTACT_TO_EMAIL ?? gmailUser ?? site.business.email;

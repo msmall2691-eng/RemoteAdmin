@@ -119,8 +119,16 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-line pt-6 text-sm text-muted">
-          © {year} {footer.copyright}
+        <div className="mt-12 flex flex-col gap-3 border-t border-line pt-6 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
+          <p>© {year} {footer.copyright}</p>
+          <nav className="flex gap-5">
+            <Link href="/privacy" className="transition-colors hover:text-ink">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="transition-colors hover:text-ink">
+              Terms
+            </Link>
+          </nav>
         </div>
       </div>
     </footer>

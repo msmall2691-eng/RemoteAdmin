@@ -263,7 +263,7 @@ export const site = {
           "Recurring bookkeeping",
           "Ongoing invoicing & follow-up",
           "Customer follow-up & communication",
-          "Monthly check-in",
+          "Regular communication and support tailored to your needs",
         ],
         highlighted: false,
         cta: { label: "Book a call", href: "#book" },

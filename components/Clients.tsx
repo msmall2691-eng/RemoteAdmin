@@ -4,12 +4,14 @@ import { site } from "@/content/site";
 import { Reveal } from "./Reveal";
 
 /**
- * "Proudly supporting local businesses" — logo cards that link out to each
- * client's site (mirrors Karen's About page). Logos sit in /public/clients/.
- * A client with no `url` shows its logo without a "Visit" link.
+ * "Proudly supporting local businesses" — an auto-scrolling horizontal marquee
+ * of client logo cards. The track pauses on hover so links are clickable; the
+ * list is duplicated for a seamless loop (the clone is hidden from assistive
+ * tech and keyboard focus). Under prefers-reduced-motion the scroll stops.
  */
 export function Clients() {
   const { clients } = site;
+  const loop = [...clients.items, ...clients.items];
 
   return (
     <section id="clients" className="border-y border-line bg-card">
@@ -21,38 +23,48 @@ export function Clients() {
           </h2>
         </Reveal>
 
-        <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {clients.items.map((client, i) => (
-            <Reveal key={client.name} delay={i * 90} className="h-full">
-              <div className="hover-lift flex h-full flex-col items-center rounded-card border border-line bg-card p-6 text-center">
-                <div className="relative flex h-32 w-full items-center justify-center overflow-hidden rounded-xl bg-white p-3">
-                  <Image
-                    src={client.logo}
-                    alt={`${client.name} logo`}
-                    fill
-                    sizes="(max-width: 640px) 80vw, 280px"
-                    className="object-contain p-2"
-                  />
-                </div>
-                {client.url ? (
-                  <a
-                    href={client.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-ghost mt-6"
-                  >
-                    Visit {client.name}
-                    <ArrowUpRight className="h-4 w-4" />
-                  </a>
-                ) : (
-                  <p className="mt-6 font-display text-lg font-semibold text-ink">
-                    {client.name}
-                  </p>
-                )}
-              </div>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal className="marquee-mask mt-12 overflow-hidden py-2">
+          <ul className="marquee-track animate-marquee flex w-max items-stretch">
+            {loop.map((client, i) => {
+              const clone = i >= clients.items.length;
+              return (
+                <li
+                  key={i}
+                  aria-hidden={clone}
+                  className="mr-6 w-64 shrink-0"
+                >
+                  <div className="hover-lift flex h-full flex-col items-center rounded-card border border-line bg-card p-6 text-center">
+                    <div className="relative flex h-36 w-full items-center justify-center overflow-hidden rounded-xl bg-white p-2">
+                      <Image
+                        src={client.logo}
+                        alt={clone ? "" : `${client.name} logo`}
+                        fill
+                        sizes="240px"
+                        className="object-contain p-1"
+                      />
+                    </div>
+                    {client.url ? (
+                      <a
+                        href={client.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        tabIndex={clone ? -1 : 0}
+                        className="btn-ghost mt-5"
+                      >
+                        Visit {client.name}
+                        <ArrowUpRight className="h-4 w-4" />
+                      </a>
+                    ) : (
+                      <p className="mt-5 font-display text-base font-semibold text-ink">
+                        {client.name}
+                      </p>
+                    )}
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </Reveal>
 
         <Reveal className="mt-12 text-center">
           <p className="font-display text-2xl italic text-sage-deep sm:text-3xl">

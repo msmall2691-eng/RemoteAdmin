@@ -19,7 +19,8 @@ export default function TermsPage() {
           <p>
             These terms apply to your use of the The Remote Admin website. By
             using this site, you agree to them. If you do not agree, please do
-            not use the site.
+            not use the site. They cover the website only — any work we take on
+            is governed by a separate agreement.
           </p>
 
           <div className="space-y-3">
@@ -65,12 +66,32 @@ export default function TermsPage() {
 
           <div className="space-y-3">
             <h2 className="font-display text-2xl text-ink">
+              Intellectual property
+            </h2>
+            <p>
+              The Remote Admin name, logo, and the text and images on this site
+              belong to The Remote Admin. Please don&rsquo;t copy or reuse them
+              without permission. Client logos shown here remain the property of
+              their respective owners and are used with permission.
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            <h2 className="font-display text-2xl text-ink">
               Limitation of liability
             </h2>
             <p>
               The site is provided on an as-is basis. To the extent permitted by
               law, The Remote Admin is not liable for any damages arising from
               your use of the site.
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            <h2 className="font-display text-2xl text-ink">Governing law</h2>
+            <p>
+              These terms are governed by the laws of the State of New
+              Hampshire, without regard to its conflict-of-laws rules.
             </p>
           </div>
 

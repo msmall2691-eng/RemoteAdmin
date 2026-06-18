@@ -32,12 +32,17 @@ export default function PrivacyPolicyPage() {
               information you choose to provide — typically your name, your email
               address or phone number, the type of help you are looking for, and
               your message. If you book a call, scheduling details are handled by
-              our scheduling provider, Calendly.
+              Calendly; if you start the New Client Intake, that form is handled
+              by JotForm.
             </p>
             <p>
-              We do not use advertising trackers on this site. Embedded tools
-              such as Calendly may set their own cookies to provide their
-              service.
+              Our host also keeps basic technical logs (such as your IP address)
+              to keep the site running and to limit spam on the contact form.
+            </p>
+            <p>
+              We do not use advertising trackers on this site. Embedded tools —
+              such as the Calendly scheduler and the Facebook page feed — may set
+              their own cookies to provide their service.
             </p>
           </div>
 
@@ -45,20 +50,20 @@ export default function PrivacyPolicyPage() {
             <h2 className="font-display text-2xl text-ink">How we use it</h2>
             <p>
               We use the information you submit only to respond to your inquiry,
-              follow up about working together, and keep a record of requests so
-              nothing gets missed. Submissions are delivered to our email inbox
-              and saved to a private spreadsheet we control.
+              follow up about working together, and prevent spam. Contact-form
+              submissions are delivered straight to our private email inbox; we
+              don&rsquo;t use them for marketing lists.
             </p>
           </div>
 
           <div className="space-y-3">
             <h2 className="font-display text-2xl text-ink">How we share it</h2>
             <p>
-              We do not sell or rent your information. We do not share it with
-              third parties except the service providers that help us run the
-              site and our business — for example, our email, scheduling, and
-              spreadsheet providers — and only as needed to provide those
-              services or as required by law.
+              We do not sell or rent your information. We only share it with the
+              service providers that help us run the site and respond to you —
+              Google (email), Calendly (scheduling), JotForm (new-client
+              intake), and Vercel (website hosting) — and only as needed to
+              provide those services, or where required by law.
             </p>
           </div>
 

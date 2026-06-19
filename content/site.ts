@@ -92,7 +92,7 @@ export const site = {
     subcopy: "You focus on your customers; I'll take care of the admin.",
     primaryCta: { label: "Book a call", href: "#book" },
     secondaryCta: { label: "See what I do", href: "#services" },
-    trustLine: ["Local", "Reliable", "Confidential"],
+    trustLine: ["Local", "Friendly", "Confidential"],
   },
 
   valueProps: {

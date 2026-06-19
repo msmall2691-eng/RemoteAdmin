@@ -54,7 +54,7 @@ export default function OpengraphImage() {
           <div
             style={{
               display: "flex",
-              color: "#e6b84c",
+              color: "#8aa378",
               fontSize: 24,
               letterSpacing: 2,
               textTransform: "uppercase",
@@ -78,7 +78,7 @@ export default function OpengraphImage() {
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-          <div style={{ display: "flex", color: "#e6b84c", fontSize: 30, fontStyle: "italic" }}>
+          <div style={{ display: "flex", color: "#8aa378", fontSize: 30, fontStyle: "italic" }}>
             {site.business.slogan}
           </div>
           <div style={{ display: "flex", color: "#bfd4d7", fontSize: 24 }}>

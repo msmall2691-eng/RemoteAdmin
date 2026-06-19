@@ -479,7 +479,7 @@ export const site = {
 
   footer: {
     blurb:
-      "Admin office support, light bookkeeping, collections, and more for small, service-based businesses across southern New Hampshire.",
+      "Admin office support, light bookkeeping, collections, and more for contractors and small service-based businesses across southern New Hampshire.",
     copyright: "Karen Felch · Amherst, NH",
   },
 } as const;

@@ -17,7 +17,7 @@
   --sage-deep: 79 106 66; /* #4f6a42 deep sage — accent text/links */
   --brass: 63 112 121; /* #3f7079 teal — primary CTAs (AA white text) */
   --brass-deep: 55 96 106; /* #37606a deep teal */
-  --gold: 230 184 76; /* #e6b84c warm gold — highlight accent only */
+  --gold: 26 26 26; /* #1a1a1a near-black accent (was mustard) */
   --line: 226 224 214; /* #e2e0d6 warm border */
   --muted: 92 107 102; /* #5c6b66 muted text */
 }
@@ -81,7 +81,7 @@
     @apply btn bg-ink text-oat hover:bg-ink-2 active:scale-[0.98];
   }
   .btn-brass {
-    @apply btn bg-gradient-to-br from-brass to-brass-deep text-oat shadow-sm hover:from-gold hover:to-gold hover:text-[#20302d] hover:shadow-md active:scale-[0.98];
+    @apply btn bg-gradient-to-br from-brass to-brass-deep text-oat shadow-sm hover:from-gold hover:to-gold hover:text-oat hover:shadow-md active:scale-[0.98];
   }
   .btn-ghost {
     @apply btn border border-line bg-transparent text-ink hover:border-sage hover:bg-mist/50;

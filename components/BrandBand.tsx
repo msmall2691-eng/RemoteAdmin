@@ -24,7 +24,8 @@ export function BrandBand() {
           </p>
           <p className="mt-3 text-muted">
             Admin office support, light bookkeeping, collections, and more for
-            small, service-based businesses across southern New Hampshire.
+            contractors and small service-based businesses across southern New
+            Hampshire.
           </p>
         </Reveal>
       </div>

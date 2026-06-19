@@ -26,10 +26,10 @@ export function About() {
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 rounded-2xl bg-gold px-4 py-3 text-center shadow-md">
-                <p className="font-display text-2xl font-semibold leading-none text-[#20302d]">
+                <p className="font-display text-2xl font-semibold leading-none text-oat">
                   35+
                 </p>
-                <p className="mt-1 text-[0.7rem] font-semibold uppercase tracking-wider text-[#20302d]">
+                <p className="mt-1 text-[0.7rem] font-semibold uppercase tracking-wider text-oat">
                   Years experience
                 </p>
               </div>

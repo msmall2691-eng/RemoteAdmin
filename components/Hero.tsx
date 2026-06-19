@@ -13,7 +13,10 @@ const floatingTasks = [
 export function Hero() {
   const { hero } = site;
   return (
-    <section id="top" className="relative overflow-hidden">
+    <section
+      id="top"
+      className="relative overflow-hidden bg-gradient-to-b from-mist/30 to-transparent"
+    >
       {/* Ambient "aurora" — slow drifting brand glows across the whole hero */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
         <div className="animate-drift absolute -left-24 top-0 h-72 w-72 rounded-full bg-sage/20 blur-3xl" />
@@ -62,12 +65,15 @@ export function Hero() {
           </div>
 
           <ul
-            className="hero-in mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium text-muted"
+            className="hero-in mt-8 flex flex-wrap items-center gap-2.5"
             style={{ animationDelay: "460ms" }}
           >
             {hero.trustLine.map((item) => (
-              <li key={item} className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-sage" />
+              <li
+                key={item}
+                className="inline-flex items-center gap-1.5 rounded-pill border border-line bg-card/70 px-3 py-1.5 text-sm font-medium text-ink"
+              >
+                <Check className="h-3.5 w-3.5 text-sage-deep" strokeWidth={3} />
                 {item}
               </li>
             ))}

@@ -29,7 +29,6 @@ export default function Home() {
       <Reviews />
       <Clients />
       <Faq />
-      <CtaStrip />
       <SocialFeed />
       <BrandBand />
       <GetStarted />

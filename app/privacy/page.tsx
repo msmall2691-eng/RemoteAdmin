@@ -32,8 +32,7 @@ export default function PrivacyPolicyPage() {
               information you choose to provide — typically your name, your email
               address or phone number, the type of help you are looking for, and
               your message. If you book a call, scheduling details are handled by
-              Calendly; if you start the New Client Intake, that form is handled
-              by JotForm.
+              Calendly.
             </p>
             <p>
               Our host also keeps basic technical logs (such as your IP address)
@@ -61,9 +60,9 @@ export default function PrivacyPolicyPage() {
             <p>
               We do not sell or rent your information. We only share it with the
               service providers that help us run the site and respond to you —
-              Google (email), Calendly (scheduling), JotForm (new-client
-              intake), and Vercel (website hosting) — and only as needed to
-              provide those services, or where required by law.
+              Google (email), Calendly (scheduling), and Vercel (website
+              hosting) — and only as needed to provide those services, or where
+              required by law.
             </p>
           </div>
 

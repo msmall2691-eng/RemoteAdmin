@@ -25,7 +25,7 @@ export function Hero() {
           style={{ animationDelay: "-7s" }}
         />
         <div
-          className="animate-drift absolute -right-16 top-1/4 h-72 w-72 rounded-full bg-gold/15 blur-3xl"
+          className="animate-drift absolute -right-16 top-1/4 h-72 w-72 rounded-full bg-brass/12 blur-3xl"
           style={{ animationDelay: "-13s" }}
         />
       </div>
@@ -93,7 +93,7 @@ export function Hero() {
           {/* Gold + sage accent glows drift gently */}
           <div
             aria-hidden="true"
-            className="animate-drift absolute right-6 top-8 -z-10 h-40 w-40 rounded-full bg-gold/20 blur-3xl"
+            className="animate-drift absolute right-6 top-8 -z-10 h-40 w-40 rounded-full bg-brass/18 blur-3xl"
             style={{ animationDelay: "-4s" }}
           />
           <div

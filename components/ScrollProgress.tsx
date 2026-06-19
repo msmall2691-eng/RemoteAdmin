@@ -30,7 +30,7 @@ export function ScrollProgress() {
       className="fixed inset-x-0 top-0 z-[60] h-1 bg-transparent"
     >
       <div
-        className="h-full bg-gradient-to-r from-brass to-gold"
+        className="h-full bg-gold"
         style={{ width: `${progress}%` }}
       />
     </div>

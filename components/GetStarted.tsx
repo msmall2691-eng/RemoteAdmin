@@ -1,12 +1,11 @@
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
 import { site } from "@/content/site";
 import { Reveal } from "./Reveal";
 import { Calendly } from "./Calendly";
 import { ContactForm } from "./ContactForm";
 
 export function GetStarted() {
-  const { getStarted, links } = site;
+  const { getStarted } = site;
   return (
     <section
       id="book"
@@ -89,15 +88,6 @@ export function GetStarted() {
             <div className="mt-5">
               <ContactForm />
             </div>
-            <a
-              href={links.jotform}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-sage-deep hover:text-ink"
-            >
-              {getStarted.jotform.label}
-              <ExternalLink className="h-4 w-4" />
-            </a>
           </Reveal>
         </div>
       </div>

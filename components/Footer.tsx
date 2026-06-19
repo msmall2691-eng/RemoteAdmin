@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, Facebook, Instagram, MapPin, ExternalLink } from "lucide-react";
+import { Mail, Phone, Facebook, Instagram, MapPin } from "lucide-react";
 import { site } from "@/content/site";
 
 export function Footer() {
@@ -43,17 +43,6 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <a
-                  href={links.jotform}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-ink"
-                >
-                  New client intake
-                  <ExternalLink className="h-3.5 w-3.5" />
-                </a>
-              </li>
             </ul>
           </div>
 

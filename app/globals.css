@@ -13,10 +13,10 @@
   --card: 255 255 255; /* #ffffff */
   --mist: 215 228 229; /* #d7e4e5 soft teal-blue surface */
   --mist-2: 191 212 215; /* #bfd4d7 dusty blue */
-  --sage: 138 163 120; /* #8aa378 sage green — secondary accent */
-  --sage-deep: 79 106 66; /* #4f6a42 deep sage — accent text/links */
-  --brass: 63 112 121; /* #3f7079 teal — primary CTAs (AA white text) */
-  --brass-deep: 55 96 106; /* #37606a deep teal */
+  --sage: 122 152 196; /* #7a98c4 light logo-blue — icons, accents, glows */
+  --sage-deep: 56 92 146; /* #385c92 medium logo-blue — accent text/links */
+  --brass: 58 96 150; /* #3a6096 logo-blue — primary CTAs (AA white text) */
+  --brass-deep: 45 74 122; /* #2d4a7a deep logo-blue */
   --gold: 26 26 26; /* #1a1a1a near-black accent (was mustard) */
   --line: 226 224 214; /* #e2e0d6 warm border */
   --muted: 88 102 122; /* #58667a blue-gray muted text */
@@ -98,7 +98,7 @@
         0deg,
         transparent,
         transparent 31px,
-        rgba(74, 124, 132, 0.05) 32px
+        rgba(45, 74, 122, 0.05) 32px
       );
   }
 }

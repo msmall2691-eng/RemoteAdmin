@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Check } from "lucide-react";
 import { site } from "@/content/site";
+import { HeroBackdrop } from "./HeroBackdrop";
 
 const floatingTasks = [
   { label: "Books up to date", pos: "left-0 top-6", delay: "-1s" },
@@ -15,20 +16,10 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden bg-gradient-to-b from-mist/30 to-transparent"
+      className="relative overflow-hidden bg-gradient-to-b from-mist/20 to-transparent"
     >
-      {/* Ambient "aurora" — slow drifting brand glows across the whole hero */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
-        <div className="animate-drift absolute -left-24 top-0 h-72 w-72 rounded-full bg-sage/20 blur-3xl" />
-        <div
-          className="animate-drift absolute left-1/3 -bottom-28 h-80 w-80 rounded-full bg-mist-2/50 blur-3xl"
-          style={{ animationDelay: "-7s" }}
-        />
-        <div
-          className="animate-drift absolute -right-16 top-1/4 h-72 w-72 rounded-full bg-brass/12 blur-3xl"
-          style={{ animationDelay: "-13s" }}
-        />
-      </div>
+      {/* Calm, simple interactive backdrop — glow gently follows the cursor */}
+      <HeroBackdrop />
       <div className="container-page grid items-center gap-6 py-12 sm:gap-12 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
         <div className="max-w-xl">
           <p className="hero-in eyebrow" style={{ animationDelay: "60ms" }}>
@@ -90,17 +81,6 @@ export function Hero() {
                 "radial-gradient(circle, rgb(var(--mist-2) / 0.95) 0%, rgb(var(--sage) / 0.18) 45%, transparent 72%)",
             }}
           />
-          {/* Gold + sage accent glows drift gently */}
-          <div
-            aria-hidden="true"
-            className="animate-drift absolute right-6 top-8 -z-10 h-40 w-40 rounded-full bg-brass/18 blur-3xl"
-            style={{ animationDelay: "-4s" }}
-          />
-          <div
-            aria-hidden="true"
-            className="animate-drift absolute bottom-8 left-6 -z-10 h-44 w-44 rounded-full bg-sage/20 blur-3xl"
-          />
-
           {/* Faint floating "task handled" chips — quiet, on-brand motion.
               Hidden on small screens to keep the mobile hero uncluttered. */}
           {floatingTasks.map((task) => (
@@ -114,11 +94,6 @@ export function Hero() {
               {task.label}
             </span>
           ))}
-          <span
-            aria-hidden="true"
-            className="animate-float absolute left-8 top-1/2 hidden h-2.5 w-2.5 rounded-full bg-gold/70 shadow-sm sm:block"
-            style={{ animationDelay: "-4.5s" }}
-          />
 
           {/* The logo as the centerpiece — modest on mobile, large on desktop */}
           <div className="hero-in" style={{ animationDelay: "240ms" }}>

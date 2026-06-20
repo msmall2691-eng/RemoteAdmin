@@ -481,6 +481,7 @@ export const site = {
     blurb:
       "Admin office support, light bookkeeping, collections, and more for contractors and small service-based businesses across southern New Hampshire.",
     copyright: "Karen Felch · Amherst, NH",
+    credit: { label: "Site by M Studio", href: "https://www.mlinx.studio" },
   },
 } as const;
 

@@ -101,12 +101,13 @@ export function Hero() {
             className="animate-drift absolute bottom-8 left-6 -z-10 h-44 w-44 rounded-full bg-sage/20 blur-3xl"
           />
 
-          {/* Faint floating "task handled" chips — quiet, on-brand motion */}
+          {/* Faint floating "task handled" chips — quiet, on-brand motion.
+              Hidden on small screens to keep the mobile hero uncluttered. */}
           {floatingTasks.map((task) => (
             <span
               key={task.label}
               aria-hidden="true"
-              className={`animate-chip absolute ${task.pos} flex items-center gap-1.5 rounded-pill border border-line bg-card/80 px-2.5 py-1 text-[0.7rem] font-medium text-sage-deep shadow-sm backdrop-blur-sm`}
+              className={`animate-chip absolute ${task.pos} hidden items-center gap-1.5 rounded-pill border border-line bg-card/80 px-2.5 py-1 text-[0.7rem] font-medium text-sage-deep shadow-sm backdrop-blur-sm sm:flex`}
               style={{ animationDelay: task.delay }}
             >
               <Check className="h-3 w-3 text-gold" strokeWidth={3} />
@@ -115,7 +116,7 @@ export function Hero() {
           ))}
           <span
             aria-hidden="true"
-            className="animate-float absolute left-8 top-1/2 h-2.5 w-2.5 rounded-full bg-gold/70 shadow-sm"
+            className="animate-float absolute left-8 top-1/2 hidden h-2.5 w-2.5 rounded-full bg-gold/70 shadow-sm sm:block"
             style={{ animationDelay: "-4.5s" }}
           />
 

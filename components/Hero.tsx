@@ -120,32 +120,8 @@ export function Hero() {
             style={{ animationDelay: "-4.5s" }}
           />
 
-          {/* Mobile: warm brand illustration in a soft panel (logo lives in the nav) */}
-          <div
-            className="hero-in relative mx-auto w-full max-w-[19rem] sm:hidden"
-            style={{ animationDelay: "240ms" }}
-          >
-            <div
-              aria-hidden="true"
-              className="absolute -inset-2.5 -z-10 rounded-[30px] bg-brass/15"
-            />
-            <div className="overflow-hidden rounded-[26px] border border-line bg-card shadow-sm">
-              <Image
-                src="/karen-2.jpg"
-                alt="The Remote Admin, virtual office support"
-                width={1024}
-                height={1013}
-                priority
-                className="h-auto w-full"
-              />
-            </div>
-          </div>
-
-          {/* Tablet & desktop: the logo as the centerpiece */}
-          <div
-            className="hero-in hidden sm:block"
-            style={{ animationDelay: "240ms" }}
-          >
+          {/* The logo as the centerpiece — modest on mobile, large on desktop */}
+          <div className="hero-in" style={{ animationDelay: "240ms" }}>
             <div className="animate-float">
               <Image
                 src="/tra-logo.png"
@@ -153,7 +129,7 @@ export function Hero() {
                 width={445}
                 height={446}
                 priority
-                className="mx-auto h-auto w-full max-w-md drop-shadow-md lg:max-w-xl"
+                className="mx-auto h-auto w-full max-w-[15rem] drop-shadow-md sm:max-w-md lg:max-w-xl"
               />
             </div>
           </div>

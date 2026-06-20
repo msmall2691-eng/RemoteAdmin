@@ -50,12 +50,12 @@ export function OfficeRescueAnimation() {
   return (
     <div
       ref={ref}
-      className="relative mx-auto aspect-square w-full max-w-md select-none"
+      className="relative mx-auto aspect-[3/4] w-full max-w-md select-none sm:aspect-square"
       aria-hidden="true"
     >
       {/* The settled "handled" stack */}
       <div
-        className={`absolute inset-x-6 bottom-6 rounded-card border border-line bg-card p-5 shadow-sm transition-all duration-700 ease-out ${
+        className={`absolute inset-x-5 bottom-5 rounded-card border border-line bg-card p-4 shadow-sm transition-all duration-700 ease-out ${
           settled ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
         }`}
       >
@@ -74,7 +74,7 @@ export function OfficeRescueAnimation() {
             className="h-9 w-auto opacity-90"
           />
         </div>
-        <ul className="mt-4 space-y-2.5">
+        <ul className="mt-3 space-y-2">
           {["Backlog cleared", "Files organized", "Follow-ups done"].map(
             (line, i) => (
               <li
@@ -102,11 +102,11 @@ export function OfficeRescueAnimation() {
         return (
           <div
             key={m.label}
-            className="absolute left-1/2 top-1/2 flex w-44 items-center gap-2 rounded-2xl border border-line bg-card px-3.5 py-3 shadow-sm transition-all duration-700 ease-out"
+            className="absolute left-1/2 top-0 flex w-44 max-w-[80%] items-center gap-2 rounded-2xl border border-line bg-card px-3.5 py-3 shadow-sm transition-all duration-700 ease-out"
             style={{
               transform: settled
-                ? `translate(-50%, -50%) translate(0px, ${-128 + i * 52}px) rotate(0deg)`
-                : `translate(-50%, -50%) translate(${m.x * 4}px, ${m.y * 4}px) rotate(${m.r}deg)`,
+                ? `translate(-50%, 0) translate(0px, ${18 + i * 46}px) rotate(0deg)`
+                : `translate(-50%, 0) translate(${m.x * 4}px, ${60 + m.y * 4}px) rotate(${m.r}deg)`,
               opacity: 1,
               transitionDelay: settled ? `${i * 90}ms` : "0ms",
             }}

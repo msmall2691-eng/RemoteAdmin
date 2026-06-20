@@ -6,19 +6,44 @@ import { site } from "@/content/site";
 import { Reveal } from "./Reveal";
 
 /**
- * Facebook Page Plugin (timeline) with a graceful fallback. If the FB SDK
- * fails to load (blockers, network) within a short window, we show simple
- * Follow buttons instead of an empty box.
+ * Facebook Page Plugin (timeline) with a graceful fallback. The plugin is
+ * sized to its container so it fits neatly on phones (FB allows 180–500px);
+ * we re-measure on resize and re-parse. If the SDK fails to load (blockers,
+ * network), we show simple Follow buttons instead of an empty box.
  */
 export function SocialFeed() {
   const { social, links } = site;
+  const measureRef = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [failed, setFailed] = useState(false);
+  const [width, setWidth] = useState<number | null>(null);
 
+  // Measure the available width and clamp to Facebook's 180–500px range.
   useEffect(() => {
+    const measure = () => {
+      const w = measureRef.current?.clientWidth;
+      if (!w) return;
+      setWidth(Math.max(180, Math.min(500, Math.floor(w))));
+    };
+    measure();
+
+    let raf = 0;
+    const onResize = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(measure);
+    };
+    window.addEventListener("resize", onResize);
+    return () => {
+      window.removeEventListener("resize", onResize);
+      cancelAnimationFrame(raf);
+    };
+  }, []);
+
+  // Load (or re-parse) the FB SDK whenever the target width changes.
+  useEffect(() => {
+    if (width == null) return;
     let cancelled = false;
 
-    // If the SDK is already present, ask it to (re)parse our plugin.
     const w = window as unknown as { FB?: { XFBML: { parse: () => void } } };
     if (w.FB) {
       w.FB.XFBML.parse();
@@ -45,7 +70,7 @@ export function SocialFeed() {
       cancelled = true;
       clearTimeout(timer);
     };
-  }, []);
+  }, [width]);
 
   return (
     <section id="social" className="bg-mist/50">
@@ -59,44 +84,50 @@ export function SocialFeed() {
         </Reveal>
 
         <Reveal className="mt-10 flex flex-col items-center">
-          {!failed ? (
-            <div
-              ref={containerRef}
-              className="overflow-hidden rounded-card border border-line bg-card"
-            >
+          {/* Full-width up to 500px so the embed shrinks cleanly on phones */}
+          <div ref={measureRef} className="w-full max-w-[500px]">
+            {!failed ? (
               <div
-                className="fb-page"
-                data-href={links.facebook}
-                data-tabs="timeline"
-                data-width="500"
-                data-height="600"
-                data-small-header="false"
-                data-adapt-container-width="true"
-                data-hide-cover="false"
-                data-show-facepile="true"
+                ref={containerRef}
+                className="hover-lift overflow-hidden rounded-card border border-line bg-card"
               >
-                <blockquote
-                  cite={links.facebook}
-                  className="fb-xfbml-parse-ignore"
-                />
+                {width != null && (
+                  <div
+                    key={width}
+                    className="fb-page"
+                    data-href={links.facebook}
+                    data-tabs="timeline"
+                    data-width={String(width)}
+                    data-height="600"
+                    data-small-header="false"
+                    data-adapt-container-width="true"
+                    data-hide-cover="false"
+                    data-show-facepile="true"
+                  >
+                    <blockquote
+                      cite={links.facebook}
+                      className="fb-xfbml-parse-ignore"
+                    />
+                  </div>
+                )}
               </div>
-            </div>
-          ) : (
-            <div className="card max-w-md p-8 text-center">
-              <p className="text-muted">
-                My latest updates live on Facebook, come say hello.
-              </p>
-              <a
-                href={links.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-ghost mt-5"
-              >
-                <ExternalLink className="h-4 w-4" />
-                Open our Facebook page
-              </a>
-            </div>
-          )}
+            ) : (
+              <div className="card p-8 text-center">
+                <p className="text-muted">
+                  My latest updates live on Facebook, come say hello.
+                </p>
+                <a
+                  href={links.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-ghost mt-5"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  Open our Facebook page
+                </a>
+              </div>
+            )}
+          </div>
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <a

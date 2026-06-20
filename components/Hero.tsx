@@ -29,7 +29,7 @@ export function Hero() {
           style={{ animationDelay: "-13s" }}
         />
       </div>
-      <div className="container-page grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
+      <div className="container-page grid items-center gap-6 py-12 sm:gap-12 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
         <div className="max-w-xl">
           <p className="hero-in eyebrow" style={{ animationDelay: "60ms" }}>
             {hero.eyebrow}
@@ -80,11 +80,11 @@ export function Hero() {
           </ul>
         </div>
 
-        <div className="relative flex items-center justify-center py-10">
+        <div className="relative flex items-center justify-center py-2 sm:py-10">
           {/* Soft "breathing" glow halo grounds the logo */}
           <div
             aria-hidden="true"
-            className="animate-pulse-glow absolute -z-10 h-[22rem] w-[22rem] rounded-full blur-2xl sm:h-[26rem] sm:w-[26rem] lg:h-[30rem] lg:w-[30rem]"
+            className="animate-pulse-glow absolute -z-10 h-[16rem] w-[16rem] rounded-full blur-2xl sm:h-[26rem] sm:w-[26rem] lg:h-[30rem] lg:w-[30rem]"
             style={{
               background:
                 "radial-gradient(circle, rgb(var(--mist-2) / 0.95) 0%, rgb(var(--sage) / 0.18) 45%, transparent 72%)",
@@ -128,7 +128,7 @@ export function Hero() {
                 width={445}
                 height={446}
                 priority
-                className="mx-auto h-auto w-full max-w-lg drop-shadow-md sm:max-w-xl"
+                className="mx-auto h-auto w-full max-w-[15rem] drop-shadow-md sm:max-w-md lg:max-w-xl"
               />
             </div>
           </div>

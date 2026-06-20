@@ -7,8 +7,8 @@
      Stored as space-separated RGB channels so Tailwind alpha modifiers
      (e.g. bg-mist/50) work via rgb(var(--token) / <alpha-value>).
      For direct CSS/SVG use, wrap in rgb(): rgb(var(--ink)). */
-  --ink: 55 96 106; /* #37606a deep teal — headings & text (primary) */
-  --ink-2: 74 124 132; /* #4a7c84 teal */
+  --ink: 45 74 122; /* #2d4a7a deep logo-blue — headings & text (primary) */
+  --ink-2: 60 94 150; /* #3c5e96 medium logo-blue */
   --oat: 252 250 232; /* #fcfae8 very pale yellow page bg */
   --card: 255 255 255; /* #ffffff */
   --mist: 215 228 229; /* #d7e4e5 soft teal-blue surface */
@@ -19,7 +19,7 @@
   --brass-deep: 55 96 106; /* #37606a deep teal */
   --gold: 26 26 26; /* #1a1a1a near-black accent (was mustard) */
   --line: 226 224 214; /* #e2e0d6 warm border */
-  --muted: 92 107 102; /* #5c6b66 muted text */
+  --muted: 88 102 122; /* #58667a blue-gray muted text */
 }
 
 @layer base {

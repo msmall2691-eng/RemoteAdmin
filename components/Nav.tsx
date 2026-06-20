@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Menu, X, Facebook, Instagram } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { site } from "@/content/site";
@@ -9,7 +10,7 @@ import { site } from "@/content/site";
 export function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [active, setActive] = useState<string>("#top");
+  const [active, setActive] = useState<string>("/#top");
   const reduce = useReducedMotion();
 
   useEffect(() => {
@@ -22,7 +23,7 @@ export function Nav() {
   // Scroll-spy: highlight the nav item for the section currently in view.
   useEffect(() => {
     const ids = site.nav
-      .map((item) => item.href.replace("#", ""))
+      .map((item) => item.href.split("#")[1])
       .filter(Boolean);
     const sections = ids
       .map((id) => document.getElementById(id))
@@ -35,7 +36,7 @@ export function Nav() {
         const visible = entries
           .filter((e) => e.isIntersecting)
           .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-        if (visible[0]) setActive(`#${visible[0].target.id}`);
+        if (visible[0]) setActive(`/#${visible[0].target.id}`);
       },
       { rootMargin: "-45% 0px -50% 0px", threshold: 0 },
     );
@@ -66,8 +67,8 @@ export function Nav() {
         className="container-page flex h-16 items-center justify-between sm:h-20"
         aria-label="Primary"
       >
-        <a
-          href="#top"
+        <Link
+          href="/#top"
           className="group flex items-center"
           aria-label={`${site.business.name}, home`}
         >
@@ -79,7 +80,7 @@ export function Nav() {
             priority
             className="h-14 w-auto transition-transform duration-200 group-hover:scale-[1.03] sm:h-16"
           />
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-6 md:flex">
           {site.nav.map((item) => {
@@ -121,9 +122,9 @@ export function Nav() {
               </a>
             )}
           </span>
-          <a href="#book" className="btn-brass">
+          <Link href="/#book" className="btn-brass">
             Book a call
-          </a>
+          </Link>
         </div>
 
         <button
@@ -190,13 +191,13 @@ export function Nav() {
                     </motion.a>
                   );
                 })}
-                <a
-                  href="#book"
+                <Link
+                  href="/#book"
                   className="btn-brass mt-2"
                   onClick={() => setOpen(false)}
                 >
                   Book a call
-                </a>
+                </Link>
                 <div className="mt-3 flex items-center gap-2 border-t border-line pt-4">
                   <a
                     href={site.links.facebook}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { CalendarDays } from "lucide-react";
 
 /**
@@ -29,10 +30,10 @@ export function StickyMobileCta() {
       }`}
       style={{ paddingBottom: "calc(0.75rem + env(safe-area-inset-bottom))" }}
     >
-      <a href="#book" className="btn-brass w-full">
+      <Link href="/#book" className="btn-brass w-full">
         <CalendarDays className="h-4 w-4" />
         Book a call
-      </a>
+      </Link>
     </div>
   );
 }

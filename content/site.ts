@@ -77,12 +77,12 @@ export const site = {
   },
 
   nav: [
-    { label: "Home", href: "#top" },
-    { label: "Services", href: "#services" },
-    { label: "How it works", href: "#how" },
-    { label: "About", href: "#about" },
-    { label: "Reviews", href: "#reviews" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Home", href: "/#top" },
+    { label: "Services", href: "/#services" },
+    { label: "How it works", href: "/#how" },
+    { label: "About", href: "/#about" },
+    { label: "Reviews", href: "/#reviews" },
+    { label: "FAQ", href: "/#faq" },
   ],
 
   hero: {

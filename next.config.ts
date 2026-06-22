@@ -19,7 +19,9 @@ const csp = [
   "default-src 'self'",
   "base-uri 'self'",
   "object-src 'none'",
-  "frame-ancestors 'self'",
+  // Allow this site to be embedded only by itself and the M Studio site;
+  // every other origin is still blocked from framing it (anti-clickjacking).
+  "frame-ancestors 'self' https://mlinx.studio https://www.mlinx.studio",
   "form-action 'self'",
   "img-src 'self' data: https:",
   "font-src 'self' data:",
@@ -39,8 +41,9 @@ const securityHeaders = [
   },
   // Don't let browsers guess (MIME-sniff) a file's type.
   { key: "X-Content-Type-Options", value: "nosniff" },
-  // Block the site from being framed elsewhere (clickjacking).
-  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+  // NB: X-Frame-Options is intentionally omitted — framing is controlled by the
+  // CSP `frame-ancestors` directive above, which (unlike X-Frame-Options) can
+  // allow specific external origins (the M Studio site) while blocking the rest.
   // Only send the origin (not the full path) to other sites.
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   // Turn off powerful browser features the site never uses.

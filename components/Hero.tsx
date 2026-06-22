@@ -44,13 +44,19 @@ export function Hero() {
           </p>
 
           <div
-            className="hero-in mt-8 flex flex-wrap items-center gap-3"
+            className="hero-in mt-8 flex flex-col gap-3 sm:flex-row sm:items-center"
             style={{ animationDelay: "380ms" }}
           >
-            <Link href={hero.primaryCta.href} className="btn-brass">
+            <Link
+              href={hero.primaryCta.href}
+              className="btn-brass w-full sm:w-auto"
+            >
               {hero.primaryCta.label}
             </Link>
-            <Link href={hero.secondaryCta.href} className="btn-ghost">
+            <Link
+              href={hero.secondaryCta.href}
+              className="btn-ghost w-full sm:w-auto"
+            >
               {hero.secondaryCta.label}
               <ArrowRight className="h-4 w-4" />
             </Link>

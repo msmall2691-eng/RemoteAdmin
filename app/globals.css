@@ -102,6 +102,9 @@
     font-feature-settings: "kern", "liga";
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    /* Guard against accidental horizontal scroll on mobile (decorative
+       blobs, wide previews) without breaking the sticky nav. */
+    overflow-x: clip;
   }
 
   h1,
@@ -252,6 +255,20 @@
   animation: drift 18s ease-in-out infinite;
 }
 
+/* Slow horizontal "aurora" shimmer for a gentle bit of top-of-page movement */
+@keyframes aurora {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.animate-aurora {
+  animation: aurora 16s ease-in-out infinite;
+}
+
 /* Very slow rotation for the decorative brand ring behind the hero logo */
 @keyframes spin-slow {
   to {
@@ -327,7 +344,8 @@
   .animate-marquee,
   .animate-spin-slow,
   .animate-pulse-glow,
-  .animate-chip {
+  .animate-chip,
+  .animate-aurora {
     animation: none !important;
   }
   .hover-lift:hover {

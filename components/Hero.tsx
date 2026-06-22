@@ -88,17 +88,29 @@ export function Hero() {
             </span>
           ))}
 
-          {/* The logo as the centerpiece — modest on mobile, large on desktop */}
+          {/* The logo as the centerpiece — framed as a clean badge for presence */}
           <div className="hero-in" style={{ animationDelay: "240ms" }}>
-            <div className="animate-float">
-              <Image
-                src="/tra-logo.png"
-                alt={`${site.business.name} logo`}
-                width={445}
-                height={446}
-                priority
-                className="mx-auto h-auto w-full max-w-[15rem] drop-shadow-md sm:max-w-md lg:max-w-xl"
+            <div className="animate-float relative">
+              {/* Soft concentric accent rings */}
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 -m-3 rounded-full border border-sage/20 sm:-m-5"
               />
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 -m-7 rounded-full border border-sage/10 sm:-m-11"
+              />
+              {/* The logo on a clean circular disc with depth */}
+              <div className="rounded-full bg-gradient-to-br from-card to-mist/40 p-7 shadow-[0_35px_80px_-40px_rgb(var(--ink)/0.55)] ring-1 ring-line sm:p-10">
+                <Image
+                  src="/tra-logo.png"
+                  alt={`${site.business.name} logo`}
+                  width={445}
+                  height={446}
+                  priority
+                  className="mx-auto h-auto w-full max-w-[11rem] sm:max-w-[15rem] lg:max-w-[18rem]"
+                />
+              </div>
             </div>
           </div>
         </div>

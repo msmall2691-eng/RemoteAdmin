@@ -79,10 +79,10 @@ export const site = {
 
   nav: [
     { label: "Home", href: "/#top" },
-    { label: "Services", href: "/#services" },
-    { label: "Free Tools", href: "/tools" },
-    { label: "How it works", href: "/#how" },
     { label: "About", href: "/#about" },
+    { label: "Services", href: "/#services" },
+    { label: "How it works", href: "/#how" },
+    { label: "Free Tools", href: "/#tools" },
     { label: "Reviews", href: "/#reviews" },
     { label: "FAQ", href: "/#faq" },
   ],

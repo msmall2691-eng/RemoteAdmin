@@ -98,7 +98,8 @@ export const site = {
 
   hero: {
     eyebrow: "Virtual admin · Southern NH",
-    headline: "Office admin support for contractors & service businesses",
+    headline:
+      "Administrative office support for contractors & small service-based businesses",
     subcopy: "You focus on your customers; I'll take care of the admin.",
     primaryCta: { label: "Book a call", href: "#book" },
     secondaryCta: { label: "See what I do", href: "#services" },

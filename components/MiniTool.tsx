@@ -11,10 +11,16 @@ import { CopyButton, esc, inputClass } from "./tools/ui";
  * links down to the full toolkit for the rest.
  */
 
-const ACCENT = "#3A6096";
+const PRESETS = ["#3A6096", "#2F6B43", "#13808C", "#D9603F", "#C79A3E"];
 
-function buildSig(name: string, title: string, company: string, email: string) {
-  const a = esc(ACCENT);
+function buildSig(
+  name: string,
+  title: string,
+  company: string,
+  email: string,
+  accent: string,
+) {
+  const a = esc(accent);
   const line2 = [title, company].filter(Boolean).map(esc).join(" · ");
   const rows = [
     `<div style="font-weight:bold;color:${a};font-size:14px;">${esc(name || "Your Name")}</div>`,
@@ -33,8 +39,9 @@ export function MiniTool() {
   const [title, setTitle] = useState("");
   const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
+  const [accent, setAccent] = useState(PRESETS[0]);
 
-  const html = buildSig(name, title, company, email);
+  const html = buildSig(name, title, company, email, accent);
   const plain = [name, [title, company].filter(Boolean).join(" · "), email]
     .filter(Boolean)
     .join("\n");
@@ -74,11 +81,38 @@ export function MiniTool() {
         </div>
 
         <div className="mt-3 grid gap-4 sm:grid-cols-2 sm:items-center">
-          <div className="grid grid-cols-2 gap-2">
-            {field(name, setName, "Name")}
-            {field(title, setTitle, "Title")}
-            {field(company, setCompany, "Company")}
-            {field(email, setEmail, "Email", "email")}
+          <div>
+            <div className="grid grid-cols-2 gap-2">
+              {field(name, setName, "Name")}
+              {field(title, setTitle, "Title")}
+              {field(company, setCompany, "Company")}
+              {field(email, setEmail, "Email", "email")}
+            </div>
+            <div className="mt-2.5 flex items-center gap-2">
+              <span className="text-xs font-medium text-muted">Color</span>
+              {PRESETS.map((hex) => (
+                <button
+                  key={hex}
+                  type="button"
+                  onClick={() => setAccent(hex)}
+                  aria-label={`Use accent ${hex}`}
+                  aria-pressed={accent.toLowerCase() === hex.toLowerCase()}
+                  className={`h-6 w-6 rounded-full border border-black/10 transition-transform hover:scale-110 ${
+                    accent.toLowerCase() === hex.toLowerCase()
+                      ? "ring-2 ring-sage ring-offset-1"
+                      : ""
+                  }`}
+                  style={{ backgroundColor: hex }}
+                />
+              ))}
+              <input
+                type="color"
+                value={accent}
+                onChange={(e) => setAccent(e.target.value)}
+                aria-label="Custom accent color"
+                className="h-7 w-8 cursor-pointer rounded border border-line bg-oat"
+              />
+            </div>
           </div>
 
           <div>

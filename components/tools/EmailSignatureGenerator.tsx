@@ -1,13 +1,14 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { Upload, Download, Code } from "lucide-react";
+import { Upload, Download, Code, ChevronDown } from "lucide-react";
 import {
   labelClass,
   groupLabel,
   inputClass,
   esc,
   safeUrl,
+  AccentSelect,
   CopyButton,
   ToolCta,
 } from "./ui";
@@ -155,6 +156,7 @@ export function EmailSignatureGenerator() {
   const [f, setF] = useState<Fields>(EMPTY);
   const [logo, setLogo] = useState<string | null>(null);
   const [showCode, setShowCode] = useState(false);
+  const [showMore, setShowMore] = useState(false);
   const fileRef = useRef<HTMLInputElement | null>(null);
 
   const set = (k: keyof Fields) => (e: React.ChangeEvent<HTMLInputElement>) =>
@@ -210,10 +212,10 @@ export function EmailSignatureGenerator() {
   return (
     <div className="grid gap-8 lg:grid-cols-2">
       {/* Inputs */}
-      <div className="space-y-6">
+      <div className="space-y-5">
         <div>
           <p className={groupLabel}>Your details</p>
-          <div className="mt-2.5 grid gap-4 sm:grid-cols-2">
+          <div className="mt-2.5 grid gap-3 sm:grid-cols-2">
             {field("name", "Full name", "Karen Felch")}
             {field("title", "Job title", "Owner")}
             {field("business", "Business name", "The Remote Admin")}
@@ -223,76 +225,73 @@ export function EmailSignatureGenerator() {
           </div>
         </div>
 
-        <div>
-          <p className={groupLabel}>Social links (optional)</p>
-          <div className="mt-2.5 grid gap-4 sm:grid-cols-3">
-            {field("facebook", "Facebook URL", "facebook.com/…")}
-            {field("instagram", "Instagram URL", "instagram.com/…")}
-            {field("linkedin", "LinkedIn URL", "linkedin.com/in/…")}
-          </div>
+        <div className="flex items-center gap-3">
+          <span className={groupLabel}>Color</span>
+          <AccentSelect accent={accent} setAccent={setAccent} />
         </div>
 
-        <div>
-          <p className={groupLabel}>Extras (optional)</p>
-          <div className="mt-2.5 grid gap-4 sm:grid-cols-2">
-            {field("tagline", "Tagline", "Making your life easier")}
-            {field("cta", "Button text", "Book a Call")}
-          </div>
-        </div>
+        <button
+          type="button"
+          onClick={() => setShowMore((v) => !v)}
+          aria-expanded={showMore}
+          className="inline-flex items-center gap-1.5 text-sm font-semibold text-sage-deep transition-colors hover:text-ink"
+        >
+          {showMore ? "Fewer options" : "More options — logo, social, tagline"}
+          <ChevronDown
+            className={`h-4 w-4 transition-transform ${showMore ? "rotate-180" : ""}`}
+          />
+        </button>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div>
-            <span className={labelClass}>Logo (optional)</span>
-            <div className="mt-1.5 flex items-center gap-3">
-              <button
-                type="button"
-                onClick={() => fileRef.current?.click()}
-                className="btn-ghost"
-              >
-                <Upload className="h-4 w-4" />
-                {logo ? "Change logo" : "Upload logo"}
-              </button>
-              {logo && (
+        {showMore && (
+          <div className="space-y-5">
+            <div>
+              <p className={groupLabel}>Social links</p>
+              <div className="mt-2.5 grid gap-3 sm:grid-cols-3">
+                {field("facebook", "Facebook URL", "facebook.com/…")}
+                {field("instagram", "Instagram URL", "instagram.com/…")}
+                {field("linkedin", "LinkedIn URL", "linkedin.com/in/…")}
+              </div>
+            </div>
+
+            <div>
+              <p className={groupLabel}>Extras</p>
+              <div className="mt-2.5 grid gap-3 sm:grid-cols-2">
+                {field("tagline", "Tagline", "Making your life easier")}
+                {field("cta", "Button text", "Book a Call")}
+              </div>
+            </div>
+
+            <div>
+              <span className={labelClass}>Logo</span>
+              <div className="mt-1.5 flex items-center gap-3">
                 <button
                   type="button"
-                  onClick={() => setLogo(null)}
-                  className="text-sm text-muted underline hover:text-ink"
+                  onClick={() => fileRef.current?.click()}
+                  className="btn-ghost"
                 >
-                  Remove
+                  <Upload className="h-4 w-4" />
+                  {logo ? "Change logo" : "Upload logo"}
                 </button>
-              )}
-              <input
-                ref={fileRef}
-                type="file"
-                accept="image/*"
-                onChange={onLogo}
-                className="hidden"
-              />
+                {logo && (
+                  <button
+                    type="button"
+                    onClick={() => setLogo(null)}
+                    className="text-sm text-muted underline hover:text-ink"
+                  >
+                    Remove
+                  </button>
+                )}
+                <input
+                  ref={fileRef}
+                  type="file"
+                  accept="image/*"
+                  onChange={onLogo}
+                  className="hidden"
+                />
+              </div>
             </div>
           </div>
-
-          <div>
-            <label className={labelClass} htmlFor="sig-accent">
-              Accent color
-            </label>
-            <div className="mt-1.5 flex items-center gap-2">
-              <input
-                id="sig-accent"
-                type="color"
-                value={accent}
-                onChange={(e) => setAccent(e.target.value)}
-                className="h-10 w-12 cursor-pointer rounded-lg border border-line bg-oat"
-                aria-label="Signature accent color"
-              />
-              <input
-                type="text"
-                value={accent}
-                onChange={(e) => setAccent(e.target.value)}
-                className={inputClass}
-              />
-            </div>
-          </div>
-        </div>
+        )}
       </div>
 
       {/* Preview + actions */}

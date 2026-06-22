@@ -30,6 +30,69 @@ export function safeUrl(raw: string): string {
   return "#";
 }
 
+export const ACCENT_PRESETS = [
+  { name: "Professional Blue", hex: "#3A6096" },
+  { name: "Fresh Green", hex: "#2F6B43" },
+  { name: "Calm Teal", hex: "#13808C" },
+  { name: "Warm Coral", hex: "#D9603F" },
+  { name: "Soft Gold", hex: "#C79A3E" },
+];
+
+/** Compact color control: a named-color dropdown + a swatch, with a
+ *  "Custom…" option that reveals a color picker only when chosen. */
+export function AccentSelect({
+  accent,
+  setAccent,
+  className = "",
+}: {
+  accent: string;
+  setAccent: (hex: string) => void;
+  className?: string;
+}) {
+  const [custom, setCustom] = useState(
+    () => !ACCENT_PRESETS.some((p) => p.hex.toLowerCase() === accent.toLowerCase()),
+  );
+
+  return (
+    <div className={`flex items-center gap-2 ${className}`}>
+      <span
+        className="h-6 w-6 shrink-0 rounded-full border border-black/10"
+        style={{ backgroundColor: accent }}
+        aria-hidden="true"
+      />
+      <select
+        value={custom ? "custom" : accent}
+        onChange={(e) => {
+          const v = e.target.value;
+          if (v === "custom") setCustom(true);
+          else {
+            setCustom(false);
+            setAccent(v);
+          }
+        }}
+        aria-label="Signature color"
+        className="rounded-lg border border-line bg-oat px-3 py-2 text-sm text-ink focus:border-sage focus:outline-none"
+      >
+        {ACCENT_PRESETS.map((p) => (
+          <option key={p.hex} value={p.hex}>
+            {p.name}
+          </option>
+        ))}
+        <option value="custom">Custom…</option>
+      </select>
+      {custom && (
+        <input
+          type="color"
+          value={accent}
+          onChange={(e) => setAccent(e.target.value)}
+          aria-label="Custom accent color"
+          className="h-9 w-10 cursor-pointer rounded border border-line bg-oat"
+        />
+      )}
+    </div>
+  );
+}
+
 async function copyRich(html: string, plain: string): Promise<boolean> {
   try {
     if (navigator.clipboard && typeof ClipboardItem !== "undefined") {

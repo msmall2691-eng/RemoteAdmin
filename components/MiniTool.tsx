@@ -3,21 +3,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Sparkles, ArrowDown } from "lucide-react";
-import { CopyButton, esc, inputClass } from "./tools/ui";
+import { AccentSelect, CopyButton, esc, inputClass } from "./tools/ui";
 
 /**
  * Tiny, genuinely-usable email-signature widget for the top of the page —
  * a few fields, a live preview, and copy. No big section, no instructions;
  * links down to the full toolkit for the rest.
  */
-
-const PRESETS = [
-  { name: "Professional Blue", hex: "#3A6096" },
-  { name: "Fresh Green", hex: "#2F6B43" },
-  { name: "Calm Teal", hex: "#13808C" },
-  { name: "Warm Coral", hex: "#D9603F" },
-  { name: "Soft Gold", hex: "#C79A3E" },
-];
 
 function buildSig(
   name: string,
@@ -45,8 +37,7 @@ export function MiniTool() {
   const [title, setTitle] = useState("");
   const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
-  const [accent, setAccent] = useState(PRESETS[0].hex);
-  const [customMode, setCustomMode] = useState(false);
+  const [accent, setAccent] = useState("#3A6096");
 
   const html = buildSig(name, title, company, email, accent);
   const plain = [name, [title, company].filter(Boolean).join(" · "), email]
@@ -96,41 +87,8 @@ export function MiniTool() {
               {field(email, setEmail, "Email", "email")}
             </div>
             <div className="mt-2.5 flex items-center gap-2">
-              <span
-                className="h-5 w-5 shrink-0 rounded-full border border-black/10"
-                style={{ backgroundColor: accent }}
-                aria-hidden="true"
-              />
-              <select
-                value={customMode ? "custom" : accent}
-                onChange={(e) => {
-                  const v = e.target.value;
-                  if (v === "custom") {
-                    setCustomMode(true);
-                  } else {
-                    setCustomMode(false);
-                    setAccent(v);
-                  }
-                }}
-                aria-label="Signature color"
-                className="rounded-lg border border-line bg-oat px-3 py-1.5 text-sm text-ink focus:border-sage focus:outline-none"
-              >
-                {PRESETS.map((p) => (
-                  <option key={p.hex} value={p.hex}>
-                    {p.name}
-                  </option>
-                ))}
-                <option value="custom">Custom…</option>
-              </select>
-              {customMode && (
-                <input
-                  type="color"
-                  value={accent}
-                  onChange={(e) => setAccent(e.target.value)}
-                  aria-label="Custom accent color"
-                  className="h-8 w-9 cursor-pointer rounded border border-line bg-oat"
-                />
-              )}
+              <span className="text-xs font-medium text-muted">Color</span>
+              <AccentSelect accent={accent} setAccent={setAccent} />
             </div>
           </div>
 

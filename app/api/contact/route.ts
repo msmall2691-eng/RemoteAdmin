@@ -39,6 +39,12 @@ function rateLimited(ip: string): boolean {
   return entry.count > MAX_PER_WINDOW;
 }
 
+// Strip CR/LF so user input can never inject extra email headers
+// (e.g. via the reply-to address or subject line).
+function stripNewlines(str: string): string {
+  return str.replace(/[\r\n]+/g, " ").trim();
+}
+
 function escapeHtml(str: string): string {
   return str
     .replace(/&/g, "&amp;")
@@ -72,8 +78,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true });
   }
 
-  const name = (body.name ?? "").trim();
-  const contact = (body.contact ?? "").trim();
+  const name = stripNewlines(body.name ?? "");
+  const contact = stripNewlines(body.contact ?? "");
   const message = (body.message ?? "").trim();
   const needs = Array.isArray(body.needs)
     ? body.needs.filter((n) => typeof n === "string").slice(0, 10)

@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
         <h1 className="mt-2 font-display text-4xl text-ink md:text-5xl">
           Privacy Policy
         </h1>
-        <p className="mt-3 text-sm text-muted">Last updated June 17, 2026</p>
+        <p className="mt-3 text-sm text-muted">Last updated June 22, 2026</p>
 
         <div className="mt-10 space-y-8 text-ink/90">
           <p>
@@ -78,6 +78,29 @@ export default function PrivacyPolicyPage() {
                 office@the-remote-admin.com
               </a>{" "}
               and we will take care of it.
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            <h2 className="font-display text-2xl text-ink">
+              How long we keep it
+            </h2>
+            <p>
+              We keep contact-form submissions only as long as needed to respond
+              to your inquiry and for our ordinary business records, and we
+              delete them when they are no longer needed or sooner on request.
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            <h2 className="font-display text-2xl text-ink">
+              Children&rsquo;s privacy
+            </h2>
+            <p>
+              This website is intended for adults and for businesses. It is not
+              directed to children under 13, and we do not knowingly collect
+              personal information from children. If you believe a child has
+              provided us information, please contact us and we will delete it.
             </p>
           </div>
 

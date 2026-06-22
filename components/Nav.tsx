@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Menu, X, Facebook, Instagram } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { site } from "@/content/site";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export function Nav() {
   const [open, setOpen] = useState(false);
@@ -121,6 +122,7 @@ export function Nav() {
                 <Instagram className="h-[1.15rem] w-[1.15rem]" />
               </a>
             )}
+            <ThemeSwitcher />
           </span>
           <Link href="/#book" className="btn-brass">
             Book a call
@@ -219,6 +221,10 @@ export function Nav() {
                       <Instagram className="h-5 w-5" />
                     </a>
                   )}
+                  <span className="ml-auto inline-flex items-center gap-2 text-sm text-muted">
+                    Theme
+                    <ThemeSwitcher variant="inline" />
+                  </span>
                 </div>
               </div>
             </motion.div>

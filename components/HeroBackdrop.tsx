@@ -35,11 +35,25 @@ export function HeroBackdrop() {
       aria-hidden="true"
       className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
     >
+      {/* Gentle aurora shimmer across the top — adds movement on mobile too */}
+      <div
+        className="animate-aurora absolute inset-x-0 top-0 h-72"
+        style={{
+          background:
+            "linear-gradient(100deg, transparent 10%, rgb(var(--sage) / 0.12) 40%, rgb(var(--brass) / 0.10) 60%, transparent 90%)",
+          backgroundSize: "220% 100%",
+        }}
+      />
+
       {/* Slow ambient drift */}
       <div className="animate-drift absolute -left-24 top-0 h-72 w-72 rounded-full bg-mist-2/40 blur-3xl" />
       <div
         className="animate-drift absolute -right-16 bottom-0 h-80 w-80 rounded-full bg-sage/15 blur-3xl"
         style={{ animationDelay: "-9s" }}
+      />
+      <div
+        className="animate-float absolute left-1/3 top-1/4 h-56 w-56 rounded-full bg-brass/10 blur-3xl"
+        style={{ animationDelay: "-3s" }}
       />
 
       {/* Soft glow that gently follows the cursor */}

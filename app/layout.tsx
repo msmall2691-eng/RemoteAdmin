@@ -7,6 +7,7 @@ import { TopBar } from "@/components/TopBar";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { StickyMobileCta } from "@/components/StickyMobileCta";
+import { BackToTop } from "@/components/BackToTop";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -105,6 +106,7 @@ export default function RootLayout({
         <main id="main">{children}</main>
         <Footer />
         <StickyMobileCta />
+        <BackToTop />
       </body>
     </html>
   );

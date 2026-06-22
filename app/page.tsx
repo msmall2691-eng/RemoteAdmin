@@ -4,7 +4,7 @@ import { PainStrip } from "@/components/PainStrip";
 import { Services } from "@/components/Services";
 import { Tools } from "@/components/Tools";
 import { HowItWorks } from "@/components/HowItWorks";
-import { ToolsPreview } from "@/components/ToolsPreview";
+import { MiniTool } from "@/components/MiniTool";
 import { FreeTools } from "@/components/FreeTools";
 import { Packages } from "@/components/Packages";
 import { CtaStrip } from "@/components/CtaStrip";
@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <ToolsPreview />
+      <MiniTool />
       <About />
       <PainStrip />
       <Services />

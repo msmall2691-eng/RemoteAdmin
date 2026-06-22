@@ -11,7 +11,7 @@ export function FreeTools() {
       id="tools"
       className="scroll-mt-24 bg-gradient-to-b from-mist/30 to-transparent"
     >
-      <div className="container-page py-14 sm:py-16">
+      <div className="container-page py-20 sm:py-24">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="eyebrow inline-flex items-center gap-1.5">
             <Sparkles className="h-3.5 w-3.5" />

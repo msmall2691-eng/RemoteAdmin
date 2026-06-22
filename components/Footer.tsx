@@ -31,7 +31,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="eyebrow">Explore</p>
+            <h2 className="eyebrow">Explore</h2>
             <ul className="mt-4 space-y-2.5">
               {nav.map((item) => (
                 <li key={item.href}>
@@ -47,7 +47,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="eyebrow">Get in touch</p>
+            <h2 className="eyebrow">Get in touch</h2>
             <ul className="mt-4 space-y-2.5">
               <li>
                 <a

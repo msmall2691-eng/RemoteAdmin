@@ -11,7 +11,7 @@ export function CtaStrip() {
   const { cta } = site;
   return (
     <section className="bg-mist/70">
-      <div className="container-page py-10">
+      <div className="container-page py-12 sm:py-14">
         <Reveal className="flex flex-col items-center justify-between gap-5 rounded-card border border-line bg-card px-7 py-7 text-center shadow-sm sm:flex-row sm:text-left">
           <div>
             <p className="font-display text-xl font-semibold text-ink sm:text-2xl">

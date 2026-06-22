@@ -1,9 +1,8 @@
 import { MessageSquare, Phone } from "lucide-react";
 import { site } from "@/content/site";
-import { WeatherWidget } from "./WeatherWidget";
 
 /**
- * Slim utility bar above the nav: local weather on the left, quick
+ * Slim utility bar above the nav: a quiet location note on the left and quick
  * "Text" / "Call" actions on the right. Scrolls away; the nav stays sticky.
  */
 export function TopBar() {
@@ -12,9 +11,9 @@ export function TopBar() {
   return (
     <div className="border-b border-line bg-mist/40">
       <div className="container-page flex h-10 items-center justify-between gap-2">
-        <div className="min-w-0">
-          <WeatherWidget />
-        </div>
+        <p className="hidden text-xs text-muted sm:block">
+          Serving {business.region}
+        </p>
 
         <div className="flex shrink-0 items-center gap-1">
           <a

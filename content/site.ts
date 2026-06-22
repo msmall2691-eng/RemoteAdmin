@@ -62,6 +62,7 @@ export const site = {
     state: "NH",
     phone: "(603) 714-8370",
     phoneHref: "tel:+16037148370",
+    smsHref: "sms:+16037148370",
     email: "office@the-remote-admin.com",
     emailHref: "mailto:office@the-remote-admin.com",
     url: "https://the-remote-admin.com",

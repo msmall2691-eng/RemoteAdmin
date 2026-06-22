@@ -1,10 +1,10 @@
 import { Hero } from "@/components/Hero";
-import { FreeToolsTeaser } from "@/components/FreeToolsTeaser";
 import { About } from "@/components/About";
 import { PainStrip } from "@/components/PainStrip";
 import { Services } from "@/components/Services";
 import { Tools } from "@/components/Tools";
 import { HowItWorks } from "@/components/HowItWorks";
+import { FreeTools } from "@/components/FreeTools";
 import { Packages } from "@/components/Packages";
 import { CtaStrip } from "@/components/CtaStrip";
 import { Reviews } from "@/components/Reviews";
@@ -18,12 +18,12 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <FreeToolsTeaser />
       <About />
       <PainStrip />
       <Services />
-      <Tools />
       <HowItWorks />
+      <FreeTools />
+      <Tools />
       <Packages />
       <CtaStrip />
       <Reviews />

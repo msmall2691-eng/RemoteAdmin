@@ -79,12 +79,12 @@ export const site = {
 
   nav: [
     { label: "Home", href: "/#top" },
-    { label: "Free Tools", href: "/#tools" },
     { label: "About", href: "/#about" },
     { label: "Services", href: "/#services" },
     { label: "How it works", href: "/#how" },
     { label: "Reviews", href: "/#reviews" },
     { label: "FAQ", href: "/#faq" },
+    { label: "Free Tools", href: "/#tools" },
   ],
 
   toolsPage: {

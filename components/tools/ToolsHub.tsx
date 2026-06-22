@@ -1,14 +1,11 @@
 "use client";
 
-import { useState } from "react";
-import { Mail, Palette, BellRing } from "lucide-react";
+import { Mail, BellRing } from "lucide-react";
 import { EmailSignatureGenerator } from "./EmailSignatureGenerator";
-import { BrandAccentPicker } from "./BrandAccentPicker";
 import { LatePaymentReminder } from "./LatePaymentReminder";
 
 const MENU = [
   { id: "signature", label: "Email Signature", Icon: Mail },
-  { id: "accent", label: "Brand Accent Picker", Icon: Palette },
   { id: "reminder", label: "Late Payment Reminder", Icon: BellRing },
 ];
 
@@ -40,9 +37,6 @@ function Section({
 }
 
 export function ToolsHub() {
-  // Shared accent color — the Brand Accent Picker and Email Signature use the same value.
-  const [accent, setAccent] = useState("#3A6096");
-
   return (
     <div>
       {/* Quick jump menu */}
@@ -72,21 +66,12 @@ export function ToolsHub() {
           title="Email Signature Generator"
           description="Build a polished email signature and paste it straight into Gmail or Outlook. Fill in your details and watch the preview update live."
         >
-          <EmailSignatureGenerator accent={accent} setAccent={setAccent} />
-        </Section>
-
-        <Section
-          id="accent"
-          eyebrow="Tool 02"
-          title="Brand Accent Picker"
-          description="Choose one accent color to use across your invoices, forms, and emails. Pick a mood or set a custom color — it carries into the signature tool too."
-        >
-          <BrandAccentPicker accent={accent} setAccent={setAccent} />
+          <EmailSignatureGenerator />
         </Section>
 
         <Section
           id="reminder"
-          eyebrow="Tool 03"
+          eyebrow="Tool 02"
           title="Late Payment Reminder Generator"
           description="Create a polite but firm payment reminder in seconds. Choose a tone, then copy the email or a short text-message version."
         >

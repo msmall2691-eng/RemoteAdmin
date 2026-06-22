@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Palette, BellRing, ArrowRight, Sparkles } from "lucide-react";
+import { Mail, BellRing, ArrowRight, Sparkles } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const TEASERS = [
@@ -8,12 +8,6 @@ const TEASERS = [
     Icon: Mail,
     name: "Email Signature Maker",
     body: "Build a polished signature and paste it into Gmail or Outlook.",
-  },
-  {
-    href: "/tools#accent",
-    Icon: Palette,
-    name: "Brand Accent Picker",
-    body: "Pick one color for your invoices, forms, and emails.",
   },
   {
     href: "/tools#reminder",
@@ -26,7 +20,7 @@ const TEASERS = [
 export function FreeToolsTeaser() {
   return (
     <section className="bg-gradient-to-b from-transparent to-mist/30">
-      <div className="container-page py-14 sm:py-16">
+      <div className="container-page py-10 sm:py-12">
         <Reveal className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-end">
           <div>
             <p className="eyebrow inline-flex items-center gap-1.5">
@@ -49,7 +43,7 @@ export function FreeToolsTeaser() {
           </Link>
         </Reveal>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {TEASERS.map(({ href, Icon, name, body }, i) => (
             <Reveal key={href} delay={i * 60}>
               <Link

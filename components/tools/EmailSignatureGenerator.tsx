@@ -12,11 +12,6 @@ import {
   ToolCta,
 } from "./ui";
 
-type Props = {
-  accent: string;
-  setAccent: (hex: string) => void;
-};
-
 type Fields = {
   name: string;
   title: string;
@@ -155,7 +150,8 @@ function buildPlain(f: Fields): string {
   return lines.join("\n");
 }
 
-export function EmailSignatureGenerator({ accent, setAccent }: Props) {
+export function EmailSignatureGenerator() {
+  const [accent, setAccent] = useState("#3A6096");
   const [f, setF] = useState<Fields>(EMPTY);
   const [logo, setLogo] = useState<string | null>(null);
   const [showCode, setShowCode] = useState(false);

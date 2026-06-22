@@ -21,7 +21,7 @@ export function Hero() {
     >
       {/* Calm, simple interactive backdrop — glow gently follows the cursor */}
       <HeroBackdrop />
-      <div className="container-page grid items-center gap-6 py-12 sm:gap-12 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
+      <div className="container-page grid items-center gap-6 py-10 sm:gap-12 sm:py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-20">
         <div className="max-w-xl">
           <p className="hero-in eyebrow" style={{ animationDelay: "60ms" }}>
             {hero.eyebrow}
@@ -56,24 +56,9 @@ export function Hero() {
             </Link>
           </div>
 
-          <ul
-            className="hero-in mt-8 flex flex-wrap items-center gap-2.5"
-            style={{ animationDelay: "460ms" }}
-          >
-            {hero.trustLine.map((item) => (
-              <li
-                key={item}
-                className="inline-flex items-center gap-1.5 rounded-pill border border-line bg-card/70 px-3 py-1.5 text-sm font-medium text-ink"
-              >
-                <Check className="h-3.5 w-3.5 text-sage-deep" strokeWidth={3} />
-                {item}
-              </li>
-            ))}
-          </ul>
-
           <div
             className="hero-in mt-8 max-w-sm"
-            style={{ animationDelay: "540ms" }}
+            style={{ animationDelay: "460ms" }}
           >
             <HeroLiveCard />
           </div>

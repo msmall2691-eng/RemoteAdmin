@@ -95,7 +95,7 @@ export function Reviews() {
                   type="button"
                   aria-label="Previous review"
                   onClick={() => go(-1)}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-sage hover:bg-mist/50"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-sage hover:bg-mist/50"
                 >
                   <ChevronLeft className="h-5 w-5" />
                 </button>
@@ -103,7 +103,7 @@ export function Reviews() {
                   type="button"
                   aria-label="Next review"
                   onClick={() => go(1)}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-sage hover:bg-mist/50"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-sage hover:bg-mist/50"
                 >
                   <ChevronRight className="h-5 w-5" />
                 </button>

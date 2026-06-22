@@ -108,7 +108,7 @@ export function ThemeSwitcher({
         aria-haspopup="menu"
         aria-expanded={open}
         aria-label="Change site theme"
-        className="flex h-9 w-9 items-center justify-center rounded-full text-muted transition-all hover:scale-110 hover:bg-mist/60 hover:text-ink"
+        className="flex h-10 w-10 items-center justify-center rounded-full text-muted transition-all hover:scale-110 hover:bg-mist/60 hover:text-ink"
       >
         <Palette className="h-[1.15rem] w-[1.15rem]" />
       </button>

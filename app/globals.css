@@ -214,6 +214,7 @@
 }
 .animate-float {
   animation: float 6s ease-in-out infinite;
+  will-change: transform;
 }
 
 /* Organic 2D drift for the hero task chips */
@@ -234,6 +235,7 @@
 }
 .animate-chip {
   animation: chip-float 9s ease-in-out infinite;
+  will-change: transform;
 }
 
 /* Slowly drifting blob for the hero backdrop */
@@ -253,6 +255,7 @@
 }
 .animate-drift {
   animation: drift 18s ease-in-out infinite;
+  will-change: transform;
 }
 
 /* Slow horizontal "aurora" shimmer for a gentle bit of top-of-page movement */
@@ -267,6 +270,7 @@
 }
 .animate-aurora {
   animation: aurora 16s ease-in-out infinite;
+  will-change: background-position;
 }
 
 /* Very slow rotation for the decorative brand ring behind the hero logo */
@@ -277,6 +281,7 @@
 }
 .animate-spin-slow {
   animation: spin-slow 50s linear infinite;
+  will-change: transform;
 }
 
 /* Soft "breathing" glow behind the hero logo */
@@ -293,6 +298,7 @@
 }
 .animate-pulse-glow {
   animation: pulse-glow 7s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 /* Logo marquee — seamless horizontal scroll for the clients strip */

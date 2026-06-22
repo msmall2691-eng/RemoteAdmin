@@ -107,7 +107,7 @@ export function Nav() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="The Remote Admin on Facebook"
-              className="flex h-9 w-9 items-center justify-center rounded-full text-muted transition-all hover:scale-110 hover:bg-mist/60 hover:text-ink"
+              className="flex h-10 w-10 items-center justify-center rounded-full text-muted transition-all hover:scale-110 hover:bg-mist/60 hover:text-ink"
             >
               <Facebook className="h-[1.15rem] w-[1.15rem]" />
             </a>
@@ -117,7 +117,7 @@ export function Nav() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="The Remote Admin on Instagram"
-                className="flex h-9 w-9 items-center justify-center rounded-full text-muted transition-all hover:scale-110 hover:bg-mist/60 hover:text-ink"
+                className="flex h-10 w-10 items-center justify-center rounded-full text-muted transition-all hover:scale-110 hover:bg-mist/60 hover:text-ink"
               >
                 <Instagram className="h-[1.15rem] w-[1.15rem]" />
               </a>

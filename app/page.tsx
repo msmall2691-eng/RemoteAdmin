@@ -18,11 +18,11 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <FreeTools />
       <About />
       <PainStrip />
       <Services />
       <HowItWorks />
-      <FreeTools />
       <Tools />
       <Packages />
       <CtaStrip />

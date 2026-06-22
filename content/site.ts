@@ -79,11 +79,21 @@ export const site = {
   nav: [
     { label: "Home", href: "/#top" },
     { label: "Services", href: "/#services" },
+    { label: "Free Tools", href: "/tools" },
     { label: "How it works", href: "/#how" },
     { label: "About", href: "/#about" },
     { label: "Reviews", href: "/#reviews" },
     { label: "FAQ", href: "/#faq" },
   ],
+
+  toolsPage: {
+    eyebrow: "Free Admin Tools",
+    title: "Free admin tools for small business owners",
+    intro:
+      "Simple tools to help you save time, look more professional, and stay organized — created by The Remote Admin.",
+    disclaimer:
+      "These tools are for general business use and run entirely in your browser. We don’t store any of the information you enter.",
+  },
 
   hero: {
     eyebrow: "Admin support, light bookkeeping & collections · Southern NH",

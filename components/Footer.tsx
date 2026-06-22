@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, Facebook, Instagram, MapPin } from "lucide-react";
 import { site } from "@/content/site";
+import { WeatherWidget } from "./WeatherWidget";
 
 export function Footer() {
   const { business, footer, nav, links } = site;
@@ -28,6 +29,9 @@ export function Footer() {
               {business.slogan}
             </p>
             <p className="mt-3 max-w-xs text-sm text-muted">{footer.blurb}</p>
+            <div className="mt-5">
+              <WeatherWidget />
+            </div>
           </div>
 
           <div>

@@ -22,6 +22,74 @@
   --muted: 88 102 122; /* #58667a blue-gray muted text */
 }
 
+/* ---------------------------------------------------------------------------
+   Visitor-selectable themes (NH/New England flavored).
+   Granite is the default (the :root tokens above). Each theme below keeps a
+   dark "ink" on a light "oat" so text contrast and the button styles stay
+   readable; only the surface tints and accent colors change. Applied by the
+   ThemeSwitcher via a `data-theme` attribute on <html>.
+   --------------------------------------------------------------------------- */
+
+/* Foliage — warm autumn (NH fall foliage) */
+[data-theme="foliage"] {
+  --ink: 58 40 30;
+  --ink-2: 92 60 42;
+  --oat: 252 246 237;
+  --card: 255 252 246;
+  --mist: 244 226 206;
+  --mist-2: 235 210 184;
+  --sage: 201 124 62;
+  --sage-deep: 158 74 38;
+  --brass: 158 66 38;
+  --brass-deep: 122 48 28;
+  --gold: 58 40 30;
+  --line: 230 214 194;
+  --muted: 122 96 78;
+}
+
+/* Lakeside — cool lake-country teal (NH lakes region) */
+[data-theme="lakeside"] {
+  --ink: 20 58 74;
+  --ink-2: 30 84 104;
+  --oat: 247 251 252;
+  --card: 255 255 255;
+  --mist: 208 233 236;
+  --mist-2: 182 217 222;
+  --sage: 74 160 174;
+  --sage-deep: 22 110 124;
+  --brass: 16 104 118;
+  --brass-deep: 12 80 92;
+  --gold: 20 58 74;
+  --line: 210 228 230;
+  --muted: 64 100 112;
+}
+
+/* Evergreen — deep pine (White Mountains) */
+[data-theme="evergreen"] {
+  --ink: 28 50 38;
+  --ink-2: 44 78 58;
+  --oat: 248 250 245;
+  --card: 255 255 255;
+  --mist: 214 230 216;
+  --mist-2: 190 214 194;
+  --sage: 96 150 110;
+  --sage-deep: 40 104 64;
+  --brass: 47 107 67;
+  --brass-deep: 32 80 50;
+  --gold: 28 50 38;
+  --line: 216 228 216;
+  --muted: 78 104 86;
+}
+
+/* Smooth the palette swap so switching themes feels intentional, not jarring */
+@media (prefers-reduced-motion: no-preference) {
+  body {
+    transition:
+      background-color 300ms ease,
+      color 300ms ease;
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

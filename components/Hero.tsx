@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowRight, Check } from "lucide-react";
 import { site } from "@/content/site";
 import { HeroBackdrop } from "./HeroBackdrop";
+import { HeroLiveCard } from "./HeroLiveCard";
 
 const floatingTasks = [
   { label: "Books up to date", pos: "left-0 top-6", delay: "-1s" },
@@ -69,6 +70,13 @@ export function Hero() {
               </li>
             ))}
           </ul>
+
+          <div
+            className="hero-in mt-8 max-w-sm"
+            style={{ animationDelay: "540ms" }}
+          >
+            <HeroLiveCard />
+          </div>
         </div>
 
         <div className="relative flex items-center justify-center py-2 sm:py-10">

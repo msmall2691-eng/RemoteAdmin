@@ -61,6 +61,8 @@ export function Calendly() {
   return (
     <div
       ref={ref}
+      role="region"
+      aria-label="Book a free discovery call with The Remote Admin"
       className="calendly-inline-widget overflow-hidden rounded-card border border-line"
       data-url={url}
       style={{ minWidth: "320px", height: "660px" }}

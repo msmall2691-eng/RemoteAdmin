@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { Upload, Download, Code } from "lucide-react";
 import {
   labelClass,
+  groupLabel,
   inputClass,
   esc,
   safeUrl,
@@ -213,25 +214,34 @@ export function EmailSignatureGenerator({ accent, setAccent }: Props) {
   return (
     <div className="grid gap-8 lg:grid-cols-2">
       {/* Inputs */}
-      <div className="space-y-4">
-        <div className="grid gap-4 sm:grid-cols-2">
-          {field("name", "Full name", "Karen Felch")}
-          {field("title", "Job title", "Owner")}
-          {field("business", "Business name", "The Remote Admin")}
-          {field("phone", "Phone", "(603) 555-0100", "tel")}
-          {field("email", "Email", "you@business.com", "email")}
-          {field("website", "Website", "yourbusiness.com")}
+      <div className="space-y-6">
+        <div>
+          <p className={groupLabel}>Your details</p>
+          <div className="mt-2.5 grid gap-4 sm:grid-cols-2">
+            {field("name", "Full name", "Karen Felch")}
+            {field("title", "Job title", "Owner")}
+            {field("business", "Business name", "The Remote Admin")}
+            {field("phone", "Phone", "(603) 555-0100", "tel")}
+            {field("email", "Email", "you@business.com", "email")}
+            {field("website", "Website", "yourbusiness.com")}
+          </div>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-3">
-          {field("facebook", "Facebook URL", "facebook.com/…")}
-          {field("instagram", "Instagram URL", "instagram.com/…")}
-          {field("linkedin", "LinkedIn URL", "linkedin.com/in/…")}
+        <div>
+          <p className={groupLabel}>Social links (optional)</p>
+          <div className="mt-2.5 grid gap-4 sm:grid-cols-3">
+            {field("facebook", "Facebook URL", "facebook.com/…")}
+            {field("instagram", "Instagram URL", "instagram.com/…")}
+            {field("linkedin", "LinkedIn URL", "linkedin.com/in/…")}
+          </div>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          {field("tagline", "Tagline (optional)", "Making your life easier")}
-          {field("cta", "Button text (optional)", "Book a Call")}
+        <div>
+          <p className={groupLabel}>Extras (optional)</p>
+          <div className="mt-2.5 grid gap-4 sm:grid-cols-2">
+            {field("tagline", "Tagline", "Making your life easier")}
+            {field("cta", "Button text", "Book a Call")}
+          </div>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">

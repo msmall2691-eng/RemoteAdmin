@@ -7,6 +7,8 @@ import { Copy, Check, type LucideIcon } from "lucide-react";
 /** Shared styling + helpers for the free admin tools. */
 
 export const labelClass = "block text-sm font-medium text-ink";
+export const groupLabel =
+  "text-xs font-semibold uppercase tracking-[0.12em] text-muted";
 export const inputClass =
   "mt-1.5 w-full rounded-xl border border-line bg-oat px-4 py-2.5 text-ink placeholder:text-muted/60 focus:border-sage focus:outline-none";
 

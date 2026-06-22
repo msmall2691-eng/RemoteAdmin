@@ -27,8 +27,8 @@ const csp = [
   "font-src 'self' data:",
   "style-src 'self' 'unsafe-inline'",
   "script-src 'self' 'unsafe-inline' https://assets.calendly.com https://connect.facebook.net",
-  "frame-src https://*.calendly.com https://*.facebook.com https://www.facebook.com",
-  "connect-src 'self' https://*.calendly.com https://*.facebook.com https://connect.facebook.net https://graph.facebook.com https://api.open-meteo.com",
+  "frame-src https://calendly.com https://*.calendly.com https://*.facebook.com https://www.facebook.com",
+  "connect-src 'self' https://calendly.com https://*.calendly.com https://*.facebook.com https://connect.facebook.net https://graph.facebook.com https://api.open-meteo.com",
   "upgrade-insecure-requests",
 ].join("; ");
 
